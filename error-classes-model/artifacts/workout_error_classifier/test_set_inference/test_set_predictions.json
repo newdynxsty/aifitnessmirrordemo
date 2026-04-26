@@ -1,0 +1,222 @@
+[
+  {
+    "input": "test-set/iCloud Photos/IMG_3260.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3260.annotated.mp4",
+    "frames_written": 290,
+    "predicted_label": "Jumping Jacks - Good",
+    "prediction_count": 122,
+    "mean_confidence": 0.48375544220697686,
+    "correction_message": "Great form. Keep it up!",
+    "is_error": false
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3261.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3261.annotated.mp4",
+    "frames_written": 313,
+    "predicted_label": "Jumping Jacks - Arms Not High Enough",
+    "prediction_count": 157,
+    "mean_confidence": 0.7200950589149621,
+    "correction_message": "Reach your arms higher overhead!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3262.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3262.annotated.mp4",
+    "frames_written": 307,
+    "predicted_label": "Jumping Jacks - Legs Not Wide Enough",
+    "prediction_count": 100,
+    "mean_confidence": 0.4599545839428902,
+    "correction_message": "Step your feet wider on each jack!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3263.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3263.annotated.mp4",
+    "frames_written": 374,
+    "predicted_label": "Jumping Jacks - Good",
+    "prediction_count": 161,
+    "mean_confidence": 0.49098603751348413,
+    "correction_message": "Great form. Keep it up!",
+    "is_error": false
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3264.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3264.annotated.mp4",
+    "frames_written": 319,
+    "predicted_label": "Jumping Jacks - Arms Not High Enough",
+    "prediction_count": 160,
+    "mean_confidence": 0.7136237397789955,
+    "correction_message": "Reach your arms higher overhead!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3265.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3265.annotated.mp4",
+    "frames_written": 294,
+    "predicted_label": "Jumping Jacks - Legs Not Wide Enough",
+    "prediction_count": 129,
+    "mean_confidence": 0.5252745997074039,
+    "correction_message": "Step your feet wider on each jack!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3266.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3266.annotated.mp4",
+    "frames_written": 249,
+    "predicted_label": "Jumping Jacks - Legs Not Wide Enough",
+    "prediction_count": 120,
+    "mean_confidence": 0.5852868768076102,
+    "correction_message": "Step your feet wider on each jack!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3267.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3267.annotated.mp4",
+    "frames_written": 259,
+    "predicted_label": "Push Ups - Good",
+    "prediction_count": 126,
+    "mean_confidence": 0.7982176518629468,
+    "correction_message": "Great form. Keep it up!",
+    "is_error": false
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3268.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3268.annotated.mp4",
+    "frames_written": 271,
+    "predicted_label": "Push Ups - Knees Touching Ground",
+    "prediction_count": 136,
+    "mean_confidence": 0.9642153526930248,
+    "correction_message": "Get those knees off the ground!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3269.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3269.annotated.mp4",
+    "frames_written": 88,
+    "predicted_label": "Jumping Jacks - Arms Not High Enough",
+    "prediction_count": 44,
+    "mean_confidence": 0.7103956572034142,
+    "correction_message": "Reach your arms higher overhead!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3270.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3270.annotated.mp4",
+    "frames_written": 342,
+    "predicted_label": "Squats - Not Low Enough",
+    "prediction_count": 106,
+    "mean_confidence": 0.730527603963636,
+    "correction_message": "Go lower and reach full depth!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3271.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3271.annotated.mp4",
+    "frames_written": 305,
+    "predicted_label": "Squats - Not Low Enough",
+    "prediction_count": 153,
+    "mean_confidence": 0.9236201055688795,
+    "correction_message": "Go lower and reach full depth!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3272.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3272.annotated.mp4",
+    "frames_written": 561,
+    "predicted_label": "Sit Ups - Good",
+    "prediction_count": 160,
+    "mean_confidence": 0.5501792753115297,
+    "correction_message": "Great form. Keep it up!",
+    "is_error": false
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3273.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3273.annotated.mp4",
+    "frames_written": 364,
+    "predicted_label": "Sit Ups - Core Not High Enough",
+    "prediction_count": 174,
+    "mean_confidence": 0.5896839189460907,
+    "correction_message": "Sit up taller and lift your chest!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3274.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3274.annotated.mp4",
+    "frames_written": 451,
+    "predicted_label": "Sit Ups - Good",
+    "prediction_count": 182,
+    "mean_confidence": 0.559663115458174,
+    "correction_message": "Great form. Keep it up!",
+    "is_error": false
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3275.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3275.annotated.mp4",
+    "frames_written": 257,
+    "predicted_label": "Sit Ups - Core Not High Enough",
+    "prediction_count": 120,
+    "mean_confidence": 0.5267679060498873,
+    "correction_message": "Sit up taller and lift your chest!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3276.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3276.annotated.mp4",
+    "frames_written": 355,
+    "predicted_label": "Lunges - Not Low Enough",
+    "prediction_count": 93,
+    "mean_confidence": 0.6104642252127329,
+    "correction_message": "Go lower and reach full depth!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3277.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3277.annotated.mp4",
+    "frames_written": 332,
+    "predicted_label": "Lunges - Not Low Enough",
+    "prediction_count": 107,
+    "mean_confidence": 0.6244426709469234,
+    "correction_message": "Go lower and reach full depth!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3278.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3278.annotated.mp4",
+    "frames_written": 316,
+    "predicted_label": "Lunges - Not Low Enough",
+    "prediction_count": 116,
+    "mean_confidence": 0.6032757265814419,
+    "correction_message": "Go lower and reach full depth!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3279.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3279.annotated.mp4",
+    "frames_written": 447,
+    "predicted_label": "Lunges - Not Low Enough",
+    "prediction_count": 212,
+    "mean_confidence": 0.6801976505315529,
+    "correction_message": "Go lower and reach full depth!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3280.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3280.annotated.mp4",
+    "frames_written": 477,
+    "predicted_label": "Lunges - Not Low Enough",
+    "prediction_count": 128,
+    "mean_confidence": 0.6432002389337867,
+    "correction_message": "Go lower and reach full depth!",
+    "is_error": true
+  },
+  {
+    "input": "test-set/iCloud Photos/IMG_3281.MP4",
+    "output": "artifacts/workout_error_classifier/test_set_inference/IMG_3281.annotated.mp4",
+    "frames_written": 454,
+    "predicted_label": "Lunges - Not Low Enough",
+    "prediction_count": 227,
+    "mean_confidence": 0.6872996375424221,
+    "correction_message": "Go lower and reach full depth!",
+    "is_error": true
+  }
+]
