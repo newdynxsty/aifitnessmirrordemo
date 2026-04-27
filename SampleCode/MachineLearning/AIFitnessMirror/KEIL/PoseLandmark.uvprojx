@@ -549,6 +549,11 @@
               <FileType>8</FileType>
               <FilePath>.\RepCounterModel.cpp</FilePath>
             </File>
+            <File>
+              <FileName>ErrorClassModel.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\ErrorClassModel.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

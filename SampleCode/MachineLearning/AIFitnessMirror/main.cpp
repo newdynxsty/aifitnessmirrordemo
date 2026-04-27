@@ -16,6 +16,7 @@
 
 // --- NEW REP COUNTER ---
 #include "RepCounterModel.hpp" // MUST duplicate ExerciseClassifierModel.hpp/cpp and rename to RepCounterModel
+#include "ErrorClassModel.hpp"
 
 #include "imlib.h"          /* Image processing */
 #include "framebuffer.h"
@@ -48,6 +49,7 @@
 
 // --- NEW REP COUNTER ---
 #define REP_COUNTER_MODEL_FILE         "0:\\rep_counter_int8_vela.tflite"
+#define ERROR_CLASS_MODEL_FILE         "0:\\workout_error_classifier_int8_vela.tflite"
 
 #define POSE_PRESENCE_THRESHOLD  				(0.7)
 #define POSE_KEYPOINT_VISIBLE_THRESHOLD  		(0.5)
@@ -100,6 +102,21 @@ extern "C" {
 
 static constexpr int KP_WIN = 16;
 static constexpr int KP_DIM = 51;
+static constexpr int ERROR_CLASS_COUNT = 11;
+
+static const char* const ERROR_CLASS_NAMES[ERROR_CLASS_COUNT] = {
+    "JJ ARM LOW",
+    "JJ GOOD",
+    "JJ LEG NAR",
+    "LUNGE GOOD",
+    "LUNGE LOW",
+    "PUSH GOOD",
+    "PUSH KNEE",
+    "SIT CORE",
+    "SIT GOOD",
+    "SQUAT GOOD",
+    "SQUAT LOW"
+};
 
 
 
@@ -177,6 +194,9 @@ static uint8_t tensorArena[ACTIVATION_BUF_SZ] ACTIVATION_BUF_ATTRIBUTE;
 
 // --- NEW REP COUNTER --- Memory Arena Allocation
 static uint8_t repCounterTensorArena[256 * 1024] ACTIVATION_BUF_ATTRIBUTE; 
+
+// --- ERROR CLASS MODEL --- Memory Arena Allocation
+static uint8_t errorClassTensorArena[64 * 1024] ACTIVATION_BUF_ATTRIBUTE;
 	
 } /* namespace app */
 } /* namespace arm */
@@ -481,6 +501,14 @@ int main()
             return 1;
     }
 
+    uint32_t errorClassModelAddr = repCounterModelAddr + ((repCounterModelSize + 0xFFF) & ~0xFFF);
+    int32_t errorClassModelSize = PrepareModelToHyperRAM(ERROR_CLASS_MODEL_FILE, errorClassModelAddr);
+    if (errorClassModelSize <= 0)
+    {
+            printf_err("Failed to prepare ERROR CLASS model\n");
+            return 1;
+    }
+
 	// --- Init YOLO model interpreter ---
 	arm::app::YOLOv8nPoseModel poseModel;
 	if (!poseModel.Init(arm::app::tensorArena,
@@ -504,6 +532,16 @@ int main()
             return 1;
     }
 
+    arm::app::ErrorClassModel errorClassModel;
+    if (!errorClassModel.Init(arm::app::errorClassTensorArena,
+                              sizeof(arm::app::errorClassTensorArena),
+                              (unsigned char*)errorClassModelAddr,
+                              errorClassModelSize))
+    {
+            printf_err("Failed to initialise ERROR CLASS model\n");
+            return 1;
+    }
+
     /* Setup cache poicy of tensor arean buffer */
     info("Set tesnor arena cache policy to WTRA \n");
     const std::vector<ARM_MPU_Region_t> mpuConfig =
@@ -517,6 +555,10 @@ int main()
         {
             ARM_MPU_RBAR(((unsigned int)arm::app::repCounterTensorArena), ARM_MPU_SH_NON, 0, 1, 1),
             ARM_MPU_RLAR((((unsigned int)arm::app::repCounterTensorArena) + sizeof(arm::app::repCounterTensorArena) - 1), eMPU_ATTR_CACHEABLE_WTRA)
+        },
+        {
+            ARM_MPU_RBAR(((unsigned int)arm::app::errorClassTensorArena), ARM_MPU_SH_NON, 0, 1, 1),
+            ARM_MPU_RLAR((((unsigned int)arm::app::errorClassTensorArena) + sizeof(arm::app::errorClassTensorArena) - 1), eMPU_ATTR_CACHEABLE_WTRA)
         },
         {
             ARM_MPU_RBAR(((unsigned int)fb_array), ARM_MPU_SH_NON, 0, 1, 1),
@@ -549,6 +591,11 @@ int main()
     TfLiteTensor* repOutTensor = repCounterModel.GetOutputTensor(0);
     arm::app::QuantParams repInQ = arm::app::GetTensorQuantParams(repInTensor);
     arm::app::QuantParams repOutQ = arm::app::GetTensorQuantParams(repOutTensor);
+
+    TfLiteTensor* errorInTensor = errorClassModel.GetInputTensor(0);
+    TfLiteTensor* errorOutTensor = errorClassModel.GetOutputTensor(0);
+    arm::app::QuantParams errorInQ = arm::app::GetTensorQuantParams(errorInTensor);
+    arm::app::QuantParams errorOutQ = arm::app::GetTensorQuantParams(errorOutTensor);
 
     // postProcess
 	arm::app::yolov8n_pose::YOLOv8nPosePostProcessing postProcess(&poseModel, POSE_PRESENCE_THRESHOLD);
@@ -641,6 +688,8 @@ int main()
 						float prob_squat_middle = 0.0f;
 						float prob_squat_start = 0.0f;
 						int current_pose_class = 0;
+						float current_error_conf = 0.0f;
+						int current_error_class = -1;
 
             if (infFramebuf->results.size() > 0)
             {
@@ -675,6 +724,26 @@ int main()
                 }
 
                 repCounterModel.RunInference();
+
+                int8_t* errorIn = (int8_t*)errorInTensor->data.data;
+                for (int i = 0; i < KP_DIM; i++) {
+                    errorIn[i] = QuantizeToInt8(feat[i], errorInQ.scale, errorInQ.offset);
+                }
+
+                errorClassModel.RunInference();
+
+                int8_t* errorOut = (int8_t*)errorOutTensor->data.data;
+                float error_out_scale = (errorOutQ.scale <= 0.0f) ? (1.0f / 255.0f) : errorOutQ.scale;
+                int error_out_offset = (errorOutQ.scale <= 0.0f) ? -128 : errorOutQ.offset;
+                current_error_class = 0;
+                current_error_conf = ((int)errorOut[0] - error_out_offset) * error_out_scale;
+                for (int i = 1; i < ERROR_CLASS_COUNT; i++) {
+                    float p = ((int)errorOut[i] - error_out_offset) * error_out_scale;
+                    if (p > current_error_conf) {
+                        current_error_class = i;
+                        current_error_conf = p;
+                    }
+                }
 
                 // Extract INT8 outputs and Dequantize
                 int8_t* repOut = (int8_t*)repOutTensor->data.data;
@@ -788,6 +857,16 @@ int main()
 						// Display Confidence
 						snprintf(displayBuffer, sizeof(displayBuffer), "C: %.2f", current_pose_conf);
 						Display_PutText_Wrapped(displayBuffer, 650, 260, C_BLACK, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
+
+						const char* errorName = "NO POSE";
+						if (current_error_class >= 0 && current_error_class < ERROR_CLASS_COUNT) {
+								errorName = ERROR_CLASS_NAMES[current_error_class];
+						}
+						snprintf(displayBuffer, sizeof(displayBuffer), "ERR:%s", errorName);
+						Display_PutText_Wrapped(displayBuffer, 650, 320, C_MAGENTA, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
+
+						snprintf(displayBuffer, sizeof(displayBuffer), "EC: %.2f", current_error_conf);
+						Display_PutText_Wrapped(displayBuffer, 650, 380, C_MAGENTA, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
 
 			// Display accelerometer and heart rate data
 			/**
