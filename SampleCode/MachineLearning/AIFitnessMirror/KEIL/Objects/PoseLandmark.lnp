@@ -27,6 +27,7 @@
 ".\objects\yolov8nposemodel.o"
 ".\objects\exerciseclassifiermodel.o"
 ".\objects\repcountermodel.o"
+".\objects\errorclassmodel.o"
 ".\objects\model.o"
 ".\objects\tensorflowlitemicro.o"
 ".\objects\platformmath.o"

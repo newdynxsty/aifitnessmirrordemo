@@ -25,8 +25,8 @@
 	.eabi_attribute	14, 0	@ Tag_ABI_PCS_R9_use
 	.file	"ebi.c"
 	.file	1 "C:\\Users\\austi" "AppData\\Local\\Keil_v5\\ARM\\ARMCLANG\\bin\\..\\include\\stdint.h"
-	.file	2 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AI Fitness Mirror\\KEIL" "../../../../Library/Device/Nuvoton/M55M1/Include\\ebi_reg.h"
-	.file	3 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AI Fitness Mirror\\KEIL" "../../../../Library/Device/Nuvoton/M55M1/Include\\ccap_reg.h"
+	.file	2 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/Device/Nuvoton/M55M1/Include\\ebi_reg.h"
+	.file	3 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/Device/Nuvoton/M55M1/Include\\ccap_reg.h"
 	.section	.text.EBI_Open,"ax",%progbits
 	.hidden	EBI_Open                        @ -- Begin function EBI_Open
 	.globl	EBI_Open
@@ -36,7 +36,7 @@
 	.thumb_func
 EBI_Open:
 .Lfunc_begin0:
-	.file	4 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AI Fitness Mirror\\KEIL" "../../../../Library/StdDriver/src/ebi.c"
+	.file	4 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/src/ebi.c"
 	.loc	4 57 0                          @ ../../../../Library/StdDriver/src/ebi.c:57:0
 	.fnstart
 	.cfi_sections .debug_frame
@@ -1545,137 +1545,137 @@ EBI_SetBusTiming:
 .Linfo_string1:
 	.asciz	"../../../../Library/StdDriver/src\\ebi.c" @ string offset=68
 .Linfo_string2:
-	.asciz	"C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AI Fitness Mirror\\KEIL" @ string offset=108
+	.asciz	"C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" @ string offset=108
 .Linfo_string3:
-	.asciz	"unsigned int"                  @ string offset=232
+	.asciz	"unsigned int"                  @ string offset=230
 .Linfo_string4:
-	.asciz	"uint32_t"                      @ string offset=245
+	.asciz	"uint32_t"                      @ string offset=243
 .Linfo_string5:
-	.asciz	"CTL0"                          @ string offset=254
+	.asciz	"CTL0"                          @ string offset=252
 .Linfo_string6:
-	.asciz	"TCTL0"                         @ string offset=259
+	.asciz	"TCTL0"                         @ string offset=257
 .Linfo_string7:
-	.asciz	"RESERVE0"                      @ string offset=265
+	.asciz	"RESERVE0"                      @ string offset=263
 .Linfo_string8:
-	.asciz	"__ARRAY_SIZE_TYPE__"           @ string offset=274
+	.asciz	"__ARRAY_SIZE_TYPE__"           @ string offset=272
 .Linfo_string9:
-	.asciz	"CTL1"                          @ string offset=294
+	.asciz	"CTL1"                          @ string offset=292
 .Linfo_string10:
-	.asciz	"TCTL1"                         @ string offset=299
+	.asciz	"TCTL1"                         @ string offset=297
 .Linfo_string11:
-	.asciz	"RESERVE1"                      @ string offset=305
+	.asciz	"RESERVE1"                      @ string offset=303
 .Linfo_string12:
-	.asciz	"CTL2"                          @ string offset=314
+	.asciz	"CTL2"                          @ string offset=312
 .Linfo_string13:
-	.asciz	"TCTL2"                         @ string offset=319
+	.asciz	"TCTL2"                         @ string offset=317
 .Linfo_string14:
-	.asciz	"EBI_T"                         @ string offset=325
+	.asciz	"EBI_T"                         @ string offset=323
 .Linfo_string15:
-	.asciz	"CTL"                           @ string offset=331
+	.asciz	"CTL"                           @ string offset=329
 .Linfo_string16:
-	.asciz	"PAR"                           @ string offset=335
+	.asciz	"PAR"                           @ string offset=333
 .Linfo_string17:
-	.asciz	"INTEN"                         @ string offset=339
+	.asciz	"INTEN"                         @ string offset=337
 .Linfo_string18:
-	.asciz	"INTSTS"                        @ string offset=345
+	.asciz	"INTSTS"                        @ string offset=343
 .Linfo_string19:
-	.asciz	"PARM"                          @ string offset=352
+	.asciz	"PARM"                          @ string offset=350
 .Linfo_string20:
-	.asciz	"CWSP"                          @ string offset=357
+	.asciz	"CWSP"                          @ string offset=355
 .Linfo_string21:
-	.asciz	"CWS"                           @ string offset=362
+	.asciz	"CWS"                           @ string offset=360
 .Linfo_string22:
-	.asciz	"PKTSL"                         @ string offset=366
+	.asciz	"PKTSL"                         @ string offset=364
 .Linfo_string23:
-	.asciz	"PLNSL"                         @ string offset=372
+	.asciz	"PLNSL"                         @ string offset=370
 .Linfo_string24:
-	.asciz	"FRCTL"                         @ string offset=378
+	.asciz	"FRCTL"                         @ string offset=376
 .Linfo_string25:
-	.asciz	"STRIDE"                        @ string offset=384
+	.asciz	"STRIDE"                        @ string offset=382
 .Linfo_string26:
-	.asciz	"FIFOTH"                        @ string offset=391
+	.asciz	"FIFOTH"                        @ string offset=389
 .Linfo_string27:
-	.asciz	"CMPADDR"                       @ string offset=398
+	.asciz	"CMPADDR"                       @ string offset=396
 .Linfo_string28:
-	.asciz	"LUMA_Y1_THD"                   @ string offset=406
+	.asciz	"LUMA_Y1_THD"                   @ string offset=404
 .Linfo_string29:
-	.asciz	"PKTSM"                         @ string offset=418
+	.asciz	"PKTSM"                         @ string offset=416
 .Linfo_string30:
-	.asciz	"PLNSM"                         @ string offset=424
+	.asciz	"PLNSM"                         @ string offset=422
 .Linfo_string31:
-	.asciz	"CURADDRP"                      @ string offset=430
+	.asciz	"CURADDRP"                      @ string offset=428
 .Linfo_string32:
-	.asciz	"CURADDRY"                      @ string offset=439
+	.asciz	"CURADDRY"                      @ string offset=437
 .Linfo_string33:
-	.asciz	"CURADDRU"                      @ string offset=448
+	.asciz	"CURADDRU"                      @ string offset=446
 .Linfo_string34:
-	.asciz	"CURADDRV"                      @ string offset=457
+	.asciz	"CURADDRV"                      @ string offset=455
 .Linfo_string35:
-	.asciz	"PKTBA0"                        @ string offset=466
+	.asciz	"PKTBA0"                        @ string offset=464
 .Linfo_string36:
-	.asciz	"RESERVE2"                      @ string offset=473
+	.asciz	"RESERVE2"                      @ string offset=471
 .Linfo_string37:
-	.asciz	"YBA"                           @ string offset=482
+	.asciz	"YBA"                           @ string offset=480
 .Linfo_string38:
-	.asciz	"UBA"                           @ string offset=486
+	.asciz	"UBA"                           @ string offset=484
 .Linfo_string39:
-	.asciz	"VBA"                           @ string offset=490
+	.asciz	"VBA"                           @ string offset=488
 .Linfo_string40:
-	.asciz	"RESERVE3"                      @ string offset=494
+	.asciz	"RESERVE3"                      @ string offset=492
 .Linfo_string41:
-	.asciz	"MDCTL"                         @ string offset=503
+	.asciz	"MDCTL"                         @ string offset=501
 .Linfo_string42:
-	.asciz	"MDTRG_WK"                      @ string offset=509
+	.asciz	"MDTRG_WK"                      @ string offset=507
 .Linfo_string43:
-	.asciz	"RESERVE4"                      @ string offset=518
+	.asciz	"RESERVE4"                      @ string offset=516
 .Linfo_string44:
-	.asciz	"MDTTH"                         @ string offset=527
+	.asciz	"MDTTH"                         @ string offset=525
 .Linfo_string45:
-	.asciz	"MDTSAD"                        @ string offset=533
+	.asciz	"MDTSAD"                        @ string offset=531
 .Linfo_string46:
-	.asciz	"RESERVE5"                      @ string offset=540
+	.asciz	"RESERVE5"                      @ string offset=538
 .Linfo_string47:
-	.asciz	"MDWOCTH"                       @ string offset=549
+	.asciz	"MDWOCTH"                       @ string offset=547
 .Linfo_string48:
-	.asciz	"MDWOC"                         @ string offset=557
+	.asciz	"MDWOC"                         @ string offset=555
 .Linfo_string49:
-	.asciz	"RESERVE6"                      @ string offset=563
+	.asciz	"RESERVE6"                      @ string offset=561
 .Linfo_string50:
-	.asciz	"MDWTH"                         @ string offset=572
+	.asciz	"MDWTH"                         @ string offset=570
 .Linfo_string51:
-	.asciz	"MDWSAD"                        @ string offset=578
+	.asciz	"MDWSAD"                        @ string offset=576
 .Linfo_string52:
-	.asciz	"CCAP_T"                        @ string offset=585
+	.asciz	"CCAP_T"                        @ string offset=583
 .Linfo_string53:
-	.asciz	"EBI_Open"                      @ string offset=592
+	.asciz	"EBI_Open"                      @ string offset=590
 .Linfo_string54:
-	.asciz	"EBI_Close"                     @ string offset=601
+	.asciz	"EBI_Close"                     @ string offset=599
 .Linfo_string55:
-	.asciz	"EBI_SetBusTiming"              @ string offset=611
+	.asciz	"EBI_SetBusTiming"              @ string offset=609
 .Linfo_string56:
-	.asciz	"u32Bank"                       @ string offset=628
+	.asciz	"u32Bank"                       @ string offset=626
 .Linfo_string57:
-	.asciz	"u32DataWidth"                  @ string offset=636
+	.asciz	"u32DataWidth"                  @ string offset=634
 .Linfo_string58:
-	.asciz	"u32TimingClass"                @ string offset=649
+	.asciz	"u32TimingClass"                @ string offset=647
 .Linfo_string59:
-	.asciz	"u32BusMode"                    @ string offset=664
+	.asciz	"u32BusMode"                    @ string offset=662
 .Linfo_string60:
-	.asciz	"u32CSActiveLevel"              @ string offset=675
+	.asciz	"u32CSActiveLevel"              @ string offset=673
 .Linfo_string61:
-	.asciz	"pu32EBICTL"                    @ string offset=692
+	.asciz	"pu32EBICTL"                    @ string offset=690
 .Linfo_string62:
-	.asciz	"u32Index0"                     @ string offset=703
+	.asciz	"u32Index0"                     @ string offset=701
 .Linfo_string63:
-	.asciz	"u32Index1"                     @ string offset=713
+	.asciz	"u32Index1"                     @ string offset=711
 .Linfo_string64:
-	.asciz	"pu32EBITCTL"                   @ string offset=723
+	.asciz	"pu32EBITCTL"                   @ string offset=721
 .Linfo_string65:
-	.asciz	"u32Index"                      @ string offset=735
+	.asciz	"u32Index"                      @ string offset=733
 .Linfo_string66:
-	.asciz	"u32TimingConfig"               @ string offset=744
+	.asciz	"u32TimingConfig"               @ string offset=742
 .Linfo_string67:
-	.asciz	"u32MclkDiv"                    @ string offset=760
+	.asciz	"u32MclkDiv"                    @ string offset=758
 	.ident	"Component: Arm Compiler for Embedded 6.24 Tool: armclang [5f371800]"
 	.section	".note.GNU-stack","",%progbits
 	.eabi_attribute	30, 1	@ Tag_ABI_optimization_goals

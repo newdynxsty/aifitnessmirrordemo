@@ -132,6 +132,11 @@ static int g_currentRepCount = 0;
 static int g_activeExerciseType = 0; // 0=None, 2=Jumping Jack, 5=Situp
 static const char* g_activeExerciseName = "WAITING...";
 
+// --- FORM TRACKING GLOBALS ---
+static int g_currentRepWorstError = 1;
+static float g_currentRepWorstConf = 0.0f;
+static float g_errorConfidenceThreshold = 0.70f;
+
 // State Enum: 0 = None, 1 = Squatting, 2 = Jumping, 3 = Lunging, 4 = Pushup, 5 = Situp
 static int g_activeExercise = 0;
 
@@ -658,25 +663,26 @@ int main()
 
             imlib_nvt_scale(&fullFramebuf->frameImage, &resizeImg, &roi);
 
-			auto *req_data = static_cast<uint8_t *>(inputTensor->data.data);
-			auto *signed_req_data = static_cast<int8_t *>(inputTensor->data.data);
+						auto *req_data = static_cast<uint8_t *>(inputTensor->data.data);
+						auto *signed_req_data = static_cast<int8_t *>(inputTensor->data.data);
 
-			for (size_t i = 0; i < inputTensor->bytes; i++)
-			{
-				signed_req_data[i] = static_cast<int8_t>(req_data[i]) - 128;
-			}
+						for (size_t i = 0; i < inputTensor->bytes; i++)
+						{
+							signed_req_data[i] = static_cast<int8_t>(req_data[i]) - 128;
+						}
 
-			poseModel.RunInference();
-            fullFramebuf->eState = eFRAMEBUF_INF;
+						poseModel.RunInference();
+						fullFramebuf->eState = eFRAMEBUF_INF;
         }
 
         infFramebuf = get_inf_framebuf();
         if (infFramebuf)
         {
-			postProcess.RunPostProcessing(
-				inputImgCols, inputImgRows, infFramebuf->frameImage.w, infFramebuf->frameImage.h, infFramebuf->results);
 					
-			// ---- EXERCISE CLASSIFIER AND REP COUNTER ----
+						postProcess.RunPostProcessing(
+						inputImgCols, inputImgRows, infFramebuf->frameImage.w, infFramebuf->frameImage.h, infFramebuf->results);
+					
+						// ---- EXERCISE CLASSIFIER AND REP COUNTER ----
 
 					  float current_pose_conf = 0.0f;
 						float prob_jump_middle = 0.0f;
@@ -760,6 +766,7 @@ int main()
 								prob_situp_start   = ((int)repOut[5] - out_offset) * out_scale;
 								prob_squat_middle  = ((int)repOut[6] - out_offset) * out_scale;
 								prob_squat_start   = ((int)repOut[7] - out_offset) * out_scale;
+								
                 // Find highest probability
                 int current_pose_class = 0;
                 current_pose_conf = prob_jump_middle;
@@ -772,8 +779,38 @@ int main()
                 if (prob_squat_middle > current_pose_conf) { current_pose_class = 6; current_pose_conf = prob_squat_middle; }
                 if (prob_squat_start > current_pose_conf) { current_pose_class = 7; current_pose_conf = prob_squat_start; }
 
-								// --- DEMO COUNTER: JUMPING JACKS & SITUPS ONLY ---
+								// 1. Capture the highest confidence error for the CURRENT frame
+								int frame_error_class = 0;
+								float frame_error_conf = ((int)errorOut[0] - error_out_offset) * error_out_scale;
+								for (int i = 1; i < ERROR_CLASS_COUNT; i++) {
+										float p = ((int)errorOut[i] - error_out_offset) * error_out_scale;
+										if (p > frame_error_conf) {
+												frame_error_class = i;
+												frame_error_conf = p;
+										}
+								}
+
+								// 2. Track the "worst" error during this movement								
+								const char* frameErrorName = ERROR_CLASS_NAMES[frame_error_class];
+								bool isBadForm = (strstr(frameErrorName, "GOOD") == NULL);
+								bool exerciseMatch = false;
+
+								// Check bad form class and current exercise match
+								if (g_activeExerciseType == 2 && strncmp(frameErrorName, "JJ", 2) == 0) {
+										exerciseMatch = true;
+								} else if (g_activeExerciseType == 5 && strncmp(frameErrorName, "SIT", 3) == 0) {
+										exerciseMatch = true;
+								}
+								if (g_activeExercise != 0 && frame_error_conf > g_errorConfidenceThreshold && isBadForm && exerciseMatch) {
+										if (frame_error_conf > g_currentRepWorstConf) {
+												g_currentRepWorstError = frame_error_class;
+												g_currentRepWorstConf = frame_error_conf;
+										}
+								}
+
+								// 3. REP COUNTING & ERROR RESET
 								if (current_pose_conf >= 0.70f) {
+										char displayBuffer[64];
 										
 										// 1. IDENTIFY THE EXERCISE & HANDLE AUTO-RESET
 										int detectedType = 0; 
@@ -787,29 +824,76 @@ int main()
 												g_activeExerciseName = (detectedType == 2) ? "JUMPING JACK" : "SIT-UP";
 												g_activeExercise = 0; // Reset state machine phase
 											
-												// Clear the text area to prevent character overlapping
-												S_DISP_RECT sClearRect;
-												sClearRect.u32TopLeftX = 650; 
-												sClearRect.u32TopLeftY = 100;
-												sClearRect.u32BottonRightX = 800;
-												sClearRect.u32BottonRightY = 160;
+												// Clear the entire text area
+												S_DISP_RECT sClearRect = {650, 100, 800, 500};
 												Display_ClearRect(C_WHITE, &sClearRect);
+												
+												// Display Exercise Name
+												snprintf(displayBuffer, sizeof(displayBuffer), "%s", g_activeExerciseName);
+												Display_PutText_Wrapped(
+														displayBuffer,
+														650, 100,
+														C_RED, C_WHITE,
+														FONT_DISP_UPSCALE_FACTOR
+												);
+												
+												// Display Confidence
+												snprintf(displayBuffer, sizeof(displayBuffer), "C: %.2f", current_pose_conf);
+												Display_PutText_Wrapped(displayBuffer, 650, 260, C_BLACK, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
 										}
 
 										// 2. REP COUNTING
-										// STAND
-										if (current_pose_class == 7) {
-												if (g_activeExercise == 2) g_currentRepCount++;
+										// START / END OF JUMPING JACK / SITUP
+										if (current_pose_class == 7 || current_pose_class == 5) {
+												if ((current_pose_class == 7 && g_activeExercise == 2) || 
+														(current_pose_class == 5 && g_activeExercise == 5)) {
+														
+														g_currentRepCount++;
+															
+														// Display Rep Count
+														snprintf(displayBuffer, sizeof(displayBuffer), "REPS: %d", g_currentRepCount);
+														Display_PutText_Wrapped(
+																displayBuffer,
+																650, 160,
+																C_BLUE, C_WHITE,
+																FONT_DISP_UPSCALE_FACTOR
+														);
+														
+														// Check for bad form detection
+														uint16_t textColor = C_RED;
+														if (g_currentRepWorstConf > g_errorConfidenceThreshold) {
+																const char* finalErrorName = ERROR_CLASS_NAMES[g_currentRepWorstError];
+																snprintf(displayBuffer, sizeof(displayBuffer), "%s", finalErrorName);
+														} else {
+																strcpy(displayBuffer, "GOOD FORM");
+																textColor = C_GREEN;
+														}
+
+														// Clear area
+														S_DISP_RECT sClearRect = {650, 320, 800, 380};
+														Display_ClearRect(C_WHITE, &sClearRect);
+
+														// Display error msg
+														Display_PutText_Wrapped(
+																displayBuffer, 
+																650, 320, 
+																textColor, C_WHITE, 
+																FONT_DISP_UPSCALE_FACTOR
+														);
+														
+														// Display confidence
+														snprintf(displayBuffer, sizeof(displayBuffer), "C: %.2f", g_currentRepWorstConf);
+														Display_PutText_Wrapped(displayBuffer, 650, 440, C_BLACK, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
+														
+												}
+														
+												// Reset vars
+												g_currentRepWorstConf = 0.0f;
 												g_activeExercise = 0;
-										} 
+										}
 										// JUMP_MIDDLE
 										else if (current_pose_class == 0) {
 												g_activeExercise = 2; 
-										}
-										// SITUP_START
-										else if (current_pose_class == 5) {
-												if (g_activeExercise == 5) g_currentRepCount++;
-												g_activeExercise = 0;
 										}
 										// SITUP_MIDDLE
 										else if (current_pose_class == 4) {
@@ -817,99 +901,63 @@ int main()
 										}
 								}
 						}
+						
+						// Display accelerometer and heart rate data
+						/**
+						if (g_bMsgReceived) {
+									char localBuf[RX_BUF_SIZE];
+									NVIC_DisableIRQ(UART1_IRQn);
+									memcpy(localBuf, (const void*)g_u8RecData, g_u32DataIdx);
+									g_u32DataIdx = 0;
+									g_bMsgReceived = false;
+									NVIC_EnableIRQ(UART1_IRQn);
 
+									float bAx = 0, bAy = 0, bAz = 0;
+									char bHr[20] = {0};
+									
+									if (sscanf(localBuf, "A:%f,%f,%f|HR:%s", &bAx, &bAy, &bAz, bHr) >= 3) {
+													S_DISP_RECT sRect;
+													sRect.u32TopLeftX = TEXT_X_OFFSET;
+													sRect.u32BottonRightX = Disaplay_GetLCDWidth() - 1;
+													
+													sprintf(szDisplayText, "AX: %.2f", bAx);
+													sRect.u32TopLeftY = TEXT_Y_AX; sRect.u32BottonRightY = TEXT_Y_AX + LINE_HEIGHT - 1;
+													Display_ClearRect(C_WHITE, &sRect);
+													Display_PutText(szDisplayText, strlen(szDisplayText), TEXT_X_OFFSET, TEXT_Y_AX, C_BLACK, C_WHITE, false, FONT_DISP_UPSCALE_FACTOR);
+
+													sprintf(szDisplayText, "AY: %.2f", bAy);
+													sRect.u32TopLeftY = TEXT_Y_AY; sRect.u32BottonRightY = TEXT_Y_AY + LINE_HEIGHT - 1;
+													Display_ClearRect(C_WHITE, &sRect);
+													Display_PutText(szDisplayText, strlen(szDisplayText), TEXT_X_OFFSET, TEXT_Y_AY, C_BLACK, C_WHITE, false, FONT_DISP_UPSCALE_FACTOR);
+
+													sprintf(szDisplayText, "AZ: %.2f", bAz);
+													sRect.u32TopLeftY = TEXT_Y_AZ; sRect.u32BottonRightY = TEXT_Y_AZ + LINE_HEIGHT - 1;
+													Display_ClearRect(C_WHITE, &sRect);
+													Display_PutText(szDisplayText, strlen(szDisplayText), TEXT_X_OFFSET, TEXT_Y_AZ, C_BLACK, C_WHITE, false, FONT_DISP_UPSCALE_FACTOR);
+													
+													timepassed +=1;
+													sprintf(szDisplayText, "HR: %s", bHr);
+													sRect.u32TopLeftY = TEXT_Y_HR; sRect.u32BottonRightY = TEXT_Y_HR + LINE_HEIGHT - 1;
+													Display_ClearRect(C_WHITE, &sRect);
+													Display_PutText(szDisplayText, strlen(szDisplayText), TEXT_X_OFFSET, TEXT_Y_HR, (strcmp(bHr, "No") == 0 ? C_RED : C_MAGENTA), C_WHITE, false, FONT_DISP_UPSCALE_FACTOR);
+									}
+							}
+							**/
+							
             //draw bbox and render
 						if(infFramebuf->results.size())
 						{
-							DrawPoseLandmark(infFramebuf->results, &infFramebuf->frameImage);
+								DrawPoseLandmark(infFramebuf->results, &infFramebuf->frameImage);
 						}
-
-						//display result image
+							
 						#if defined (__USE_DISPLAY__)
-									sDispRect.u32TopLeftX = 0;
-									sDispRect.u32TopLeftY = 0;
-									sDispRect.u32BottonRightX = ((frameBuffer.w * IMAGE_DISP_UPSCALE_FACTOR) - 1);
-									sDispRect.u32BottonRightY = ((frameBuffer.h * IMAGE_DISP_UPSCALE_FACTOR) - 1);
+								sDispRect.u32TopLeftX = 0;
+								sDispRect.u32TopLeftY = 0;
+								sDispRect.u32BottonRightX = ((frameBuffer.w * IMAGE_DISP_UPSCALE_FACTOR) - 1);
+								sDispRect.u32BottonRightY = ((frameBuffer.h * IMAGE_DISP_UPSCALE_FACTOR) - 1);
 
-									Display_FillRect((uint16_t *)infFramebuf->frameImage.data, &sDispRect, IMAGE_DISP_UPSCALE_FACTOR);
-
-						// --- DEMO DISPLAY ---
-						char displayBuffer[64];
-
-						// Display Exercise Name
-						snprintf(displayBuffer, sizeof(displayBuffer), "%s", g_activeExerciseName);
-						Display_PutText_Wrapped(
-								displayBuffer,
-								650, 100,
-								C_RED, C_WHITE,
-								FONT_DISP_UPSCALE_FACTOR
-						);
-
-						// Display Rep Count (Large)
-						snprintf(displayBuffer, sizeof(displayBuffer), "REPS: %d", g_currentRepCount);
-						Display_PutText_Wrapped(
-								displayBuffer,
-								650, 160,
-								C_BLUE, C_WHITE,
-								FONT_DISP_UPSCALE_FACTOR
-						);
-
-						// Display Confidence
-						snprintf(displayBuffer, sizeof(displayBuffer), "C: %.2f", current_pose_conf);
-						Display_PutText_Wrapped(displayBuffer, 650, 260, C_BLACK, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
-
-						const char* errorName = "NO POSE";
-						if (current_error_class >= 0 && current_error_class < ERROR_CLASS_COUNT) {
-								errorName = ERROR_CLASS_NAMES[current_error_class];
-						}
-						snprintf(displayBuffer, sizeof(displayBuffer), "ERR:%s", errorName);
-						Display_PutText_Wrapped(displayBuffer, 650, 320, C_MAGENTA, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
-
-						snprintf(displayBuffer, sizeof(displayBuffer), "EC: %.2f", current_error_conf);
-						Display_PutText_Wrapped(displayBuffer, 650, 380, C_MAGENTA, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
-
-			// Display accelerometer and heart rate data
-			/**
-			if (g_bMsgReceived) {
-						char localBuf[RX_BUF_SIZE];
-						NVIC_DisableIRQ(UART1_IRQn);
-						memcpy(localBuf, (const void*)g_u8RecData, g_u32DataIdx);
-						g_u32DataIdx = 0;
-						g_bMsgReceived = false;
-						NVIC_EnableIRQ(UART1_IRQn);
-
-						float bAx = 0, bAy = 0, bAz = 0;
-						char bHr[20] = {0};
-						
-						if (sscanf(localBuf, "A:%f,%f,%f|HR:%s", &bAx, &bAy, &bAz, bHr) >= 3) {
-										S_DISP_RECT sRect;
-										sRect.u32TopLeftX = TEXT_X_OFFSET;
-										sRect.u32BottonRightX = Disaplay_GetLCDWidth() - 1;
-										
-										sprintf(szDisplayText, "AX: %.2f", bAx);
-										sRect.u32TopLeftY = TEXT_Y_AX; sRect.u32BottonRightY = TEXT_Y_AX + LINE_HEIGHT - 1;
-										Display_ClearRect(C_WHITE, &sRect);
-										Display_PutText(szDisplayText, strlen(szDisplayText), TEXT_X_OFFSET, TEXT_Y_AX, C_BLACK, C_WHITE, false, FONT_DISP_UPSCALE_FACTOR);
-
-										sprintf(szDisplayText, "AY: %.2f", bAy);
-										sRect.u32TopLeftY = TEXT_Y_AY; sRect.u32BottonRightY = TEXT_Y_AY + LINE_HEIGHT - 1;
-										Display_ClearRect(C_WHITE, &sRect);
-										Display_PutText(szDisplayText, strlen(szDisplayText), TEXT_X_OFFSET, TEXT_Y_AY, C_BLACK, C_WHITE, false, FONT_DISP_UPSCALE_FACTOR);
-
-										sprintf(szDisplayText, "AZ: %.2f", bAz);
-										sRect.u32TopLeftY = TEXT_Y_AZ; sRect.u32BottonRightY = TEXT_Y_AZ + LINE_HEIGHT - 1;
-										Display_ClearRect(C_WHITE, &sRect);
-										Display_PutText(szDisplayText, strlen(szDisplayText), TEXT_X_OFFSET, TEXT_Y_AZ, C_BLACK, C_WHITE, false, FONT_DISP_UPSCALE_FACTOR);
-										
-										timepassed +=1;
-										sprintf(szDisplayText, "HR: %s", bHr);
-										sRect.u32TopLeftY = TEXT_Y_HR; sRect.u32BottonRightY = TEXT_Y_HR + LINE_HEIGHT - 1;
-										Display_ClearRect(C_WHITE, &sRect);
-										Display_PutText(szDisplayText, strlen(szDisplayText), TEXT_X_OFFSET, TEXT_Y_HR, (strcmp(bHr, "No") == 0 ? C_RED : C_MAGENTA), C_WHITE, false, FONT_DISP_UPSCALE_FACTOR);
-						}
-				}
-				**/
-#endif
+								Display_FillRect((uint16_t *)infFramebuf->frameImage.data, &sDispRect, IMAGE_DISP_UPSCALE_FACTOR);
+						#endif
 
             u64PerfFrames ++;
 			if ((uint64_t) pmu_get_systick_Count() > u64PerfCycle)

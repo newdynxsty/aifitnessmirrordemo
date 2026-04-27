@@ -2082,7 +2082,7 @@ I (..\..\..\..\Library\StdDriver\inc\wwdt.h)(0x69EEAAA9)
 I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\log\include\log_macros.h)(0x69EEAABF)
 I (..\NPU\include\ethosu_npu_init.h)(0x69EEAAAC)
 I (..\Device\include\hyperram_code.h)(0x69EEAAAA)
-F (..\main.cpp)(0x69EEEC0A)(-xc++ -std=c++17 --target=arm-arm-none-eabi -mcpu=cortex-m55 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Library/CMSIS/Core/Include -I ../../../../Library/Device/Nuvoton/M55M1/Include -I ../../../../Library/CMSIS/DSP/Include -I ../../../../Library/StdDriver/inc -I ../../../../Library/StdDriver/inc/npu -I ../../../../ThirdParty/openmv/omv/imlib -I ../../../../ThirdParty/openmv/omv/alloc -I ../../../../ThirdParty/openmv/omv/common -I ../../../../ThirdParty/openmv/omv/Lib -I ../../../../ThirdParty/tflite_micro -I ../../../../ThirdParty/tflite_micro/_deps/tensorflow-flatbuffers-src/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/application/api/common/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/log/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/math/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/application/main/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/profiler/include -I ../Device/include -I ../Model/include -I ../NPU/include -I ../Pattern/include -I ../ProfilerCounter/include -I .. -I ../../../../ThirdParty/tflite_micro/_deps/tensorflow-gemlowp-src -I ../../../../ThirdParty/FatFs/source-IC:/Users/austi/AppData/Local/Arm/Packs/Nuvoton/NuMicroM55_DFP/3.1.3/Library/Device/Nuvoton/M55M1/Include-IC:/Users/austi/AppData/Local/Keil_v5/ARM/CMSIS/Include-IC:/Users/austi/AppData/Local/Arm/Packs/Nuvoton/NuMicroM55_DFP/3.1.3/Device/M55M1/Include-D__UVISION_VERSION="543" -DNVT_VECTOR_ON_FLASH -DTF_LITE_STATIC_MEMORY -DARM_MATH_DSP -DARM_NPU -DACTIVATION_BUF_SZ="0x00100000"-o ./objects/main.o -MMD)
+F (..\main.cpp)(0x69EFF173)(-xc++ -std=c++17 --target=arm-arm-none-eabi -mcpu=cortex-m55 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Library/CMSIS/Core/Include -I ../../../../Library/Device/Nuvoton/M55M1/Include -I ../../../../Library/CMSIS/DSP/Include -I ../../../../Library/StdDriver/inc -I ../../../../Library/StdDriver/inc/npu -I ../../../../ThirdParty/openmv/omv/imlib -I ../../../../ThirdParty/openmv/omv/alloc -I ../../../../ThirdParty/openmv/omv/common -I ../../../../ThirdParty/openmv/omv/Lib -I ../../../../ThirdParty/tflite_micro -I ../../../../ThirdParty/tflite_micro/_deps/tensorflow-flatbuffers-src/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/application/api/common/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/log/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/math/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/application/main/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/profiler/include -I ../Device/include -I ../Model/include -I ../NPU/include -I ../Pattern/include -I ../ProfilerCounter/include -I .. -I ../../../../ThirdParty/tflite_micro/_deps/tensorflow-gemlowp-src -I ../../../../ThirdParty/FatFs/source-IC:/Users/austi/AppData/Local/Arm/Packs/Nuvoton/NuMicroM55_DFP/3.1.3/Library/Device/Nuvoton/M55M1/Include-IC:/Users/austi/AppData/Local/Keil_v5/ARM/CMSIS/Include-IC:/Users/austi/AppData/Local/Arm/Packs/Nuvoton/NuMicroM55_DFP/3.1.3/Device/M55M1/Include-D__UVISION_VERSION="543" -DNVT_VECTOR_ON_FLASH -DTF_LITE_STATIC_MEMORY -DARM_MATH_DSP -DARM_NPU -DACTIVATION_BUF_SZ="0x00100000"-o ./objects/main.o -MMD)
 I (..\BoardInit.hpp)(0x69EEAAAA)
 I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\log\include\log_macros.h)(0x69EEAABF)
 I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\application\main\include\BufAttributes.hpp)(0x69EEAABE)
@@ -2170,6 +2170,7 @@ I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\schema\schema_utils.h)(0x
 I (..\YOLOv8nPosePostProcessing.hpp)(0x69EEAAAA)
 I (..\PoseResult.hpp)(0x69EEAAAA)
 I (..\Model\include\RepCounterModel.hpp)(0x69EEAAAC)
+I (..\Model\include\ErrorClassModel.hpp)(0x69EFD947)
 I (..\..\..\..\ThirdParty\openmv\omv\imlib\imlib.h)(0x69EEAAC0)
 I (..\..\..\..\Library\CMSIS\DSP\Include\arm_math.h)(0x69EEAA8F)
 I (..\..\..\..\Library\CMSIS\DSP\Include\arm_math_types.h)(0x69EEAA8F)
@@ -2766,6 +2767,88 @@ I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\schema\schema_utils.h)(0x
 I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\log\include\log_macros.h)(0x69EEAABF)
 F (.\RepCounterModel.cpp)(0x69EEAAAA)(-xc++ -std=c++17 --target=arm-arm-none-eabi -mcpu=cortex-m55 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Library/CMSIS/Core/Include -I ../../../../Library/Device/Nuvoton/M55M1/Include -I ../../../../Library/CMSIS/DSP/Include -I ../../../../Library/StdDriver/inc -I ../../../../Library/StdDriver/inc/npu -I ../../../../ThirdParty/openmv/omv/imlib -I ../../../../ThirdParty/openmv/omv/alloc -I ../../../../ThirdParty/openmv/omv/common -I ../../../../ThirdParty/openmv/omv/Lib -I ../../../../ThirdParty/tflite_micro -I ../../../../ThirdParty/tflite_micro/_deps/tensorflow-flatbuffers-src/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/application/api/common/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/log/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/math/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/application/main/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/profiler/include -I ../Device/include -I ../Model/include -I ../NPU/include -I ../Pattern/include -I ../ProfilerCounter/include -I .. -I ../../../../ThirdParty/tflite_micro/_deps/tensorflow-gemlowp-src -I ../../../../ThirdParty/FatFs/source-IC:/Users/austi/AppData/Local/Arm/Packs/Nuvoton/NuMicroM55_DFP/3.1.3/Library/Device/Nuvoton/M55M1/Include-IC:/Users/austi/AppData/Local/Keil_v5/ARM/CMSIS/Include-IC:/Users/austi/AppData/Local/Arm/Packs/Nuvoton/NuMicroM55_DFP/3.1.3/Device/M55M1/Include-D__UVISION_VERSION="543" -DNVT_VECTOR_ON_FLASH -DTF_LITE_STATIC_MEMORY -DARM_MATH_DSP -DARM_NPU -DACTIVATION_BUF_SZ="0x00100000"-o ./objects/repcountermodel.o -MMD)
 I (..\Model\include\RepCounterModel.hpp)(0x69EEAAAC)
+I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\application\api\common\include\Model.hpp)(0x69EEAABD)
+I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\application\api\common\include\TensorFlowLiteMicro.hpp)(0x69EEAABD)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_mutable_op_resolver.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\c\common.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\core\c\common.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\core\c\c_api_types.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\core\api\flatbuffer_conversions.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\core\api\error_reporter.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\schema\schema_generated.h)(0x69EEAACE)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\flatbuffers.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\array.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\base.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\stl_emulation.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\vector.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\buffer.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\buffer_ref.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\verifier.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\detached_buffer.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\allocator.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\default_allocator.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\flatbuffer_builder.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\string.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\struct.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\table.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\vector_downward.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\compatibility.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\op_macros.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_log.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\compatibility.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\add.h)(0x69EEAACA)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\c\builtin_op_data.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\core\c\builtin_op_data.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_common.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\conv.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\types.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\runtime_shape.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\depthwise_conv.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\ethosu.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\fully_connected.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\micro_ops.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\signal\micro\kernels\irfft.h)(0x69EEAAC3)
+I (..\..\..\..\ThirdParty\tflite_micro\signal\micro\kernels\rfft.h)(0x69EEAAC3)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\mul.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\pooling.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\reference\integer_ops\pooling.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\common.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-gemlowp-src\fixedpoint\fixedpoint.h)(0x69EEAADB)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-gemlowp-src\fixedpoint\..\internal\detect_platform.h)(0x69EEAADB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\core\macros.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\cppmath.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\optimized\neon_check.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\reference\pooling.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\quantization_util.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\internal\tensor_ctypes.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\kernel_util.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\kernels\padding.h)(0x69EEAAC5)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\kernel_util.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_context.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_graph.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_resource_variable.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_allocator.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\arena_allocator\single_arena_buffer_allocator.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\arena_allocator\ibuffer_allocator.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\c\c_api_types.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\flatbuffer_utils.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\flexbuffers.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\_deps\tensorflow-flatbuffers-src\include\flatbuffers\util.h)(0x69EEAAD2)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\memory_planner\micro_memory_planner.h)(0x69EEAACD)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\tflite_bridge\flatbuffer_conversions_bridge.h)(0x69EEAACD)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\reduce.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\softmax.h)(0x69EEAACB)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\kernels\transpose_conv.h)(0x69EEAACC)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_op_resolver.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_interpreter.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_interpreter_context.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_interpreter_graph.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_profiler_interface.h)(0x69EEAAC6)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\portable_type_to_tflitetype.h)(0x69EEAAC4)
+I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\schema\schema_utils.h)(0x69EEAACE)
+I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\log\include\log_macros.h)(0x69EEAABF)
+F (.\ErrorClassModel.cpp)(0x69EFD947)(-xc++ -std=c++17 --target=arm-arm-none-eabi -mcpu=cortex-m55 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Library/CMSIS/Core/Include -I ../../../../Library/Device/Nuvoton/M55M1/Include -I ../../../../Library/CMSIS/DSP/Include -I ../../../../Library/StdDriver/inc -I ../../../../Library/StdDriver/inc/npu -I ../../../../ThirdParty/openmv/omv/imlib -I ../../../../ThirdParty/openmv/omv/alloc -I ../../../../ThirdParty/openmv/omv/common -I ../../../../ThirdParty/openmv/omv/Lib -I ../../../../ThirdParty/tflite_micro -I ../../../../ThirdParty/tflite_micro/_deps/tensorflow-flatbuffers-src/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/application/api/common/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/log/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/math/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/application/main/include -I ../../../../ThirdParty/ml-embedded-evaluation-kit/source/profiler/include -I ../Device/include -I ../Model/include -I ../NPU/include -I ../Pattern/include -I ../ProfilerCounter/include -I .. -I ../../../../ThirdParty/tflite_micro/_deps/tensorflow-gemlowp-src -I ../../../../ThirdParty/FatFs/source-IC:/Users/austi/AppData/Local/Arm/Packs/Nuvoton/NuMicroM55_DFP/3.1.3/Library/Device/Nuvoton/M55M1/Include-IC:/Users/austi/AppData/Local/Keil_v5/ARM/CMSIS/Include-IC:/Users/austi/AppData/Local/Arm/Packs/Nuvoton/NuMicroM55_DFP/3.1.3/Device/M55M1/Include-D__UVISION_VERSION="543" -DNVT_VECTOR_ON_FLASH -DTF_LITE_STATIC_MEMORY -DARM_MATH_DSP -DARM_NPU -DACTIVATION_BUF_SZ="0x00100000"-o ./objects/errorclassmodel.o -MMD)
+I (..\Model\include\ErrorClassModel.hpp)(0x69EFD947)
 I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\application\api\common\include\Model.hpp)(0x69EEAABD)
 I (..\..\..\..\ThirdParty\ml-embedded-evaluation-kit\source\application\api\common\include\TensorFlowLiteMicro.hpp)(0x69EEAABD)
 I (..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\micro\micro_mutable_op_resolver.h)(0x69EEAAC6)

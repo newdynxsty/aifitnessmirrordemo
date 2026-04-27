@@ -84,6 +84,7 @@
   ..\..\..\..\ThirdParty\tflite_micro\tensorflow\lite\schema\schema_utils.h \
   ..\YOLOv8nPosePostProcessing.hpp ..\PoseResult.hpp \
   ..\Model\include\RepCounterModel.hpp \
+  ..\Model\include\ErrorClassModel.hpp \
   ..\..\..\..\ThirdParty\openmv\omv\imlib\imlib.h \
   ..\..\..\..\Library\CMSIS\DSP\Include\arm_math.h \
   ..\..\..\..\Library\CMSIS\DSP\Include\arm_math_types.h \
