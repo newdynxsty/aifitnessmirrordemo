@@ -1,16 +1,38 @@
-# PoseLandmark_YOLOv8n
-A demonstration sample for YOLOv8n-pose model
-## Requirement
-1. Keil uVision5
-## Howto
-1. Build by Keil
-2. Copy Model/YOLOv8n-pose.tflite file to SD card root directory.
-3. Insert SD card to NUMAKER-M55M1 board
-4. Run
-## Performance
-System clock: 220MHz
-| Model |Input Dimension | ROM (KB) | RAM (KB) | Inference Rate (inf/sec) |  
-|:------|:---------------|:--------|:--------|:-------------------------|
-|YOLOv8n-pose|192x192x3|2240|300| 32.7|
+# AI Fitness Mirror Firmware
 
-Total frame rate: 17 fps
+Keil uVision firmware project for the Nuvoton M55 AI fitness mirror demo.
+
+## Project
+
+Open this file in Keil uVision:
+
+```text
+KEIL/PoseLandmark.uvprojx
+```
+
+The application loads three TensorFlow Lite models from the SD card:
+
+- `YOLOv8n-pose.tflite`
+- `rep_counter_int8_vela.tflite`
+- `workout_error_classifier_int8_vela.tflite`
+
+The repo root contains `sd_card_root/` with these files already collected.
+
+## Build And Flash
+
+1. Prepare a FAT32 SD card.
+2. Copy the three `.tflite` files from repo-root `sd_card_root/` to the SD card root.
+3. Insert the SD card into the board.
+4. Open `KEIL/PoseLandmark.uvprojx` in Keil uVision.
+5. Build with `Project > Build Target`.
+6. Flash with `Flash > Download`.
+7. Reset the board.
+
+The demo expects the model files at `0:\` with the exact names above.
+
+## Runtime
+
+The display shows the camera feed, pose landmarks, rep/demo status, and compact error-classifier output:
+
+- `ERR:<class>` - predicted workout/form class
+- `EC:<confidence>` - error classifier confidence
