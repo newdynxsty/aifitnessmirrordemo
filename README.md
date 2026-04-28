@@ -65,6 +65,8 @@ If Keil reports that a model file cannot be prepared, re-check the SD card root 
 
 Example classes include `JJ ARM LOW`, `JJ LEG NAR`, `PUSH KNEE`, `SIT CORE`, and `SQUAT LOW`.
 
+NOTE: Most recent firmware version may have slightly different labels. 
+
 ## Firmware Model Integration
 
 The model file paths are defined in:
@@ -82,8 +84,3 @@ keil_firmware/SampleCode/MachineLearning/AIFitnessMirror/KEIL/ErrorClassModel.cp
 
 The error classifier consumes the same 51-value pose feature vector as the rep counter: 17 pose keypoints, each represented as normalized `x`, normalized `y`, and confidence.
 
-## Current Notes
-
-- This repo includes the full Keil firmware tree and the three SD-card model files required for the demo.
-- The error-class model integration is currently a proof of concept: it runs on-device and displays predicted class/confidence.
-- Further polish can improve the display copy and stabilize per-exercise UX, but the handoff path is now explicit: build firmware, copy `sd_card_root/` to SD card, flash, run.
