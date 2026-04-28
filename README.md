@@ -67,6 +67,103 @@ Example classes include `JJ ARM LOW`, `JJ LEG NAR`, `PUSH KNEE`, `SIT CORE`, and
 
 NOTE: Most recent firmware version may have slightly different labels. 
 
+## Training The Error Classifier
+
+The workout error classifier is trained from labeled videos in:
+
+```text
+error-classes-model/Error Classes Dataset/
+```
+
+Each subfolder name is treated as the label. The pipeline collapses left/right variants into one canonical class, so folders like `Push Ups - Left - Knees Touching Ground` and `Push Ups - Right - Knees Touching Ground` become the same model class.
+
+### 1. Create A Python Environment
+
+From the repo root:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install \
+  tensorflow tf-keras ultralytics opencv-python scikit-learn matplotlib numpy \
+  ethos-u-vela==4.0.0
+```
+
+If the machine is offline, install these packages ahead of time and place a local desktop YOLO pose model at a known path. The training pipeline uses `yolov8n-pose.pt` for desktop feature extraction. Do not use the board `YOLOv8n-pose.tflite` for desktop training; that file is Vela/Ethos-U compiled.
+
+### 2. Train And Export INT8 TFLite
+
+Run this from `error-classes-model/`:
+
+```bash
+cd error-classes-model
+
+../.venv/bin/python workout_error_pipeline.py \
+  --dataset-dir "Error Classes Dataset" \
+  --pose-model yolov8n-pose.pt \
+  --output-dir artifacts/workout_error_classifier
+```
+
+Useful flags:
+
+- `--force-reextract` rebuilds pose features from videos instead of using the cache.
+- `--sample-fps 3` controls how many frames are sampled per second.
+- `--max-frames-per-clip 96` caps extraction per video.
+- `--jitter-augmentations 1` controls light feature-space augmentation.
+
+The script produces:
+
+```text
+error-classes-model/artifacts/workout_error_classifier/
+├── workout_error_classifier.keras
+├── workout_error_classifier_int8.tflite
+├── workout_error_labels.json
+├── training_summary.json
+└── validation_confusion_matrix.png
+```
+
+### 3. Compile The Error Classifier With Vela
+
+From `error-classes-model/`:
+
+```bash
+../.venv/bin/vela \
+  artifacts/workout_error_classifier/workout_error_classifier_int8.tflite \
+  --accelerator-config ethos-u55-256 \
+  --output-dir artifacts/workout_error_classifier
+```
+
+This creates:
+
+```text
+error-classes-model/artifacts/workout_error_classifier/workout_error_classifier_int8_vela.tflite
+```
+
+### 4. Update The SD Card Payload
+
+Copy the newly compiled model into the repo SD-card bundle:
+
+```bash
+cp artifacts/workout_error_classifier/workout_error_classifier_int8_vela.tflite \
+  ../sd_card_root/workout_error_classifier_int8_vela.tflite
+```
+
+Then copy all three files from `sd_card_root/` to the SD card root before running the board demo.
+
+### 5. Optional Desktop Test
+
+Before deploying to the board, run the desktop demo against a local video:
+
+```bash
+cd error-classes-model
+
+../.venv/bin/python demo_workout_error_classifier.py \
+  --pose-model yolov8n-pose.pt \
+  --classifier-model artifacts/workout_error_classifier/workout_error_classifier.keras \
+  --labels artifacts/workout_error_classifier/workout_error_labels.json \
+  --source "Error Classes Dataset/Push Ups - Left - Knees Touching Ground/AustinBadPushup.MOV"
+```
+
 ## Firmware Model Integration
 
 The model file paths are defined in:
@@ -83,4 +180,3 @@ keil_firmware/SampleCode/MachineLearning/AIFitnessMirror/KEIL/ErrorClassModel.cp
 ```
 
 The error classifier consumes the same 51-value pose feature vector as the rep counter: 17 pose keypoints, each represented as normalized `x`, normalized `y`, and confidence.
-
