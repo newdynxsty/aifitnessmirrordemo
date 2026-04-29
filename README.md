@@ -1,6 +1,6 @@
 # AI Fitness Mirror Demo
 
-Firmware and model bundle for the Nuvoton M55 AI fitness mirror demo. The demo runs YOLOv8n pose detection on the camera stream, feeds pose keypoints into a rep counter and a workout-form error classifier, and draws the result on the display.
+Firmware and model bundle for the Nuvoton M55 AI fitness mirror demo. The demo runs YOLOv8n pose detection on the camera stream, feeds pose keypoints into a rep counter and a workout-form error classifier, and draws the result on the display. **The demo currently only works with jumping jacks and sit ups. Push ups, squats, and lunges are currently in development.**
 
 ## Repository Layout
 
