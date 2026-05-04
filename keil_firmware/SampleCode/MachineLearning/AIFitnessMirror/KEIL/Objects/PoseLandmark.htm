@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\PoseLandmark.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\PoseLandmark.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Mon Apr 27 16:30:02 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Mon May  4 16:22:41 2026
 <BR><P>
-<H3>Maximum Stack Usage =       2408 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =       2400 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; BoardInit() &rArr; HyperRAM_Init &rArr; HyperRAM_TrimDLLDelayNumber &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 <P>
@@ -390,7 +390,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2cc]"></a>imlib_draw_rectangle</STRONG> (Thumb, 4342 bytes, Stack size 172 bytes, draw.o(.text.imlib_draw_rectangle))
+<P><STRONG><a name="[2cb]"></a>imlib_draw_rectangle</STRONG> (Thumb, 4342 bytes, Stack size 172 bytes, draw.o(.text.imlib_draw_rectangle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = imlib_draw_rectangle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -428,13 +428,13 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[36d]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[36c]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[36e]"></a>__scatterload_loop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[36d]"></a>__scatterload_loop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[36f]"></a>__decompress</STRONG> (Thumb, 90 bytes, Stack size unknown bytes, __dczerorl2.o(!!dczerorl2), UNUSED)
+<P><STRONG><a name="[36e]"></a>__decompress</STRONG> (Thumb, 90 bytes, Stack size unknown bytes, __dczerorl2.o(!!dczerorl2), UNUSED)
 
-<P><STRONG><a name="[370]"></a>__decompress1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(!!dczerorl2), UNUSED)
+<P><STRONG><a name="[36f]"></a>__decompress1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(!!dczerorl2), UNUSED)
 
 <P><STRONG><a name="[143]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -442,9 +442,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[371]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, __scatter.o(!!handler_null), UNUSED)
+<P><STRONG><a name="[370]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, __scatter.o(!!handler_null), UNUSED)
 
-<P><STRONG><a name="[372]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[371]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[144]"></a>_printf_n</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_n.o(.ARM.Collect$$_printf_percent$$00000001))
 <BR><BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_charcount
@@ -489,7 +489,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_hex
 </UL>
 
-<P><STRONG><a name="[373]"></a>_printf_ll</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007))
+<P><STRONG><a name="[372]"></a>_printf_ll</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007))
 
 <P><STRONG><a name="[14e]"></a>_printf_i</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_i.o(.ARM.Collect$$_printf_percent$$00000008))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
@@ -561,7 +561,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_ll_hex
 </UL>
 
-<P><STRONG><a name="[374]"></a>_printf_l</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_l.o(.ARM.Collect$$_printf_percent$$00000012))
+<P><STRONG><a name="[373]"></a>_printf_l</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_l.o(.ARM.Collect$$_printf_percent$$00000012))
 
 <P><STRONG><a name="[15e]"></a>_printf_c</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_c.o(.ARM.Collect$$_printf_percent$$00000013))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
@@ -591,7 +591,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_wstring
 </UL>
 
-<P><STRONG><a name="[375]"></a>_printf_percent_end</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017))
+<P><STRONG><a name="[374]"></a>_printf_percent_end</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017))
 
 <P><STRONG><a name="[179]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
@@ -608,21 +608,21 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc
 </UL>
 
-<P><STRONG><a name="[376]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
+<P><STRONG><a name="[375]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
 
-<P><STRONG><a name="[377]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[376]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[378]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[377]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
 <P><STRONG><a name="[16a]"></a>__rt_lib_init_lc_common</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 <BR><BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
 </UL>
 
-<P><STRONG><a name="[379]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
+<P><STRONG><a name="[378]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
 
-<P><STRONG><a name="[37a]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[379]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
-<P><STRONG><a name="[37b]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[37a]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
 <P><STRONG><a name="[16c]"></a>__rt_lib_init_lc_ctype_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000014))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
@@ -631,9 +631,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_ctype
 </UL>
 
-<P><STRONG><a name="[37c]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[37b]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[37d]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[37c]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
 <P><STRONG><a name="[16d]"></a>__rt_lib_init_lc_numeric_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000018))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
@@ -646,19 +646,19 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_atexit_init
 </UL>
 
-<P><STRONG><a name="[37e]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[37d]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[37f]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[37e]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[380]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[37f]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[381]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[380]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[382]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[381]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[383]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[382]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[384]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[383]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
 <P><STRONG><a name="[171]"></a>__rt_lib_init_stdio_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000026))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184 + Unknown Stack Size
@@ -667,9 +667,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 </UL>
 
-<P><STRONG><a name="[385]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[384]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[386]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[385]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
 <P><STRONG><a name="[173]"></a>__rt_lib_init_cpp_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
@@ -678,13 +678,13 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cpp_initialize__aeabi_
 </UL>
 
-<P><STRONG><a name="[387]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[386]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[388]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
+<P><STRONG><a name="[387]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
 
-<P><STRONG><a name="[389]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
+<P><STRONG><a name="[388]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
 
-<P><STRONG><a name="[38a]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
+<P><STRONG><a name="[389]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
 
 <P><STRONG><a name="[17e]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
@@ -698,7 +698,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_finalize
 </UL>
 
-<P><STRONG><a name="[38b]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[38a]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
 <P><STRONG><a name="[176]"></a>__rt_lib_shutdown_stdio_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000003))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
@@ -707,42 +707,42 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
 </UL>
 
-<P><STRONG><a name="[38c]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[38b]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[38d]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[38c]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[38e]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[38d]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[38f]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[38e]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[390]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[38f]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[391]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[390]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[141]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 <LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
-<P><STRONG><a name="[392]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[391]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
-<P><STRONG><a name="[393]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry7.o(.ARM.Collect$$rtentry$$00000007))
+<P><STRONG><a name="[392]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry7.o(.ARM.Collect$$rtentry$$00000007))
 
 <P><STRONG><a name="[178]"></a>__rt_entry_li</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000A))
 <BR><BR>[Calls]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[394]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[393]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[17a]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 2408 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 2400 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; BoardInit() &rArr; HyperRAM_Init &rArr; HyperRAM_TrimDLLDelayNumber &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
-<P><STRONG><a name="[395]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[394]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[1e2]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -752,7 +752,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[396]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[395]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[17f]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
@@ -770,9 +770,9 @@ Global Symbols
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__read_errno
 </UL>
 
-<P><STRONG><a name="[397]"></a>__errno$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
+<P><STRONG><a name="[396]"></a>__errno$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
 
-<P><STRONG><a name="[398]"></a>__rt_errno_addr$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
+<P><STRONG><a name="[397]"></a>__rt_errno_addr$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[181]"></a>malloc</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, h1_alloc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
@@ -780,8 +780,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_create
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
+<BR>[Called By]<UL><LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_create
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
 <LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nu_pdma_transfer
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator_new_impl(unsigned int)
 <LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
@@ -794,7 +794,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
+<BR>[Called By]<UL><LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nu_pdma_free_sgtbls
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator delete(void*)
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal
@@ -849,14 +849,14 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_release_driver
-<LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
-<LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
+<LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 <LI><a href="#[2ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_request_power
-<LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
-<LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_verify_optimizer_config
-<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_print_err_status
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
+<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
+<LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_verify_optimizer_config
+<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_print_err_status
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
 </UL>
 
 <P><STRONG><a name="[18a]"></a>__2sprintf</STRONG> (Thumb, 38 bytes, Stack size 32 bytes, __2sprintf.o(.text))
@@ -1026,7 +1026,7 @@ Global Symbols
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroMutableOpResolver&lang;2u&rang;::GetOpDataParser(tflite::BuiltinOperator) const
 <LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplier(double, int*, int*)
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
-<LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort_message
 </UL>
 
@@ -1047,9 +1047,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::Init(unsigned char*, unsigned int, unsigned char const*, unsigned int, tflite::MicroAllocator*)
 <LI><a href="#[2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_Set_EVTYPER
-<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_hw_info
-<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_driver_version
-<LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_run_command_stream
+<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_hw_info
+<LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_driver_version
+<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_run_command_stream
 <LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::LogTensorInfo(TfLiteTensor*)
 <LI><a href="#[276]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::LogInterpreterInfo()
 <LI><a href="#[25c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::GetOutputTensor(unsigned int) const
@@ -1057,13 +1057,7 @@ Global Symbols
 <LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::GetInputTensor(unsigned int) const
 </UL>
 
-<P><STRONG><a name="[399]"></a>__assert</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, assert.o(.text), UNUSED)
-
-<P><STRONG><a name="[2c9]"></a>strstr</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, strstr.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strstr
-</UL>
-<BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
+<P><STRONG><a name="[398]"></a>__assert</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, assert.o(.text), UNUSED)
 
 <P><STRONG><a name="[212]"></a>memcmp</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, memcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = memcmp
@@ -1084,10 +1078,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;follow_path
 </UL>
 
-<P><STRONG><a name="[345]"></a>strncmp</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, strncmp.o(.text))
+<P><STRONG><a name="[2ca]"></a>strncmp</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, strncmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = strncmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[31d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AllocationInfoBuilder::GetOfflinePlannedOffsets(int const**)
+<BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[31d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AllocationInfoBuilder::GetOfflinePlannedOffsets(int const**)
 </UL>
 
 <P><STRONG><a name="[1a3]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text))
@@ -1103,7 +1098,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 
-<P><STRONG><a name="[39a]"></a>_memcpy_lastbytes</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_v6.o(.text), UNUSED)
+<P><STRONG><a name="[399]"></a>_memcpy_lastbytes</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_v6.o(.text), UNUSED)
 
 <P><STRONG><a name="[27b]"></a>__aeabi_memmove</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memmove_v6.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[276]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::LogInterpreterInfo()
@@ -1114,7 +1109,7 @@ Global Symbols
 <LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 
-<P><STRONG><a name="[39b]"></a>__memmove_lastfew</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memmove_v6.o(.text), UNUSED)
+<P><STRONG><a name="[39a]"></a>__memmove_lastfew</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memmove_v6.o(.text), UNUSED)
 
 <P><STRONG><a name="[1a1]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
@@ -1135,11 +1130,11 @@ Global Symbols
 <LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
 </UL>
 
-<P><STRONG><a name="[39c]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[39b]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[39d]"></a>__rt_memcpy_w</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[39c]"></a>__rt_memcpy_w</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[39e]"></a>_memcpy_lastbytes_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[39d]"></a>_memcpy_lastbytes_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
 
 <P><STRONG><a name="[297]"></a>__aeabi_memmove4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memmove_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memmove4
@@ -1147,7 +1142,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;void std::__2::vector&lang;S_KEY_POINT, std::__2::allocator&lang;S_KEY_POINT&rang;&rang;::__assign_with_size[abi:nn200000]&lang;S_KEY_POINT*, S_KEY_POINT*&rang;(S_KEY_POINT*, S_KEY_POINT*, int)
 </UL>
 
-<P><STRONG><a name="[39f]"></a>__aeabi_memmove8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memmove_w.o(.text), UNUSED)
+<P><STRONG><a name="[39e]"></a>__aeabi_memmove8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memmove_w.o(.text), UNUSED)
 
 <P><STRONG><a name="[1a5]"></a>__rt_memmove_w</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, rt_memmove_w.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
@@ -1157,7 +1152,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memmove
 </UL>
 
-<P><STRONG><a name="[3a0]"></a>__memmove_lastfew_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memmove_w.o(.text), UNUSED)
+<P><STRONG><a name="[39f]"></a>__memmove_lastfew_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memmove_w.o(.text), UNUSED)
 
 <P><STRONG><a name="[1a6]"></a>__aeabi_memset</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, aeabi_memset.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memset &rArr; _memset &rArr; _memset_w
@@ -1165,7 +1160,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroInterpreterGraph::ResetVariableTensors()
-<LI><a href="#[346]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroResourceVariables::ResetAll()
+<LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroResourceVariables::ResetAll()
 </UL>
 
 <P><STRONG><a name="[1a8]"></a>__aeabi_memset4</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, aeabi_memset4.o(.text))
@@ -1176,13 +1171,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::GreedyMemoryPlanner::PrintMemoryPlan()
 </UL>
 
-<P><STRONG><a name="[3a1]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_memset4.o(.text), UNUSED)
+<P><STRONG><a name="[3a0]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_memset4.o(.text), UNUSED)
 
 <P><STRONG><a name="[284]"></a>__aeabi_memclr</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::Init(unsigned char*, unsigned int, unsigned char const*, unsigned int, tflite::MicroAllocator*)
 </UL>
 
-<P><STRONG><a name="[3a2]"></a>__rt_memclr</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr.o(.text), UNUSED)
+<P><STRONG><a name="[3a1]"></a>__rt_memclr</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr.o(.text), UNUSED)
 
 <P><STRONG><a name="[1a7]"></a>_memset</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, rt_memclr.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = _memset &rArr; _memset_w
@@ -1215,7 +1210,7 @@ Global Symbols
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;framebuffer_init0
 </UL>
 
-<P><STRONG><a name="[3a3]"></a>__rt_memclr_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[3a2]"></a>__rt_memclr_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
 
 <P><STRONG><a name="[1a9]"></a>_memset_w</STRONG> (Thumb, 74 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = _memset_w
@@ -1252,13 +1247,13 @@ Global Symbols
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc
 </UL>
 
-<P><STRONG><a name="[3a4]"></a>__use_no_heap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
+<P><STRONG><a name="[3a3]"></a>__use_no_heap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
 
-<P><STRONG><a name="[3a5]"></a>__heap$guard</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
+<P><STRONG><a name="[3a4]"></a>__heap$guard</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
 
-<P><STRONG><a name="[3a6]"></a>_terminate_user_alloc</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, init_alloc.o(.text), UNUSED)
+<P><STRONG><a name="[3a5]"></a>_terminate_user_alloc</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, init_alloc.o(.text), UNUSED)
 
-<P><STRONG><a name="[3a7]"></a>_init_user_alloc</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, init_alloc.o(.text), UNUSED)
+<P><STRONG><a name="[3a6]"></a>_init_user_alloc</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, init_alloc.o(.text), UNUSED)
 
 <P><STRONG><a name="[183]"></a>__Heap_Full</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, init_alloc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
@@ -1289,7 +1284,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc
 </UL>
 
-<P><STRONG><a name="[3a8]"></a>__Heap_DescSize</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, h1_init.o(.text), UNUSED)
+<P><STRONG><a name="[3a7]"></a>__Heap_DescSize</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, h1_init.o(.text), UNUSED)
 
 <P><STRONG><a name="[1ae]"></a>posix_memalign</STRONG> (Thumb, 174 bytes, Stack size 32 bytes, h1_memalign.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
@@ -1540,7 +1535,7 @@ Global Symbols
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
 </UL>
 
-<P><STRONG><a name="[3a9]"></a>_maybe_terminate_alloc</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, maybetermalloc1.o(.text), UNUSED)
+<P><STRONG><a name="[3a8]"></a>_maybe_terminate_alloc</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, maybetermalloc1.o(.text), UNUSED)
 
 <P><STRONG><a name="[1ca]"></a>_printf_fp_hex_real</STRONG> (Thumb, 756 bytes, Stack size 72 bytes, _printf_fp_hex.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = _printf_fp_hex_real &rArr; _printf_fp_infnan &rArr; _printf_post_padding
@@ -1626,7 +1621,7 @@ Global Symbols
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
-<P><STRONG><a name="[3aa]"></a>__flsbuf_wide</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, flsbuf.o(.text), UNUSED)
+<P><STRONG><a name="[3a9]"></a>__flsbuf_wide</STRONG> (Thumb, 0 bytes, Stack size 40 bytes, flsbuf.o(.text), UNUSED)
 
 <P><STRONG><a name="[1c5]"></a>setvbuf</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, setvbuf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = setvbuf
@@ -1665,7 +1660,7 @@ Global Symbols
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
 </UL>
 
-<P><STRONG><a name="[3ab]"></a>fclose</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, fclose.o(.text), UNUSED)
+<P><STRONG><a name="[3aa]"></a>fclose</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, fclose.o(.text), UNUSED)
 
 <P><STRONG><a name="[1d8]"></a>_c16rtomb</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, _c16rtomb.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ctype_table
@@ -1747,7 +1742,7 @@ Global Symbols
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen
 </UL>
 
-<P><STRONG><a name="[3ac]"></a>fseek</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, fseek.o(.text), UNUSED)
+<P><STRONG><a name="[3ab]"></a>fseek</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, fseek.o(.text), UNUSED)
 
 <P><STRONG><a name="[1cf]"></a>_seterr</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stdio.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writebuf
@@ -1791,7 +1786,7 @@ Global Symbols
 <LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__flsbuf_byte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_reserve_driver
-<LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 </UL>
 
 <P><STRONG><a name="[17c]"></a>exit</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, exit.o(.text))
@@ -1871,7 +1866,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fseek
 </UL>
 
-<P><STRONG><a name="[3ad]"></a>ftell</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, ftell.o(.text), UNUSED)
+<P><STRONG><a name="[3ac]"></a>ftell</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, ftell.o(.text), UNUSED)
 
 <P><STRONG><a name="[77]"></a>CCAP_IRQHandler</STRONG> (Thumb, 96 bytes, Stack size 0 bytes, imagesensor.o(.text.CCAP_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_m55m1.o(RESET)
@@ -2087,7 +2082,7 @@ Global Symbols
 <P><STRONG><a name="[f]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_m55m1.o(.text.Default_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_m55m1.o(RESET)
 </UL>
-<P><STRONG><a name="[3ae]"></a>Default_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_m55m1.o(.text.Default_Handler), UNUSED)
+<P><STRONG><a name="[3ad]"></a>Default_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_m55m1.o(.text.Default_Handler), UNUSED)
 
 <P><STRONG><a name="[80]"></a>EADC00_IRQHandler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_m55m1.o(.text.Default_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_m55m1.o(RESET)
@@ -2422,7 +2417,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2ca]"></a>Display_ClearRect</STRONG> (Thumb, 88 bytes, Stack size 32 bytes, display.o(.text.Display_ClearRect))
+<P><STRONG><a name="[2c9]"></a>Display_ClearRect</STRONG> (Thumb, 88 bytes, Stack size 32 bytes, display.o(.text.Display_ClearRect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Display_ClearRect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2458,7 +2453,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[2cb]"></a>Display_PutText</STRONG> (Thumb, 182 bytes, Stack size 56 bytes, display.o(.text.Display_PutText))
+<P><STRONG><a name="[2cc]"></a>Display_PutText</STRONG> (Thumb, 182 bytes, Stack size 56 bytes, display.o(.text.Display_PutText))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Display_PutText
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -3079,7 +3074,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_m55m1.o(RESET)
 </UL>
-<P><STRONG><a name="[3af]"></a>UART_ClearIntFlag</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, uart.o(.text.UART_ClearIntFlag), UNUSED)
+<P><STRONG><a name="[3ae]"></a>UART_ClearIntFlag</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, uart.o(.text.UART_ClearIntFlag), UNUSED)
 
 <P><STRONG><a name="[2c2]"></a>UART_EnableInt</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, uart.o(.text.UART_EnableInt))
 <BR><BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -3218,7 +3213,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3b0]"></a>arm::app::yolov8n_pose::YOLOv8nPosePostProcessing::YOLOv8nPosePostProcessing__sub_object(arm::app::YOLOv8nPoseModel*, float)</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, yolov8nposepostprocessing.o(.text._ZN3arm3app12yolov8n_pose25YOLOv8nPosePostProcessingC2EPNS0_16YOLOv8nPoseModelEf), UNUSED)
+<P><STRONG><a name="[3af]"></a>arm::app::yolov8n_pose::YOLOv8nPosePostProcessing::YOLOv8nPosePostProcessing__sub_object(arm::app::YOLOv8nPoseModel*, float)</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, yolov8nposepostprocessing.o(.text._ZN3arm3app12yolov8n_pose25YOLOv8nPosePostProcessingC2EPNS0_16YOLOv8nPoseModelEf), UNUSED)
 
 <P><STRONG><a name="[a3]"></a>arm::app::ErrorClassModel::GetOpResolver()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, errorclassmodel.o(.text._ZN3arm3app15ErrorClassModel13GetOpResolverEv))
 <BR>[Address Reference Count : 1]<UL><LI> errorclassmodel.o(.rodata._ZTVN3arm3app15ErrorClassModelE)
@@ -4190,13 +4185,13 @@ Global Symbols
 <P><STRONG><a name="[2]"></a>lt7381_write_reg</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, lcd_lt7381.o(.text.lt7381_write_reg))
 <BR>[Address Reference Count : 1]<UL><LI> lcd_lt7381.o(.data.g_s_WVGA_LT7381)
 </UL>
-<P><STRONG><a name="[17b]"></a>main</STRONG> (Thumb, 4944 bytes, Stack size 1552 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 2408 + Unknown Stack Size
+<P><STRONG><a name="[17b]"></a>main</STRONG> (Thumb, 4592 bytes, Stack size 1544 bytes, main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 2400 + Unknown Stack Size
 <LI>Call Chain = main &rArr; BoardInit() &rArr; HyperRAM_Init &rArr; HyperRAM_TrimDLLDelayNumber &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::Init(unsigned char*, unsigned int, unsigned char const*, unsigned int, tflite::MicroAllocator*)
 <LI><a href="#[285]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::Model__sub_object()
-<LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_PutText
+<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_PutText
 <LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator delete(void*, unsigned int)
 <LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PrepareModelToHyperRAM(char const*, unsigned int)
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BoardInit()
@@ -4211,9 +4206,9 @@ Global Symbols
 <LI><a href="#[1f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_FillRect
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;imlib_draw_line
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;imlib_draw_circle
-<LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;imlib_draw_rectangle
+<LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;imlib_draw_rectangle
 <LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;void std::__2::vector&lang;S_KEY_POINT, std::__2::allocator&lang;S_KEY_POINT&rang;&rang;::__assign_with_size[abi:nn200000]&lang;S_KEY_POINT*, S_KEY_POINT*&rang;(S_KEY_POINT*, S_KEY_POINT*, int)
-<LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_ClearRect
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Display_ClearRect
 <LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::yolov8n_pose::YOLOv8nPosePostProcessing::RunPostProcessing(unsigned int, unsigned int, unsigned int, unsigned int, std::__2::vector&lang;arm::app::yolov8n_pose::PoseResult, std::__2::allocator&lang;arm::app::yolov8n_pose::PoseResult&rang;&rang;&)
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::RunInference()
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;imlib_nvt_scale
@@ -4236,8 +4231,8 @@ Global Symbols
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned int)
 <LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroInterpreter::~MicroInterpreter()
 <LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strstr
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
@@ -4457,13 +4452,13 @@ Global Symbols
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::(anonymous namespace)::SoftmaxEval(TfLiteContext*, TfLiteNode*)
 </UL>
 
-<P><STRONG><a name="[3b1]"></a>__mathlib_expf</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, expf.o(i.__hardfp_expf), UNUSED)
+<P><STRONG><a name="[3b0]"></a>__mathlib_expf</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, expf.o(i.__hardfp_expf), UNUSED)
 
 <P><STRONG><a name="[33e]"></a>__hardfp_frexp</STRONG> (Thumb, 120 bytes, Stack size 16 bytes, frexp.o(i.__hardfp_frexp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __hardfp_frexp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplier(double, int*, int*)
-<LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)
 </UL>
 
 <P><STRONG><a name="[2c8]"></a>__hardfp_lrintf</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, lrintf.o(i.__hardfp_lrintf))
@@ -4525,7 +4520,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::CalculateInputRadius(int, int, int)
 </UL>
 
-<P><STRONG><a name="[3b2]"></a>_ll_sto_d</STRONG> (Thumb, 162 bytes, Stack size 8 bytes, dfltll_clz.o(x$fpl$dfltll), UNUSED)
+<P><STRONG><a name="[3b1]"></a>_ll_sto_d</STRONG> (Thumb, 162 bytes, Stack size 8 bytes, dfltll_clz.o(x$fpl$dfltll), UNUSED)
 
 <P><STRONG><a name="[2ec]"></a>__fpl_dnaninf</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, dnaninf.o(x$fpl$dnaninf), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[2eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ll_sfrom_d
@@ -4545,9 +4540,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_fp_1
 </UL>
 
-<P><STRONG><a name="[3b3]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit_81m.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[3b2]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit_81m.o(x$fpl$fpinit), UNUSED)
 
-<P><STRONG><a name="[3b4]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit_81m.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[3b3]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit_81m.o(x$fpl$fpinit), UNUSED)
 
 <P><STRONG><a name="[2e9]"></a>_frnd</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, frnd.o(x$fpl$frnd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _frnd &rArr; __fpl_fnaninf
@@ -4562,7 +4557,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flexbuffers::Reference::AsInt64() const
 <LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplier(double, int*, int*)
-<LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)
 </UL>
 
 <P><STRONG><a name="[2eb]"></a>_ll_sfrom_d</STRONG> (Thumb, 194 bytes, Stack size 32 bytes, dfixll.o(x$fpl$llsfromd), UNUSED)
@@ -4598,19 +4593,19 @@ Global Symbols
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;(anonymous namespace)::VDebugLog(char const*, ...)
 </UL>
 
-<P><STRONG><a name="[363]"></a>ETHOSU_PMU_CNTR_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_CNTR_Disable))
+<P><STRONG><a name="[362]"></a>ETHOSU_PMU_CNTR_Disable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_CNTR_Disable))
 <BR><BR>[Called By]<UL><LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_pmu_init
 </UL>
 
-<P><STRONG><a name="[366]"></a>ETHOSU_PMU_CNTR_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_CNTR_Enable))
+<P><STRONG><a name="[365]"></a>ETHOSU_PMU_CNTR_Enable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_CNTR_Enable))
 <BR><BR>[Called By]<UL><LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_pmu_init
 </UL>
 
-<P><STRONG><a name="[364]"></a>ETHOSU_PMU_CYCCNT_Reset</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_CYCCNT_Reset))
+<P><STRONG><a name="[363]"></a>ETHOSU_PMU_CYCCNT_Reset</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_CYCCNT_Reset))
 <BR><BR>[Called By]<UL><LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_pmu_init
 </UL>
 
-<P><STRONG><a name="[365]"></a>ETHOSU_PMU_EVCNTR_ALL_Reset</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_EVCNTR_ALL_Reset))
+<P><STRONG><a name="[364]"></a>ETHOSU_PMU_EVCNTR_ALL_Reset</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_EVCNTR_ALL_Reset))
 <BR><BR>[Called By]<UL><LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_pmu_init
 </UL>
 
@@ -4623,7 +4618,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_pmu_init
 </UL>
 
-<P><STRONG><a name="[362]"></a>ETHOSU_PMU_Set_CNTR_OVS</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_Set_CNTR_OVS))
+<P><STRONG><a name="[361]"></a>ETHOSU_PMU_Set_CNTR_OVS</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ethosu_pmu.o(.text.ETHOSU_PMU_Set_CNTR_OVS))
 <BR><BR>[Called By]<UL><LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_pmu_init
 </UL>
 
@@ -4643,7 +4638,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_m55m1.o(RESET)
 </UL>
-<P><STRONG><a name="[34d]"></a>TfLiteIntArrayGetSizeInBytes</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, common_1.o(.text.TfLiteIntArrayGetSizeInBytes))
+<P><STRONG><a name="[34c]"></a>TfLiteIntArrayGetSizeInBytes</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, common_1.o(.text.TfLiteIntArrayGetSizeInBytes))
 <BR><BR>[Called By]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::internal::InitializeTfLiteTensorFromFlatbuffer(tflite::IPersistentBufferAllocator*, tflite::INonPersistentBufferAllocator*, bool, tflite::Tensor const&, flatbuffers::Vector&lang;flatbuffers::Offset&lang;tflite::Buffer&rang;, unsigned int&rang; const*, TfLiteTensor*)
 <LI><a href="#[301]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::micro::CreateWritableTensorDimsWithCopy(TfLiteContext*, TfLiteTensor*, TfLiteEvalTensor*)
 </UL>
@@ -5028,7 +5023,7 @@ Global Symbols
 <P><STRONG><a name="[e6]"></a>tflite::MicroAllocator::~MicroAllocator__deallocating()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, micro_allocator.o(.text._ZN6tflite14MicroAllocatorD0Ev))
 <BR>[Address Reference Count : 1]<UL><LI> micro_allocator.o(.rodata._ZTVN6tflite14MicroAllocatorE)
 </UL>
-<P><STRONG><a name="[3b5]"></a>tflite::MicroAllocator::~MicroAllocator()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, micro_allocator.o(.text._ZN6tflite14MicroAllocatorD2Ev), UNUSED)
+<P><STRONG><a name="[3b4]"></a>tflite::MicroAllocator::~MicroAllocator()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, micro_allocator.o(.text._ZN6tflite14MicroAllocatorD2Ev), UNUSED)
 
 <P><STRONG><a name="[e5]"></a>tflite::MicroAllocator::~MicroAllocator__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, micro_allocator.o(.text._ZN6tflite14MicroAllocatorD2Ev))
 <BR>[Address Reference Count : 1]<UL><LI> micro_allocator.o(.rodata._ZTVN6tflite14MicroAllocatorE)
@@ -5063,7 +5058,7 @@ Global Symbols
 <LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroMutableOpResolver&lang;2u&rang;::AddEthosU()
 </UL>
 
-<P><STRONG><a name="[34a]"></a>tflite::AlignPointerDown(unsigned char*, unsigned int)</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, memory_helpers.o(.text._ZN6tflite16AlignPointerDownEPhj))
+<P><STRONG><a name="[349]"></a>tflite::AlignPointerDown(unsigned char*, unsigned int)</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, memory_helpers.o(.text._ZN6tflite16AlignPointerDownEPhj))
 <BR><BR>[Called By]<UL><LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::SingleArenaBufferAllocator::Create(unsigned char*, unsigned int)
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::SingleArenaBufferAllocator::GetAvailableMemory(unsigned int) const
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;non-virtual thunk to tflite::SingleArenaBufferAllocator::AllocatePersistentBuffer(unsigned int, unsigned int)
@@ -5166,7 +5161,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::Model::Init(unsigned char*, unsigned int, unsigned char const*, unsigned int, tflite::MicroAllocator*)
 </UL>
 
-<P><STRONG><a name="[3b6]"></a>tflite::MicroInterpreter::MicroInterpreter__sub_object(tflite::Model const*, tflite::MicroOpResolver const&, tflite::MicroAllocator*, tflite::MicroResourceVariables*, tflite::MicroProfilerInterface*)</STRONG> (Thumb, 196 bytes, Stack size 40 bytes, micro_interpreter.o(.text._ZN6tflite16MicroInterpreterC2EPKNS_5ModelERKNS_15MicroOpResolverEPNS_14MicroAllocatorEPNS_22MicroResourceVariablesEPNS_22MicroProfilerInterfaceE), UNUSED)
+<P><STRONG><a name="[3b5]"></a>tflite::MicroInterpreter::MicroInterpreter__sub_object(tflite::Model const*, tflite::MicroOpResolver const&, tflite::MicroAllocator*, tflite::MicroResourceVariables*, tflite::MicroProfilerInterface*)</STRONG> (Thumb, 196 bytes, Stack size 40 bytes, micro_interpreter.o(.text._ZN6tflite16MicroInterpreterC2EPKNS_5ModelERKNS_15MicroOpResolverEPNS_14MicroAllocatorEPNS_22MicroResourceVariablesEPNS_22MicroProfilerInterfaceE), UNUSED)
 
 <P><STRONG><a name="[26a]"></a>tflite::MicroInterpreter::~MicroInterpreter()</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, micro_interpreter.o(.text._ZN6tflite16MicroInterpreterD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = tflite::MicroInterpreter::~MicroInterpreter() &rArr; tflite::MicroInterpreterGraph::FreeSubgraphs()
@@ -5186,7 +5181,7 @@ Global Symbols
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm::app::YOLOv8nPoseModel::~YOLOv8nPoseModel__sub_object()
 </UL>
 
-<P><STRONG><a name="[3b7]"></a>tflite::MicroInterpreter::~MicroInterpreter__sub_object()</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, micro_interpreter.o(.text._ZN6tflite16MicroInterpreterD2Ev), UNUSED)
+<P><STRONG><a name="[3b6]"></a>tflite::MicroInterpreter::~MicroInterpreter__sub_object()</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, micro_interpreter.o(.text._ZN6tflite16MicroInterpreterD2Ev), UNUSED)
 
 <P><STRONG><a name="[289]"></a>tflite::Register_RESHAPE()</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, reshape.o(.text._ZN6tflite16Register_RESHAPEEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = tflite::Register_RESHAPE() &rArr; tflite::micro::RegisterOp(void* (*)(TfLiteContext*, char const*, unsigned int), TfLiteStatus (*)(TfLiteContext*, TfLiteNode*), TfLiteStatus (*)(TfLiteContext*, TfLiteNode*), void (*)(TfLiteContext*, void*), void (*)(TfLiteContext*, void*))
@@ -5216,7 +5211,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::GetMicroErrorReporter()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::internal::InitializeTfLiteEvalTensorFromFlatbuffer(tflite::Tensor const&, flatbuffers::Vector&lang;flatbuffers::Offset&lang;tflite::Buffer&rang;, unsigned int&rang; const*, TfLiteEvalTensor*)
-<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::BytesRequiredForTensor(tflite::Tensor const&, unsigned int*, unsigned int*)
+<LI><a href="#[346]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::BytesRequiredForTensor(tflite::Tensor const&, unsigned int*, unsigned int*)
 <LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::internal::InitializeTfLiteTensorFromFlatbuffer(tflite::IPersistentBufferAllocator*, tflite::INonPersistentBufferAllocator*, bool, tflite::Tensor const&, flatbuffers::Vector&lang;flatbuffers::Offset&lang;tflite::Buffer&rang;, unsigned int&rang; const*, TfLiteTensor*)
 </UL>
 
@@ -5328,12 +5323,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroAllocator::Create(unsigned char*, unsigned int, tflite::MemoryPlannerType)
 </UL>
 
-<P><STRONG><a name="[3b8]"></a>tflite::GreedyMemoryPlanner::GreedyMemoryPlanner__sub_object()</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, greedy_memory_planner.o(.text._ZN6tflite19GreedyMemoryPlannerC2Ev), UNUSED)
+<P><STRONG><a name="[3b7]"></a>tflite::GreedyMemoryPlanner::GreedyMemoryPlanner__sub_object()</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, greedy_memory_planner.o(.text._ZN6tflite19GreedyMemoryPlannerC2Ev), UNUSED)
 
 <P><STRONG><a name="[f2]"></a>tflite::GreedyMemoryPlanner::~GreedyMemoryPlanner__deallocating()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, greedy_memory_planner.o(.text._ZN6tflite19GreedyMemoryPlannerD0Ev))
 <BR>[Address Reference Count : 1]<UL><LI> greedy_memory_planner.o(.rodata._ZTVN6tflite19GreedyMemoryPlannerE)
 </UL>
-<P><STRONG><a name="[3b9]"></a>tflite::GreedyMemoryPlanner::~GreedyMemoryPlanner()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, greedy_memory_planner.o(.text._ZN6tflite19GreedyMemoryPlannerD2Ev), UNUSED)
+<P><STRONG><a name="[3b8]"></a>tflite::GreedyMemoryPlanner::~GreedyMemoryPlanner()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, greedy_memory_planner.o(.text._ZN6tflite19GreedyMemoryPlannerD2Ev), UNUSED)
 
 <P><STRONG><a name="[f1]"></a>tflite::GreedyMemoryPlanner::~GreedyMemoryPlanner__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, greedy_memory_planner.o(.text._ZN6tflite19GreedyMemoryPlannerD2Ev))
 <BR>[Address Reference Count : 1]<UL><LI> greedy_memory_planner.o(.rodata._ZTVN6tflite19GreedyMemoryPlannerE)
@@ -5364,12 +5359,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroAllocator::Create(unsigned char*, unsigned int, tflite::MemoryPlannerType)
 </UL>
 
-<P><STRONG><a name="[3ba]"></a>tflite::LinearMemoryPlanner::LinearMemoryPlanner__sub_object()</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, linear_memory_planner.o(.text._ZN6tflite19LinearMemoryPlannerC2Ev), UNUSED)
+<P><STRONG><a name="[3b9]"></a>tflite::LinearMemoryPlanner::LinearMemoryPlanner__sub_object()</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, linear_memory_planner.o(.text._ZN6tflite19LinearMemoryPlannerC2Ev), UNUSED)
 
 <P><STRONG><a name="[fc]"></a>tflite::LinearMemoryPlanner::~LinearMemoryPlanner__deallocating()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, linear_memory_planner.o(.text._ZN6tflite19LinearMemoryPlannerD0Ev))
 <BR>[Address Reference Count : 1]<UL><LI> linear_memory_planner.o(.rodata._ZTVN6tflite19LinearMemoryPlannerE)
 </UL>
-<P><STRONG><a name="[3bb]"></a>tflite::LinearMemoryPlanner::~LinearMemoryPlanner()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, linear_memory_planner.o(.text._ZN6tflite19LinearMemoryPlannerD2Ev), UNUSED)
+<P><STRONG><a name="[3ba]"></a>tflite::LinearMemoryPlanner::~LinearMemoryPlanner()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, linear_memory_planner.o(.text._ZN6tflite19LinearMemoryPlannerD2Ev), UNUSED)
 
 <P><STRONG><a name="[fb]"></a>tflite::LinearMemoryPlanner::~LinearMemoryPlanner__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, linear_memory_planner.o(.text._ZN6tflite19LinearMemoryPlannerD2Ev))
 <BR>[Address Reference Count : 1]<UL><LI> linear_memory_planner.o(.rodata._ZTVN6tflite19LinearMemoryPlannerE)
@@ -5451,7 +5446,7 @@ Global Symbols
 <LI>Call Chain = tflite::AllocationInfoBuilder::GetOfflinePlannedOffsets(int const**) &rArr; MicroPrintf(char const*, ...) &rArr; (anonymous namespace)::VDebugLog(char const*, ...) &rArr; DebugLog &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicroPrintf(char const*, ...)
-<LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroAllocator::CommitStaticMemoryPlan(tflite::Model const*, tflite::SubgraphAllocations*, tflite::ScratchBufferHandle*)
 </UL>
@@ -5563,7 +5558,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = tflite::MicroInterpreterGraph::ResetVariableTensors() &rArr; tflite::MicroResourceVariables::ResetAll() &rArr; __aeabi_memset &rArr; _memset &rArr; _memset_w
 </UL>
 <BR>[Calls]<UL><LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::TfLiteEvalTensorByteLength(TfLiteEvalTensor const*, unsigned int*)
-<LI><a href="#[346]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroResourceVariables::ResetAll()
+<LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroResourceVariables::ResetAll()
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[332]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroInterpreter::Reset()
@@ -5580,7 +5575,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroInterpreter::MicroInterpreter(tflite::Model const*, tflite::MicroOpResolver const&, tflite::MicroAllocator*, tflite::MicroResourceVariables*, tflite::MicroProfilerInterface*)
 </UL>
 
-<P><STRONG><a name="[3bc]"></a>tflite::MicroInterpreterGraph::MicroInterpreterGraph__sub_object(TfLiteContext*, tflite::Model const*, tflite::MicroAllocator*, tflite::MicroResourceVariables*)</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, micro_interpreter_graph.o(.text._ZN6tflite21MicroInterpreterGraphC2EP13TfLiteContextPKNS_5ModelEPNS_14MicroAllocatorEPNS_22MicroResourceVariablesE), UNUSED)
+<P><STRONG><a name="[3bb]"></a>tflite::MicroInterpreterGraph::MicroInterpreterGraph__sub_object(TfLiteContext*, tflite::Model const*, tflite::MicroAllocator*, tflite::MicroResourceVariables*)</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, micro_interpreter_graph.o(.text._ZN6tflite21MicroInterpreterGraphC2EP13TfLiteContextPKNS_5ModelEPNS_14MicroAllocatorEPNS_22MicroResourceVariablesE), UNUSED)
 
 <P><STRONG><a name="[106]"></a>tflite::MicroInterpreterGraph::~MicroInterpreterGraph__deallocating()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, micro_interpreter_graph.o(.text._ZN6tflite21MicroInterpreterGraphD0Ev))
 <BR>[Address Reference Count : 1]<UL><LI> micro_interpreter_graph.o(.rodata._ZTVN6tflite21MicroInterpreterGraphE)
@@ -5592,7 +5587,7 @@ Global Symbols
 <P><STRONG><a name="[105]"></a>tflite::MicroInterpreterGraph::~MicroInterpreterGraph__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, micro_interpreter_graph.o(.text._ZN6tflite21MicroInterpreterGraphD2Ev))
 <BR>[Address Reference Count : 1]<UL><LI> micro_interpreter_graph.o(.rodata._ZTVN6tflite21MicroInterpreterGraphE)
 </UL>
-<P><STRONG><a name="[347]"></a>tflite::BytesRequiredForTensor(tflite::Tensor const&, unsigned int*, unsigned int*)</STRONG> (Thumb, 194 bytes, Stack size 32 bytes, memory_helpers.o(.text._ZN6tflite22BytesRequiredForTensorERKNS_6TensorEPjS3_))
+<P><STRONG><a name="[346]"></a>tflite::BytesRequiredForTensor(tflite::Tensor const&, unsigned int*, unsigned int*)</STRONG> (Thumb, 194 bytes, Stack size 32 bytes, memory_helpers.o(.text._ZN6tflite22BytesRequiredForTensorERKNS_6TensorEPjS3_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = tflite::BytesRequiredForTensor(tflite::Tensor const&, unsigned int*, unsigned int*) &rArr; tflite::ConvertTensorType(tflite::TensorType, TfLiteType*)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::ConvertTensorType(tflite::TensorType, TfLiteType*)
@@ -5606,14 +5601,14 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TfLiteTypeGetName
 <LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::CalculateInputRadius(int, int, int)
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::PreprocessSoftmaxScaling(double, double, int, int*, int*)
+<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::PreprocessSoftmaxScaling(double, double, int, int*, int*)
 <LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplier(double, int*, int*)
 <LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_expf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::(anonymous namespace)::Prepare(TfLiteContext*, TfLiteNode*)
 </UL>
 
-<P><STRONG><a name="[346]"></a>tflite::MicroResourceVariables::ResetAll()</STRONG> (Thumb, 114 bytes, Stack size 16 bytes, micro_resource_variable.o(.text._ZN6tflite22MicroResourceVariables8ResetAllEv))
+<P><STRONG><a name="[345]"></a>tflite::MicroResourceVariables::ResetAll()</STRONG> (Thumb, 114 bytes, Stack size 16 bytes, micro_resource_variable.o(.text._ZN6tflite22MicroResourceVariables8ResetAllEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = tflite::MicroResourceVariables::ResetAll() &rArr; __aeabi_memset &rArr; _memset &rArr; _memset_w
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -5679,7 +5674,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroInterpreter::MicroInterpreter(tflite::Model const*, tflite::MicroOpResolver const&, tflite::MicroAllocator*, tflite::MicroResourceVariables*, tflite::MicroProfilerInterface*)
 </UL>
 
-<P><STRONG><a name="[3bd]"></a>tflite::MicroInterpreterContext::MicroInterpreterContext__sub_object(tflite::MicroAllocator*, tflite::Model const*, tflite::MicroInterpreterGraph*)</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, micro_interpreter_context.o(.text._ZN6tflite23MicroInterpreterContextC2EPNS_14MicroAllocatorEPKNS_5ModelEPNS_21MicroInterpreterGraphE), UNUSED)
+<P><STRONG><a name="[3bc]"></a>tflite::MicroInterpreterContext::MicroInterpreterContext__sub_object(tflite::MicroAllocator*, tflite::Model const*, tflite::MicroInterpreterGraph*)</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, micro_interpreter_context.o(.text._ZN6tflite23MicroInterpreterContextC2EPNS_14MicroAllocatorEPKNS_5ModelEPNS_21MicroInterpreterGraphE), UNUSED)
 
 <P><STRONG><a name="[114]"></a>tflite::MicroInterpreterContext::~MicroInterpreterContext__deallocating()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, micro_interpreter_context.o(.text._ZN6tflite23MicroInterpreterContextD0Ev))
 <BR>[Address Reference Count : 1]<UL><LI> micro_interpreter_context.o(.rodata._ZTVN6tflite23MicroInterpreterContextE)
@@ -5706,11 +5701,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroInterpreter::PrepareNodeAndRegistrationDataFromFlatbuffer()
 </UL>
 
-<P><STRONG><a name="[348]"></a>tflite::PreprocessSoftmaxScaling(double, double, int, int*, int*)</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, quantization_util.o(.text._ZN6tflite24PreprocessSoftmaxScalingEddiPiS0_))
+<P><STRONG><a name="[347]"></a>tflite::PreprocessSoftmaxScaling(double, double, int, int*, int*)</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, quantization_util.o(.text._ZN6tflite24PreprocessSoftmaxScalingEddiPiS0_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = tflite::PreprocessSoftmaxScaling(double, double, int, int*, int*) &rArr; tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*) &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)
+<BR>[Calls]<UL><LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[312]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::CalculateSoftmaxParams(TfLiteContext*, TfLiteTensor const*, TfLiteTensor*, TfLiteSoftmaxParams const*, tflite::SoftmaxParams*)
 </UL>
@@ -5799,7 +5794,7 @@ Global Symbols
 <LI>Call Chain = tflite::SingleArenaBufferAllocator::AllocatePersistentBuffer(unsigned int, unsigned int) &rArr; MicroPrintf(char const*, ...) &rArr; (anonymous namespace)::VDebugLog(char const*, ...) &rArr; DebugLog &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicroPrintf(char const*, ...)
-<LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerDown(unsigned char*, unsigned int)
+<LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerDown(unsigned char*, unsigned int)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> single_arena_buffer_allocator.o(.rodata._ZTVN6tflite26SingleArenaBufferAllocatorE)
 </UL>
@@ -5818,7 +5813,7 @@ Global Symbols
 <LI>Call Chain = tflite::SingleArenaBufferAllocator::Create(unsigned char*, unsigned int) &rArr; MicroPrintf(char const*, ...) &rArr; (anonymous namespace)::VDebugLog(char const*, ...) &rArr; DebugLog &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicroPrintf(char const*, ...)
-<LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerDown(unsigned char*, unsigned int)
+<LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerDown(unsigned char*, unsigned int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroAllocator::Create(unsigned char*, unsigned int, tflite::MemoryPlannerType)
 </UL>
@@ -5826,7 +5821,7 @@ Global Symbols
 <P><STRONG><a name="[121]"></a>tflite::SingleArenaBufferAllocator::~SingleArenaBufferAllocator__deallocating()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, single_arena_buffer_allocator.o(.text._ZN6tflite26SingleArenaBufferAllocatorD0Ev))
 <BR>[Address Reference Count : 1]<UL><LI> single_arena_buffer_allocator.o(.rodata._ZTVN6tflite26SingleArenaBufferAllocatorE)
 </UL>
-<P><STRONG><a name="[3be]"></a>tflite::SingleArenaBufferAllocator::~SingleArenaBufferAllocator()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, single_arena_buffer_allocator.o(.text._ZN6tflite26SingleArenaBufferAllocatorD2Ev), UNUSED)
+<P><STRONG><a name="[3bd]"></a>tflite::SingleArenaBufferAllocator::~SingleArenaBufferAllocator()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, single_arena_buffer_allocator.o(.text._ZN6tflite26SingleArenaBufferAllocatorD2Ev), UNUSED)
 
 <P><STRONG><a name="[120]"></a>tflite::SingleArenaBufferAllocator::~SingleArenaBufferAllocator__sub_object()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, single_arena_buffer_allocator.o(.text._ZN6tflite26SingleArenaBufferAllocatorD2Ev))
 <BR>[Address Reference Count : 1]<UL><LI> single_arena_buffer_allocator.o(.rodata._ZTVN6tflite26SingleArenaBufferAllocatorE)
@@ -5847,8 +5842,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 248 + Unknown Stack Size
 <LI>Call Chain = tflite::CalculateOpDataFullyConnected(TfLiteContext*, TfLiteFusedActivation, TfLiteType, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor*, tflite::OpDataFullyConnected*) &rArr; tflite::QuantizeMultiplier(double, int*, int*) &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::CalculateActivationRangeQuantized(TfLiteContext*, TfLiteFusedActivation, TfLiteTensor*, int*, int*)
-<LI><a href="#[34b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::GetQuantizedConvolutionMultipler(TfLiteContext*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor*, double*)
+<BR>[Calls]<UL><LI><a href="#[34b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::CalculateActivationRangeQuantized(TfLiteContext*, TfLiteFusedActivation, TfLiteTensor*, int*, int*)
+<LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::GetQuantizedConvolutionMultipler(TfLiteContext*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor*, double*)
 <LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::QuantizeMultiplier(double, int*, int*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::(anonymous namespace)::Prepare(TfLiteContext*, TfLiteNode*)
@@ -5861,13 +5856,13 @@ Global Symbols
 <P><STRONG><a name="[cf]"></a>tflite::MicroContextGetExternalContext(TfLiteContext*, TfLiteExternalContextType)</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, micro_interpreter.o(.text._ZN6tflite30MicroContextGetExternalContextEP13TfLiteContext25TfLiteExternalContextType))
 <BR>[Address Reference Count : 1]<UL><LI> micro_interpreter.o(.text._ZN6tflite16MicroInterpreterC2EPKNS_5ModelERKNS_15MicroOpResolverEPNS_14MicroAllocatorEPNS_22MicroResourceVariablesEPNS_22MicroProfilerInterfaceE)
 </UL>
-<P><STRONG><a name="[34b]"></a>tflite::GetQuantizedConvolutionMultipler(TfLiteContext*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor*, double*)</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, kernel_util_1.o(.text._ZN6tflite32GetQuantizedConvolutionMultiplerEP13TfLiteContextPK12TfLiteTensorS4_S4_PS2_Pd))
+<P><STRONG><a name="[34a]"></a>tflite::GetQuantizedConvolutionMultipler(TfLiteContext*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor*, double*)</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, kernel_util_1.o(.text._ZN6tflite32GetQuantizedConvolutionMultiplerEP13TfLiteContextPK12TfLiteTensorS4_S4_PS2_Pd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = tflite::GetQuantizedConvolutionMultipler(TfLiteContext*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor*, double*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::CalculateOpDataFullyConnected(TfLiteContext*, TfLiteFusedActivation, TfLiteType, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor*, tflite::OpDataFullyConnected*)
 </UL>
 
-<P><STRONG><a name="[349]"></a>tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, quantization_util.o(.text._ZN6tflite32QuantizeMultiplierGreaterThanOneEdPiS0_))
+<P><STRONG><a name="[348]"></a>tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*)</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, quantization_util.o(.text._ZN6tflite32QuantizeMultiplierGreaterThanOneEdPiS0_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = tflite::QuantizeMultiplierGreaterThanOne(double, int*, int*) &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -5875,16 +5870,16 @@ Global Symbols
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_frexp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::PreprocessSoftmaxScaling(double, double, int, int*, int*)
+<BR>[Called By]<UL><LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::PreprocessSoftmaxScaling(double, double, int, int*, int*)
 </UL>
 
-<P><STRONG><a name="[34c]"></a>tflite::CalculateActivationRangeQuantized(TfLiteContext*, TfLiteFusedActivation, TfLiteTensor*, int*, int*)</STRONG> (Thumb, 324 bytes, Stack size 16 bytes, kernel_util_1.o(.text._ZN6tflite33CalculateActivationRangeQuantizedEP13TfLiteContext21TfLiteFusedActivationP12TfLiteTensorPiS5_))
+<P><STRONG><a name="[34b]"></a>tflite::CalculateActivationRangeQuantized(TfLiteContext*, TfLiteFusedActivation, TfLiteTensor*, int*, int*)</STRONG> (Thumb, 324 bytes, Stack size 16 bytes, kernel_util_1.o(.text._ZN6tflite33CalculateActivationRangeQuantizedEP13TfLiteContext21TfLiteFusedActivationP12TfLiteTensorPiS5_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = tflite::CalculateActivationRangeQuantized(TfLiteContext*, TfLiteFusedActivation, TfLiteTensor*, int*, int*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::CalculateOpDataFullyConnected(TfLiteContext*, TfLiteFusedActivation, TfLiteType, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor const*, TfLiteTensor*, tflite::OpDataFullyConnected*)
 </UL>
 
-<P><STRONG><a name="[34e]"></a>tflite::FlatBufferVectorToTfLiteTypeArray(flatbuffers::Vector&lang;float, unsigned int&rang; const*)</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, flatbuffer_utils.o(.text._ZN6tflite33FlatBufferVectorToTfLiteTypeArrayEPKN11flatbuffers6VectorIfjEE))
+<P><STRONG><a name="[34d]"></a>tflite::FlatBufferVectorToTfLiteTypeArray(flatbuffers::Vector&lang;float, unsigned int&rang; const*)</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, flatbuffer_utils.o(.text._ZN6tflite33FlatBufferVectorToTfLiteTypeArrayEPKN11flatbuffers6VectorIfjEE))
 <BR><BR>[Called By]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::internal::InitializeTfLiteTensorFromFlatbuffer(tflite::IPersistentBufferAllocator*, tflite::INonPersistentBufferAllocator*, bool, tflite::Tensor const&, flatbuffers::Vector&lang;flatbuffers::Offset&lang;tflite::Buffer&rang;, unsigned int&rang; const*, TfLiteTensor*)
 </UL>
 
@@ -5948,7 +5943,7 @@ Global Symbols
 <P><STRONG><a name="[301]"></a>tflite::micro::CreateWritableTensorDimsWithCopy(TfLiteContext*, TfLiteTensor*, TfLiteEvalTensor*)</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, kernel_util.o(.text._ZN6tflite5micro32CreateWritableTensorDimsWithCopyEP13TfLiteContextP12TfLiteTensorP16TfLiteEvalTensor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = tflite::micro::CreateWritableTensorDimsWithCopy(TfLiteContext*, TfLiteTensor*, TfLiteEvalTensor*)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TfLiteIntArrayGetSizeInBytes
+<BR>[Calls]<UL><LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TfLiteIntArrayGetSizeInBytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[300]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::(anonymous namespace)::ReshapeOutput(TfLiteContext*, TfLiteNode*)
 </UL>
@@ -5958,10 +5953,10 @@ Global Symbols
 <LI>Call Chain = tflite::internal::InitializeTfLiteTensorFromFlatbuffer(tflite::IPersistentBufferAllocator*, tflite::INonPersistentBufferAllocator*, bool, tflite::Tensor const&, flatbuffers::Vector&lang;flatbuffers::Offset&lang;tflite::Buffer&rang;, unsigned int&rang; const*, TfLiteTensor*) &rArr; MicroPrintf(char const*, ...) &rArr; (anonymous namespace)::VDebugLog(char const*, ...) &rArr; DebugLog &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicroPrintf(char const*, ...)
-<LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TfLiteIntArrayGetSizeInBytes
-<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::BytesRequiredForTensor(tflite::Tensor const&, unsigned int*, unsigned int*)
+<LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TfLiteIntArrayGetSizeInBytes
+<LI><a href="#[346]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::BytesRequiredForTensor(tflite::Tensor const&, unsigned int*, unsigned int*)
 <LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::ConvertTensorType(tflite::TensorType, TfLiteType*)
-<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::FlatBufferVectorToTfLiteTypeArray(flatbuffers::Vector&lang;float, unsigned int&rang; const*)
+<LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::FlatBufferVectorToTfLiteTypeArray(flatbuffers::Vector&lang;float, unsigned int&rang; const*)
 <LI><a href="#[335]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::FlatBufferVectorToTfLiteTypeArray(flatbuffers::Vector&lang;int, unsigned int&rang; const*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::MicroAllocator::PopulateTfLiteTensorFromFlatbuffer(tflite::Model const*, TfLiteTensor*, int, int, bool)
@@ -6019,7 +6014,7 @@ Global Symbols
 <P><STRONG><a name="[12c]"></a>tflite::SingleArenaBufferAllocator::GetAvailableMemory(unsigned int) const</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, single_arena_buffer_allocator.o(.text._ZNK6tflite26SingleArenaBufferAllocator18GetAvailableMemoryEj))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = tflite::SingleArenaBufferAllocator::GetAvailableMemory(unsigned int) const
 </UL>
-<BR>[Calls]<UL><LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerDown(unsigned char*, unsigned int)
+<BR>[Calls]<UL><LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerDown(unsigned char*, unsigned int)
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerUp(unsigned char*, unsigned int)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> single_arena_buffer_allocator.o(.rodata._ZTVN6tflite26SingleArenaBufferAllocatorE)
@@ -6038,7 +6033,7 @@ Global Symbols
 <LI>Call Chain = non-virtual thunk to tflite::SingleArenaBufferAllocator::AllocatePersistentBuffer(unsigned int, unsigned int) &rArr; MicroPrintf(char const*, ...) &rArr; (anonymous namespace)::VDebugLog(char const*, ...) &rArr; DebugLog &rArr; vsnprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicroPrintf(char const*, ...)
-<LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerDown(unsigned char*, unsigned int)
+<LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::AlignPointerDown(unsigned char*, unsigned int)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> single_arena_buffer_allocator.o(.rodata._ZTVN6tflite26SingleArenaBufferAllocatorE)
 </UL>
@@ -6055,96 +6050,96 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 272 + Unknown Stack Size
 <LI>Call Chain = arm_ethosu_npu_init &rArr; ethosu_get_hw_info &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_hw_info
-<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_driver_version
-<LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
+<BR>[Calls]<UL><LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_hw_info
+<LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_driver_version
+<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BoardInit()
 </UL>
 
-<P><STRONG><a name="[356]"></a>ethosu_address_remap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ethosu_device_u55_u65.o(.text.ethosu_address_remap))
-<BR><BR>[Called By]<UL><LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_run_command_stream
+<P><STRONG><a name="[355]"></a>ethosu_address_remap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ethosu_device_u55_u65.o(.text.ethosu_address_remap))
+<BR><BR>[Called By]<UL><LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_run_command_stream
 </UL>
 
-<P><STRONG><a name="[358]"></a>ethosu_dev_get_hw_info</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_get_hw_info))
+<P><STRONG><a name="[357]"></a>ethosu_dev_get_hw_info</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_get_hw_info))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = ethosu_dev_get_hw_info
 </UL>
-<BR>[Called By]<UL><LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_hw_info
+<BR>[Called By]<UL><LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_get_hw_info
 </UL>
 
-<P><STRONG><a name="[360]"></a>ethosu_dev_handle_interrupt</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_handle_interrupt))
+<P><STRONG><a name="[35f]"></a>ethosu_dev_handle_interrupt</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_handle_interrupt))
 <BR><BR>[Called By]<UL><LI><a href="#[2f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_irq_handler
 </UL>
 
-<P><STRONG><a name="[352]"></a>ethosu_dev_init</STRONG> (Thumb, 124 bytes, Stack size 16 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_init))
+<P><STRONG><a name="[351]"></a>ethosu_dev_init</STRONG> (Thumb, 124 bytes, Stack size 16 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = ethosu_dev_init &rArr; ethosu_dev_soft_reset &rArr; __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
+<BR>[Calls]<UL><LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
+<BR>[Called By]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
 </UL>
 
-<P><STRONG><a name="[354]"></a>ethosu_dev_print_err_status</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_print_err_status))
+<P><STRONG><a name="[353]"></a>ethosu_dev_print_err_status</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_print_err_status))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = ethosu_dev_print_err_status &rArr; __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<BR>[Called By]<UL><LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 </UL>
 
-<P><STRONG><a name="[355]"></a>ethosu_dev_run_command_stream</STRONG> (Thumb, 288 bytes, Stack size 24 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_run_command_stream))
+<P><STRONG><a name="[354]"></a>ethosu_dev_run_command_stream</STRONG> (Thumb, 288 bytes, Stack size 24 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_run_command_stream))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224 + Unknown Stack Size
 <LI>Call Chain = ethosu_dev_run_command_stream &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_address_remap
+<BR>[Calls]<UL><LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_address_remap
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
+<BR>[Called By]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
 </UL>
 
-<P><STRONG><a name="[35d]"></a>ethosu_dev_set_clock_and_power</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_set_clock_and_power))
+<P><STRONG><a name="[35c]"></a>ethosu_dev_set_clock_and_power</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_set_clock_and_power))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ethosu_dev_set_clock_and_power
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_release_driver
-<LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
-<LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
+<LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 <LI><a href="#[2ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_request_power
 </UL>
 
-<P><STRONG><a name="[353]"></a>ethosu_dev_soft_reset</STRONG> (Thumb, 204 bytes, Stack size 8 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_soft_reset))
+<P><STRONG><a name="[352]"></a>ethosu_dev_soft_reset</STRONG> (Thumb, 204 bytes, Stack size 8 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_soft_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = ethosu_dev_soft_reset &rArr; __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_release_driver
-<LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
-<LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
+<LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 <LI><a href="#[2ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_request_power
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
 </UL>
 
-<P><STRONG><a name="[357]"></a>ethosu_dev_verify_optimizer_config</STRONG> (Thumb, 302 bytes, Stack size 56 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_verify_optimizer_config))
+<P><STRONG><a name="[356]"></a>ethosu_dev_verify_optimizer_config</STRONG> (Thumb, 302 bytes, Stack size 56 bytes, ethosu_device_u55_u65.o(.text.ethosu_dev_verify_optimizer_config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = ethosu_dev_verify_optimizer_config &rArr; __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
+<BR>[Called By]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
 </UL>
 
-<P><STRONG><a name="[35c]"></a>ethosu_flush_dcache</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ethosu_cpu_cache.o(.text.ethosu_flush_dcache))
-<BR><BR>[Called By]<UL><LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
+<P><STRONG><a name="[35b]"></a>ethosu_flush_dcache</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ethosu_cpu_cache.o(.text.ethosu_flush_dcache))
+<BR><BR>[Called By]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
 </UL>
 
-<P><STRONG><a name="[350]"></a>ethosu_get_driver_version</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_get_driver_version))
+<P><STRONG><a name="[34f]"></a>ethosu_get_driver_version</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_get_driver_version))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = ethosu_get_driver_version &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -6153,52 +6148,52 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_ethosu_npu_init
 </UL>
 
-<P><STRONG><a name="[351]"></a>ethosu_get_hw_info</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_get_hw_info))
+<P><STRONG><a name="[350]"></a>ethosu_get_hw_info</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_get_hw_info))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = ethosu_get_hw_info &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_get_hw_info
+<BR>[Calls]<UL><LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_get_hw_info
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 </UL>
 <BR>[Called By]<UL><LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_ethosu_npu_init
 </UL>
 
-<P><STRONG><a name="[35e]"></a>ethosu_inference_begin</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_inference_begin))
-<BR><BR>[Called By]<UL><LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
+<P><STRONG><a name="[35d]"></a>ethosu_inference_begin</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_inference_begin))
+<BR><BR>[Called By]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
 </UL>
 
-<P><STRONG><a name="[36b]"></a>ethosu_inference_end</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_inference_end))
-<BR><BR>[Called By]<UL><LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<P><STRONG><a name="[36a]"></a>ethosu_inference_end</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_inference_end))
+<BR><BR>[Called By]<UL><LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 </UL>
 
-<P><STRONG><a name="[34f]"></a>ethosu_init</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, ethosu_driver.o(.text.ethosu_init))
+<P><STRONG><a name="[34e]"></a>ethosu_init</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, ethosu_driver.o(.text.ethosu_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = ethosu_init &rArr; ethosu_dev_init &rArr; ethosu_dev_soft_reset &rArr; __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_create
-<LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_create
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
+<BR>[Calls]<UL><LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_create
+<LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_create
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_init
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_ethosu_npu_init
 </UL>
 
-<P><STRONG><a name="[36c]"></a>ethosu_invalidate_dcache</STRONG> (Thumb, 522 bytes, Stack size 48 bytes, ethosu_cpu_cache.o(.text.ethosu_invalidate_dcache))
+<P><STRONG><a name="[36b]"></a>ethosu_invalidate_dcache</STRONG> (Thumb, 522 bytes, Stack size 48 bytes, ethosu_cpu_cache.o(.text.ethosu_invalidate_dcache))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = ethosu_invalidate_dcache
 </UL>
-<BR>[Called By]<UL><LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<BR>[Called By]<UL><LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 </UL>
 
-<P><STRONG><a name="[35b]"></a>ethosu_invoke_async</STRONG> (Thumb, 836 bytes, Stack size 56 bytes, ethosu_driver.o(.text.ethosu_invoke_async))
+<P><STRONG><a name="[35a]"></a>ethosu_invoke_async</STRONG> (Thumb, 836 bytes, Stack size 56 bytes, ethosu_driver.o(.text.ethosu_invoke_async))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280 + Unknown Stack Size
 <LI>Call Chain = ethosu_invoke_async &rArr; ethosu_dev_run_command_stream &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_inference_begin
-<LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_verify_optimizer_config
-<LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_set_clock_and_power
-<LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_run_command_stream
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
-<LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_flush_dcache
+<BR>[Calls]<UL><LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_inference_begin
+<LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_verify_optimizer_config
+<LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_set_clock_and_power
+<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_run_command_stream
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
+<LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_flush_dcache
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_v3
@@ -6208,8 +6203,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 312 + Unknown Stack Size
 <LI>Call Chain = ethosu_invoke_v3 &rArr; ethosu_invoke_async &rArr; ethosu_dev_run_command_stream &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
-<LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<BR>[Calls]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invoke_async
+<LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)
 </UL>
@@ -6217,22 +6212,22 @@ Global Symbols
 <P><STRONG><a name="[2f1]"></a>ethosu_irq_handler</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, ethosu_driver.o(.text.ethosu_irq_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ethosu_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[361]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_give_from_ISR
-<LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_handle_interrupt
+<BR>[Calls]<UL><LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_give_from_ISR
+<LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_handle_interrupt
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NPU_IRQHandler
 </UL>
 
-<P><STRONG><a name="[359]"></a>ethosu_mutex_create</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_mutex_create))
-<BR><BR>[Called By]<UL><LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
+<P><STRONG><a name="[358]"></a>ethosu_mutex_create</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_mutex_create))
+<BR><BR>[Called By]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
 </UL>
 
-<P><STRONG><a name="[367]"></a>ethosu_mutex_lock</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_mutex_lock))
+<P><STRONG><a name="[366]"></a>ethosu_mutex_lock</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_mutex_lock))
 <BR><BR>[Called By]<UL><LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_release_driver
 <LI><a href="#[30b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_reserve_driver
 </UL>
 
-<P><STRONG><a name="[369]"></a>ethosu_mutex_unlock</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_mutex_unlock))
+<P><STRONG><a name="[368]"></a>ethosu_mutex_unlock</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_mutex_unlock))
 <BR><BR>[Called By]<UL><LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_release_driver
 <LI><a href="#[30b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_reserve_driver
 </UL>
@@ -6241,11 +6236,11 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 216 + Unknown Stack Size
 <LI>Call Chain = ethosu_pmu_init &rArr; ETHOSU_PMU_Set_EVTYPER &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __sig_exit &rArr; _sys_exit &rArr; __2snprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_Set_CNTR_OVS
-<LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_CNTR_Disable
-<LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_CNTR_Enable
-<LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_EVCNTR_ALL_Reset
-<LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_CYCCNT_Reset
+<BR>[Calls]<UL><LI><a href="#[361]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_Set_CNTR_OVS
+<LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_CNTR_Disable
+<LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_CNTR_Enable
+<LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_EVCNTR_ALL_Reset
+<LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_CYCCNT_Reset
 <LI><a href="#[2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_Set_EVTYPER
 <LI><a href="#[2ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_Enable
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr8
@@ -6257,12 +6252,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 216 + Unknown Stack Size
 <LI>Call Chain = ethosu_release_driver &rArr; ethosu_wait &rArr; ethosu_dev_print_err_status &rArr; __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
-<LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_give
-<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_unlock
-<LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_lock
-<LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_set_clock_and_power
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
+<BR>[Calls]<UL><LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_give
+<LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_unlock
+<LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_lock
+<LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_set_clock_and_power
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)
@@ -6272,8 +6267,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = ethosu_request_power &rArr; ethosu_dev_soft_reset &rArr; __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_set_clock_and_power
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
+<BR>[Calls]<UL><LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_set_clock_and_power
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETHOSU_PMU_Enable
@@ -6282,48 +6277,48 @@ Global Symbols
 <P><STRONG><a name="[30b]"></a>ethosu_reserve_driver</STRONG> (Thumb, 160 bytes, Stack size 32 bytes, ethosu_driver.o(.text.ethosu_reserve_driver))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = ethosu_reserve_driver &rArr; fwrite &rArr; _writebuf &rArr; _sys_write
 </UL>
-<BR>[Calls]<UL><LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_take
-<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_unlock
-<LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_lock
+<BR>[Calls]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_take
+<LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_unlock
+<LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_mutex_lock
 <LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fwrite
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)
 </UL>
 
-<P><STRONG><a name="[35a]"></a>ethosu_semaphore_create</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ethosu_driver.o(.text.ethosu_semaphore_create))
+<P><STRONG><a name="[359]"></a>ethosu_semaphore_create</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ethosu_driver.o(.text.ethosu_semaphore_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = ethosu_semaphore_create &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
+<BR>[Called By]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_init
 </UL>
 
-<P><STRONG><a name="[368]"></a>ethosu_semaphore_give</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_semaphore_give))
+<P><STRONG><a name="[367]"></a>ethosu_semaphore_give</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_semaphore_give))
 <BR><BR>[Called By]<UL><LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_release_driver
-<LI><a href="#[361]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_give_from_ISR
+<LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_give_from_ISR
 </UL>
 
-<P><STRONG><a name="[361]"></a>ethosu_semaphore_give_from_ISR</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_semaphore_give_from_ISR))
-<BR><BR>[Calls]<UL><LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_give
+<P><STRONG><a name="[360]"></a>ethosu_semaphore_give_from_ISR</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_semaphore_give_from_ISR))
+<BR><BR>[Calls]<UL><LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_give
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_irq_handler
 </UL>
 
-<P><STRONG><a name="[36a]"></a>ethosu_semaphore_take</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_semaphore_take))
+<P><STRONG><a name="[369]"></a>ethosu_semaphore_take</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, ethosu_driver.o(.text.ethosu_semaphore_take))
 <BR><BR>[Called By]<UL><LI><a href="#[30b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_reserve_driver
-<LI><a href="#[35f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
+<LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_wait
 </UL>
 
-<P><STRONG><a name="[35f]"></a>ethosu_wait</STRONG> (Thumb, 364 bytes, Stack size 24 bytes, ethosu_driver.o(.text.ethosu_wait))
+<P><STRONG><a name="[35e]"></a>ethosu_wait</STRONG> (Thumb, 364 bytes, Stack size 24 bytes, ethosu_driver.o(.text.ethosu_wait))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192 + Unknown Stack Size
 <LI>Call Chain = ethosu_wait &rArr; ethosu_dev_print_err_status &rArr; __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[36b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_inference_end
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_take
-<LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_set_clock_and_power
-<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_print_err_status
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
-<LI><a href="#[36c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invalidate_dcache
+<BR>[Calls]<UL><LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_inference_end
+<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_semaphore_take
+<LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_set_clock_and_power
+<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_print_err_status
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_dev_soft_reset
+<LI><a href="#[36b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ethosu_invalidate_dcache
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 <LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fwrite
 </UL>

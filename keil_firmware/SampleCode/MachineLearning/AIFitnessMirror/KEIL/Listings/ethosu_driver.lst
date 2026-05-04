@@ -24,12 +24,12 @@
 	.eabi_attribute	26, 1	@ Tag_ABI_enum_size
 	.eabi_attribute	14, 0	@ Tag_ABI_PCS_R9_use
 	.file	"ethosu_driver.c"
-	.file	1 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/src/npu/ethosu_driver.c"
-	.file	2 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/src/npu\\ethosu_device.h"
-	.file	3 "C:\\Users\\austi" "AppData\\Local\\Keil_v5\\ARM\\ARMCLANG\\bin\\..\\include\\stdint.h"
-	.file	4 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/inc/npu\\ethosu_driver.h"
-	.file	5 "C:\\Users\\austi" "AppData\\Local\\Keil_v5\\ARM\\ARMCLANG\\bin\\..\\include\\stddef.h"
-	.file	6 "C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/inc/npu\\ethosu_types.h"
+	.file	1 "C:\\Users\\eding\\Downloads\\aifitnessmirrordemo-main\\aifitnessmirrordemo-main\\keil_firmware\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/src/npu/ethosu_driver.c"
+	.file	2 "C:\\Users\\eding\\Downloads\\aifitnessmirrordemo-main\\aifitnessmirrordemo-main\\keil_firmware\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/src/npu\\ethosu_device.h"
+	.file	3 "C:\\Users\\eding" "AppData\\Local\\Keil_v5\\ARM\\ARMCLANG\\bin\\..\\include\\stdint.h"
+	.file	4 "C:\\Users\\eding\\Downloads\\aifitnessmirrordemo-main\\aifitnessmirrordemo-main\\keil_firmware\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/inc/npu\\ethosu_driver.h"
+	.file	5 "C:\\Users\\eding" "AppData\\Local\\Keil_v5\\ARM\\ARMCLANG\\bin\\..\\include\\stddef.h"
+	.file	6 "C:\\Users\\eding\\Downloads\\aifitnessmirrordemo-main\\aifitnessmirrordemo-main\\keil_firmware\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" "../../../../Library/StdDriver/inc/npu\\ethosu_types.h"
 	.section	.text.ethosu_flush_dcache,"ax",%progbits
 	.hidden	ethosu_flush_dcache             @ -- Begin function ethosu_flush_dcache
 	.weak	ethosu_flush_dcache
@@ -227,7 +227,7 @@ ethosu_semaphore_destroy:
 .Lfunc_end7:
 	.size	ethosu_semaphore_destroy, .Lfunc_end7-ethosu_semaphore_destroy
 	.cfi_endproc
-	.file	7 "C:\\Users\\austi" "AppData\\Local\\Keil_v5\\ARM\\ARMCLANG\\bin\\..\\include\\stdlib.h"
+	.file	7 "C:\\Users\\eding" "AppData\\Local\\Keil_v5\\ARM\\ARMCLANG\\bin\\..\\include\\stdlib.h"
 	.cantunwind
 	.fnend
                                         @ -- End function
@@ -7391,317 +7391,317 @@ registered_drivers:
 .Linfo_string1:
 	.asciz	"../../../../Library/StdDriver/src/npu\\ethosu_driver.c" @ string offset=68
 .Linfo_string2:
-	.asciz	"C:\\Users\\austi\\OneDrive\\Desktop\\a\\en-us--M55M1_Series_BSP_CMSIS_V3.01.002\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" @ string offset=122
+	.asciz	"C:\\Users\\eding\\Downloads\\aifitnessmirrordemo-main\\aifitnessmirrordemo-main\\keil_firmware\\SampleCode\\MachineLearning\\AIFitnessMirror\\KEIL" @ string offset=122
 .Linfo_string3:
-	.asciz	"char"                          @ string offset=244
+	.asciz	"char"                          @ string offset=259
 .Linfo_string4:
-	.asciz	"__ARRAY_SIZE_TYPE__"           @ string offset=249
+	.asciz	"__ARRAY_SIZE_TYPE__"           @ string offset=264
 .Linfo_string5:
-	.asciz	"ethosu_mutex"                  @ string offset=269
+	.asciz	"ethosu_mutex"                  @ string offset=284
 .Linfo_string6:
-	.asciz	"ethosu_semaphore"              @ string offset=282
+	.asciz	"ethosu_semaphore"              @ string offset=297
 .Linfo_string7:
-	.asciz	"registered_drivers"            @ string offset=299
+	.asciz	"registered_drivers"            @ string offset=314
 .Linfo_string8:
-	.asciz	"dev"                           @ string offset=318
+	.asciz	"dev"                           @ string offset=333
 .Linfo_string9:
-	.asciz	"reg"                           @ string offset=322
+	.asciz	"reg"                           @ string offset=337
 .Linfo_string10:
-	.asciz	"NPU_REG"                       @ string offset=326
+	.asciz	"NPU_REG"                       @ string offset=341
 .Linfo_string11:
-	.asciz	"secure"                        @ string offset=334
+	.asciz	"secure"                        @ string offset=349
 .Linfo_string12:
-	.asciz	"unsigned int"                  @ string offset=341
+	.asciz	"unsigned int"                  @ string offset=356
 .Linfo_string13:
-	.asciz	"uint32_t"                      @ string offset=354
+	.asciz	"uint32_t"                      @ string offset=369
 .Linfo_string14:
-	.asciz	"privileged"                    @ string offset=363
+	.asciz	"privileged"                    @ string offset=378
 .Linfo_string15:
-	.asciz	"ethosu_device"                 @ string offset=374
+	.asciz	"ethosu_device"                 @ string offset=389
 .Linfo_string16:
-	.asciz	"next"                          @ string offset=388
+	.asciz	"next"                          @ string offset=403
 .Linfo_string17:
-	.asciz	"job"                           @ string offset=393
+	.asciz	"job"                           @ string offset=408
 .Linfo_string18:
-	.asciz	"state"                         @ string offset=397
+	.asciz	"state"                         @ string offset=412
 .Linfo_string19:
-	.asciz	"unsigned char"                 @ string offset=403
+	.asciz	"unsigned char"                 @ string offset=418
 .Linfo_string20:
-	.asciz	"ETHOSU_JOB_IDLE"               @ string offset=417
+	.asciz	"ETHOSU_JOB_IDLE"               @ string offset=432
 .Linfo_string21:
-	.asciz	"ETHOSU_JOB_RUNNING"            @ string offset=433
+	.asciz	"ETHOSU_JOB_RUNNING"            @ string offset=448
 .Linfo_string22:
-	.asciz	"ETHOSU_JOB_DONE"               @ string offset=452
+	.asciz	"ETHOSU_JOB_DONE"               @ string offset=467
 .Linfo_string23:
-	.asciz	"ethosu_job_state"              @ string offset=468
+	.asciz	"ethosu_job_state"              @ string offset=483
 .Linfo_string24:
-	.asciz	"custom_data_ptr"               @ string offset=485
+	.asciz	"custom_data_ptr"               @ string offset=500
 .Linfo_string25:
-	.asciz	"custom_data_size"              @ string offset=501
+	.asciz	"custom_data_size"              @ string offset=516
 .Linfo_string26:
-	.asciz	"int"                           @ string offset=518
+	.asciz	"int"                           @ string offset=533
 .Linfo_string27:
-	.asciz	"base_addr"                     @ string offset=522
+	.asciz	"base_addr"                     @ string offset=537
 .Linfo_string28:
-	.asciz	"unsigned long long"            @ string offset=532
+	.asciz	"unsigned long long"            @ string offset=547
 .Linfo_string29:
-	.asciz	"uint64_t"                      @ string offset=551
+	.asciz	"uint64_t"                      @ string offset=566
 .Linfo_string30:
-	.asciz	"base_addr_size"                @ string offset=560
+	.asciz	"base_addr_size"                @ string offset=575
 .Linfo_string31:
-	.asciz	"size_t"                        @ string offset=575
+	.asciz	"size_t"                        @ string offset=590
 .Linfo_string32:
-	.asciz	"num_base_addr"                 @ string offset=582
+	.asciz	"num_base_addr"                 @ string offset=597
 .Linfo_string33:
-	.asciz	"user_arg"                      @ string offset=596
+	.asciz	"user_arg"                      @ string offset=611
 .Linfo_string34:
-	.asciz	"ethosu_job"                    @ string offset=605
+	.asciz	"ethosu_job"                    @ string offset=620
 .Linfo_string35:
-	.asciz	"semaphore"                     @ string offset=616
+	.asciz	"semaphore"                     @ string offset=631
 .Linfo_string36:
-	.asciz	"fast_memory"                   @ string offset=626
+	.asciz	"fast_memory"                   @ string offset=641
 .Linfo_string37:
-	.asciz	"fast_memory_size"              @ string offset=638
+	.asciz	"fast_memory_size"              @ string offset=653
 .Linfo_string38:
-	.asciz	"power_request_counter"         @ string offset=655
+	.asciz	"power_request_counter"         @ string offset=670
 .Linfo_string39:
-	.asciz	"status_error"                  @ string offset=677
+	.asciz	"status_error"                  @ string offset=692
 .Linfo_string40:
-	.asciz	"_Bool"                         @ string offset=690
+	.asciz	"_Bool"                         @ string offset=705
 .Linfo_string41:
-	.asciz	"reserved"                      @ string offset=696
+	.asciz	"reserved"                      @ string offset=711
 .Linfo_string42:
-	.asciz	"ethosu_driver"                 @ string offset=705
+	.asciz	"ethosu_driver"                 @ string offset=720
 .Linfo_string43:
-	.asciz	"signed char"                   @ string offset=719
+	.asciz	"signed char"                   @ string offset=734
 .Linfo_string44:
-	.asciz	"ETHOSU_SUCCESS"                @ string offset=731
+	.asciz	"ETHOSU_SUCCESS"                @ string offset=746
 .Linfo_string45:
-	.asciz	"ETHOSU_GENERIC_FAILURE"        @ string offset=746
+	.asciz	"ETHOSU_GENERIC_FAILURE"        @ string offset=761
 .Linfo_string46:
-	.asciz	"ETHOSU_INVALID_PARAM"          @ string offset=769
+	.asciz	"ETHOSU_INVALID_PARAM"          @ string offset=784
 .Linfo_string47:
-	.asciz	"ethosu_error_codes"            @ string offset=790
+	.asciz	"ethosu_error_codes"            @ string offset=805
 .Linfo_string48:
-	.asciz	"ETHOSU_CLOCK_Q_DISABLE"        @ string offset=809
+	.asciz	"ETHOSU_CLOCK_Q_DISABLE"        @ string offset=824
 .Linfo_string49:
-	.asciz	"ETHOSU_CLOCK_Q_ENABLE"         @ string offset=832
+	.asciz	"ETHOSU_CLOCK_Q_ENABLE"         @ string offset=847
 .Linfo_string50:
-	.asciz	"ETHOSU_CLOCK_Q_UNCHANGED"      @ string offset=854
+	.asciz	"ETHOSU_CLOCK_Q_UNCHANGED"      @ string offset=869
 .Linfo_string51:
-	.asciz	"ethosu_clock_q_request"        @ string offset=879
+	.asciz	"ethosu_clock_q_request"        @ string offset=894
 .Linfo_string52:
-	.asciz	"ETHOSU_POWER_Q_DISABLE"        @ string offset=902
+	.asciz	"ETHOSU_POWER_Q_DISABLE"        @ string offset=917
 .Linfo_string53:
-	.asciz	"ETHOSU_POWER_Q_ENABLE"         @ string offset=925
+	.asciz	"ETHOSU_POWER_Q_ENABLE"         @ string offset=940
 .Linfo_string54:
-	.asciz	"ETHOSU_POWER_Q_UNCHANGED"      @ string offset=947
+	.asciz	"ETHOSU_POWER_Q_UNCHANGED"      @ string offset=962
 .Linfo_string55:
-	.asciz	"ethosu_power_q_request"        @ string offset=972
+	.asciz	"ethosu_power_q_request"        @ string offset=987
 .Linfo_string56:
-	.asciz	"RESERVED"                      @ string offset=995
+	.asciz	"RESERVED"                      @ string offset=1010
 .Linfo_string57:
-	.asciz	"OPTIMIZER_CONFIG"              @ string offset=1004
+	.asciz	"OPTIMIZER_CONFIG"              @ string offset=1019
 .Linfo_string58:
-	.asciz	"COMMAND_STREAM"                @ string offset=1021
+	.asciz	"COMMAND_STREAM"                @ string offset=1036
 .Linfo_string59:
-	.asciz	"NOP"                           @ string offset=1036
+	.asciz	"NOP"                           @ string offset=1051
 .Linfo_string60:
-	.asciz	"DRIVER_ACTION_e"               @ string offset=1040
+	.asciz	"DRIVER_ACTION_e"               @ string offset=1055
 .Linfo_string61:
-	.asciz	"count"                         @ string offset=1056
+	.asciz	"count"                         @ string offset=1071
 .Linfo_string62:
-	.asciz	"uint8_t"                       @ string offset=1062
+	.asciz	"uint8_t"                       @ string offset=1077
 .Linfo_string63:
-	.asciz	"ethosu_semaphore_t"            @ string offset=1070
+	.asciz	"ethosu_semaphore_t"            @ string offset=1085
 .Linfo_string64:
-	.asciz	"uintptr_t"                     @ string offset=1089
+	.asciz	"uintptr_t"                     @ string offset=1104
 .Linfo_string65:
-	.asciz	"driver_action_command"         @ string offset=1099
+	.asciz	"driver_action_command"         @ string offset=1114
 .Linfo_string66:
-	.asciz	"rel_nbr"                       @ string offset=1121
+	.asciz	"rel_nbr"                       @ string offset=1136
 .Linfo_string67:
-	.asciz	"unsigned short"                @ string offset=1129
+	.asciz	"unsigned short"                @ string offset=1144
 .Linfo_string68:
-	.asciz	"uint16_t"                      @ string offset=1144
+	.asciz	"uint16_t"                      @ string offset=1159
 .Linfo_string69:
-	.asciz	"patch_nbr"                     @ string offset=1153
+	.asciz	"patch_nbr"                     @ string offset=1168
 .Linfo_string70:
-	.asciz	"opt_cfg_reserved"              @ string offset=1163
+	.asciz	"opt_cfg_reserved"              @ string offset=1178
 .Linfo_string71:
-	.asciz	"length"                        @ string offset=1180
+	.asciz	"length"                        @ string offset=1195
 .Linfo_string72:
-	.asciz	"driver_action_data"            @ string offset=1187
+	.asciz	"driver_action_data"            @ string offset=1202
 .Linfo_string73:
-	.asciz	"word"                          @ string offset=1206
+	.asciz	"word"                          @ string offset=1221
 .Linfo_string74:
-	.asciz	"cop_data_s"                    @ string offset=1211
+	.asciz	"cop_data_s"                    @ string offset=1226
 .Linfo_string75:
-	.asciz	"ptrdiff_t"                     @ string offset=1222
+	.asciz	"ptrdiff_t"                     @ string offset=1237
 .Linfo_string76:
-	.asciz	"da_data"                       @ string offset=1232
+	.asciz	"da_data"                       @ string offset=1247
 .Linfo_string77:
-	.asciz	"cfg"                           @ string offset=1240
+	.asciz	"cfg"                           @ string offset=1255
 .Linfo_string78:
-	.asciz	"id"                            @ string offset=1244
+	.asciz	"id"                            @ string offset=1259
 .Linfo_string79:
-	.asciz	"opt_cfg_s"                     @ string offset=1247
+	.asciz	"opt_cfg_s"                     @ string offset=1262
 .Linfo_string80:
-	.asciz	"free"                          @ string offset=1257
+	.asciz	"free"                          @ string offset=1272
 .Linfo_string81:
-	.asciz	"ethosu_register_driver"        @ string offset=1262
+	.asciz	"ethosu_register_driver"        @ string offset=1277
 .Linfo_string82:
-	.asciz	"drv"                           @ string offset=1285
+	.asciz	"drv"                           @ string offset=1300
 .Linfo_string83:
-	.asciz	"ethosu_reset_job"              @ string offset=1289
+	.asciz	"ethosu_reset_job"              @ string offset=1304
 .Linfo_string84:
-	.asciz	"ethosu_deregister_driver"      @ string offset=1306
+	.asciz	"ethosu_deregister_driver"      @ string offset=1321
 .Linfo_string85:
-	.asciz	"prev"                          @ string offset=1331
+	.asciz	"prev"                          @ string offset=1346
 .Linfo_string86:
-	.asciz	"cur"                           @ string offset=1336
+	.asciz	"cur"                           @ string offset=1351
 .Linfo_string87:
-	.asciz	"ethosu_soft_reset"             @ string offset=1340
+	.asciz	"ethosu_soft_reset"             @ string offset=1355
 .Linfo_string88:
-	.asciz	"ethosu_dev_set_clock_and_power" @ string offset=1358
+	.asciz	"ethosu_dev_set_clock_and_power" @ string offset=1373
 .Linfo_string89:
-	.asciz	"ethosu_dev_get_hw_info"        @ string offset=1389
+	.asciz	"ethosu_dev_get_hw_info"        @ string offset=1404
 .Linfo_string90:
-	.asciz	"version"                       @ string offset=1412
+	.asciz	"version"                       @ string offset=1427
 .Linfo_string91:
-	.asciz	"version_status"                @ string offset=1420
+	.asciz	"version_status"                @ string offset=1435
 .Linfo_string92:
-	.asciz	"version_minor"                 @ string offset=1435
+	.asciz	"version_minor"                 @ string offset=1450
 .Linfo_string93:
-	.asciz	"version_major"                 @ string offset=1449
+	.asciz	"version_major"                 @ string offset=1464
 .Linfo_string94:
-	.asciz	"product_major"                 @ string offset=1463
+	.asciz	"product_major"                 @ string offset=1478
 .Linfo_string95:
-	.asciz	"arch_patch_rev"                @ string offset=1477
+	.asciz	"arch_patch_rev"                @ string offset=1492
 .Linfo_string96:
-	.asciz	"arch_minor_rev"                @ string offset=1492
+	.asciz	"arch_minor_rev"                @ string offset=1507
 .Linfo_string97:
-	.asciz	"arch_major_rev"                @ string offset=1507
+	.asciz	"arch_major_rev"                @ string offset=1522
 .Linfo_string98:
-	.asciz	"ethosu_id"                     @ string offset=1522
+	.asciz	"ethosu_id"                     @ string offset=1537
 .Linfo_string99:
-	.asciz	"macs_per_cc"                   @ string offset=1532
+	.asciz	"macs_per_cc"                   @ string offset=1547
 .Linfo_string100:
-	.asciz	"cmd_stream_version"            @ string offset=1544
+	.asciz	"cmd_stream_version"            @ string offset=1559
 .Linfo_string101:
-	.asciz	"custom_dma"                    @ string offset=1563
+	.asciz	"custom_dma"                    @ string offset=1578
 .Linfo_string102:
-	.asciz	"ethosu_config"                 @ string offset=1574
+	.asciz	"ethosu_config"                 @ string offset=1589
 .Linfo_string103:
-	.asciz	"ethosu_hw_info"                @ string offset=1588
+	.asciz	"ethosu_hw_info"                @ string offset=1603
 .Linfo_string104:
-	.asciz	"ethosu_release_power"          @ string offset=1603
+	.asciz	"ethosu_release_power"          @ string offset=1618
 .Linfo_string105:
-	.asciz	"handle_optimizer_config"       @ string offset=1624
+	.asciz	"handle_optimizer_config"       @ string offset=1639
 .Linfo_string106:
-	.asciz	"opt_cfg_p"                     @ string offset=1648
+	.asciz	"opt_cfg_p"                     @ string offset=1663
 .Linfo_string107:
-	.asciz	"handle_command_stream"         @ string offset=1658
+	.asciz	"handle_command_stream"         @ string offset=1673
 .Linfo_string108:
-	.asciz	"cmd_stream"                    @ string offset=1680
+	.asciz	"cmd_stream"                    @ string offset=1695
 .Linfo_string109:
-	.asciz	"cms_length"                    @ string offset=1691
+	.asciz	"cms_length"                    @ string offset=1706
 .Linfo_string110:
-	.asciz	"cmd_stream_ptr"                @ string offset=1702
+	.asciz	"cmd_stream_ptr"                @ string offset=1717
 .Linfo_string111:
-	.asciz	"cms_bytes"                     @ string offset=1717
+	.asciz	"cms_bytes"                     @ string offset=1732
 .Linfo_string112:
-	.asciz	"i"                             @ string offset=1727
+	.asciz	"i"                             @ string offset=1742
 .Linfo_string113:
-	.asciz	"ethosu_request_power"          @ string offset=1729
+	.asciz	"ethosu_request_power"          @ string offset=1744
 .Linfo_string114:
-	.asciz	"ethosu_find_and_reserve_driver" @ string offset=1750
+	.asciz	"ethosu_find_and_reserve_driver" @ string offset=1765
 .Linfo_string115:
-	.asciz	"ethosu_flush_dcache"           @ string offset=1781
+	.asciz	"ethosu_flush_dcache"           @ string offset=1796
 .Linfo_string116:
-	.asciz	"ethosu_invalidate_dcache"      @ string offset=1801
+	.asciz	"ethosu_invalidate_dcache"      @ string offset=1816
 .Linfo_string117:
-	.asciz	"ethosu_mutex_create"           @ string offset=1826
+	.asciz	"ethosu_mutex_create"           @ string offset=1841
 .Linfo_string118:
-	.asciz	"ethosu_mutex_destroy"          @ string offset=1846
+	.asciz	"ethosu_mutex_destroy"          @ string offset=1861
 .Linfo_string119:
-	.asciz	"ethosu_mutex_lock"             @ string offset=1867
+	.asciz	"ethosu_mutex_lock"             @ string offset=1882
 .Linfo_string120:
-	.asciz	"ethosu_mutex_unlock"           @ string offset=1885
+	.asciz	"ethosu_mutex_unlock"           @ string offset=1900
 .Linfo_string121:
-	.asciz	"ethosu_semaphore_create"       @ string offset=1905
+	.asciz	"ethosu_semaphore_create"       @ string offset=1920
 .Linfo_string122:
-	.asciz	"ethosu_semaphore_destroy"      @ string offset=1929
+	.asciz	"ethosu_semaphore_destroy"      @ string offset=1944
 .Linfo_string123:
-	.asciz	"ethosu_semaphore_take"         @ string offset=1954
+	.asciz	"ethosu_semaphore_take"         @ string offset=1969
 .Linfo_string124:
-	.asciz	"ethosu_semaphore_give"         @ string offset=1976
+	.asciz	"ethosu_semaphore_give"         @ string offset=1991
 .Linfo_string125:
-	.asciz	"ethosu_semaphore_give_from_ISR" @ string offset=1998
+	.asciz	"ethosu_semaphore_give_from_ISR" @ string offset=2013
 .Linfo_string126:
-	.asciz	"ethosu_inference_begin"        @ string offset=2029
+	.asciz	"ethosu_inference_begin"        @ string offset=2044
 .Linfo_string127:
-	.asciz	"ethosu_inference_end"          @ string offset=2052
+	.asciz	"ethosu_inference_end"          @ string offset=2067
 .Linfo_string128:
-	.asciz	"ethosu_irq_handler"            @ string offset=2073
+	.asciz	"ethosu_irq_handler"            @ string offset=2088
 .Linfo_string129:
-	.asciz	"ethosu_init"                   @ string offset=2092
+	.asciz	"ethosu_init"                   @ string offset=2107
 .Linfo_string130:
-	.asciz	"ethosu_deinit"                 @ string offset=2104
+	.asciz	"ethosu_deinit"                 @ string offset=2119
 .Linfo_string131:
-	.asciz	"ethosu_get_driver_version"     @ string offset=2118
+	.asciz	"ethosu_get_driver_version"     @ string offset=2133
 .Linfo_string132:
-	.asciz	"ethosu_get_hw_info"            @ string offset=2144
+	.asciz	"ethosu_get_hw_info"            @ string offset=2159
 .Linfo_string133:
-	.asciz	"ethosu_wait"                   @ string offset=2163
+	.asciz	"ethosu_wait"                   @ string offset=2178
 .Linfo_string134:
-	.asciz	"ethosu_invoke_async"           @ string offset=2175
+	.asciz	"ethosu_invoke_async"           @ string offset=2190
 .Linfo_string135:
-	.asciz	"ethosu_invoke_v3"              @ string offset=2195
+	.asciz	"ethosu_invoke_v3"              @ string offset=2210
 .Linfo_string136:
-	.asciz	"ethosu_reserve_driver"         @ string offset=2212
+	.asciz	"ethosu_reserve_driver"         @ string offset=2227
 .Linfo_string137:
-	.asciz	"ethosu_release_driver"         @ string offset=2234
+	.asciz	"ethosu_release_driver"         @ string offset=2249
 .Linfo_string138:
-	.asciz	"p"                             @ string offset=2256
+	.asciz	"p"                             @ string offset=2271
 .Linfo_string139:
-	.asciz	"bytes"                         @ string offset=2258
+	.asciz	"bytes"                         @ string offset=2273
 .Linfo_string140:
-	.asciz	"mutex"                         @ string offset=2264
+	.asciz	"mutex"                         @ string offset=2279
 .Linfo_string141:
-	.asciz	"sem"                           @ string offset=2270
+	.asciz	"sem"                           @ string offset=2285
 .Linfo_string142:
-	.asciz	"s"                             @ string offset=2274
+	.asciz	"s"                             @ string offset=2289
 .Linfo_string143:
-	.asciz	"base_address"                  @ string offset=2276
+	.asciz	"base_address"                  @ string offset=2291
 .Linfo_string144:
-	.asciz	"secure_enable"                 @ string offset=2289
+	.asciz	"secure_enable"                 @ string offset=2304
 .Linfo_string145:
-	.asciz	"privilege_enable"              @ string offset=2303
+	.asciz	"privilege_enable"              @ string offset=2318
 .Linfo_string146:
-	.asciz	"ver"                           @ string offset=2320
+	.asciz	"ver"                           @ string offset=2335
 .Linfo_string147:
-	.asciz	"major"                         @ string offset=2324
+	.asciz	"major"                         @ string offset=2339
 .Linfo_string148:
-	.asciz	"minor"                         @ string offset=2330
+	.asciz	"minor"                         @ string offset=2345
 .Linfo_string149:
-	.asciz	"patch"                         @ string offset=2336
+	.asciz	"patch"                         @ string offset=2351
 .Linfo_string150:
-	.asciz	"ethosu_driver_version"         @ string offset=2342
+	.asciz	"ethosu_driver_version"         @ string offset=2357
 .Linfo_string151:
-	.asciz	"hw"                            @ string offset=2364
+	.asciz	"hw"                            @ string offset=2379
 .Linfo_string152:
-	.asciz	"block"                         @ string offset=2367
+	.asciz	"block"                         @ string offset=2382
 .Linfo_string153:
-	.asciz	"ret"                           @ string offset=2373
+	.asciz	"ret"                           @ string offset=2388
 .Linfo_string154:
-	.asciz	"data_ptr"                      @ string offset=2377
+	.asciz	"data_ptr"                      @ string offset=2392
 .Linfo_string155:
-	.asciz	"data_end"                      @ string offset=2386
+	.asciz	"data_end"                      @ string offset=2401
 .Linfo_string156:
-	.asciz	"command_stream"                @ string offset=2395
+	.asciz	"command_stream"                @ string offset=2410
 .Linfo_string157:
-	.asciz	"err"                           @ string offset=2410
+	.asciz	"err"                           @ string offset=2425
 	.ident	"Component: Arm Compiler for Embedded 6.24 Tool: armclang [5f371800]"
 	.section	".note.GNU-stack","",%progbits
 	.eabi_attribute	30, 1	@ Tag_ABI_optimization_goals
