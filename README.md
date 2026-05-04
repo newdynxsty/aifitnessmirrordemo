@@ -1,12 +1,13 @@
 # AI Fitness Mirror Demo
 
-Firmware and model bundle for the Nuvoton M55 AI fitness mirror demo. The demo runs YOLOv8n pose detection on the camera stream, feeds pose keypoints into a rep counter and a workout-form error classifier, and draws the result on the display. **The demo currently only works with jumping jacks and sit ups. Push ups, squats, and lunges are currently in development.**
+Firmware and model bundle for the Nuvoton M55 AI fitness mirror demo. The demo runs YOLOv8n pose detection on the camera stream, feeds pose keypoints into a rep counter and a workout-form error classifier, and draws the result on the display. **The current firmware counts jumping jacks, sit ups, and squats. Push ups and lunges are still in development.**
 
 ## Repository Layout
 
 - `keil_firmware/` - Nuvoton M55 BSP plus the Keil uVision project for the demo.
 - `keil_firmware/SampleCode/MachineLearning/AIFitnessMirror/` - application source code.
 - `sd_card_root/` - copy these files directly to the root of the board SD card.
+- `rep-counter-model/` - training notebooks, image datasets, and TFLite artifacts for the pose-phase rep counter.
 - `error-classes-model/` - training/evaluation scripts, notebooks, dataset, and model artifacts for the workout error classifier.
 
 ## Hardware
@@ -32,10 +33,11 @@ The repo includes a ready-to-copy folder:
 sd_card_root/
 ├── YOLOv8n-pose.tflite
 ├── rep_counter_int8_vela.tflite
+├── rep_counter_int8_vela_OLD_nosquats.tflite
 └── workout_error_classifier_int8_vela.tflite
 ```
 
-Copy all three files from `sd_card_root/` onto the root of the SD card. Do not put them inside a subfolder.
+Copy the three current model files from `sd_card_root/` onto the root of the SD card. Do not put them inside a subfolder. `rep_counter_int8_vela_OLD_nosquats.tflite` is kept only as an archive of the previous rep-counter model and should not be copied for the current demo.
 
 ## Build And Flash Firmware
 
@@ -63,9 +65,32 @@ If Keil reports that a model file cannot be prepared, re-check the SD card root 
    - `ERR:<class>` for the predicted form state
    - `EC:<confidence>` for the model confidence
 
-Example classes include `JJ ARM LOW`, `JJ LEG NAR`, `PUSH KNEE`, `SIT CORE`, and `SQUAT LOW`.
+The active rep counter currently displays `JUMPING JACK`, `SIT-UP`, or `SQUAT` once it sees the corresponding pose phase with enough confidence. Example error-class outputs include `JJ ARM LOW`, `JJ LEG NAR`, `PUSH KNEE`, `SIT CORE`, and `SQUAT LOW`.
 
 NOTE: Most recent firmware version may have slightly different labels. 
+
+## Training The Rep Counter
+
+The rep-counter training assets live in:
+
+```text
+rep-counter-model/
+```
+
+The current model is an INT8 MLP that consumes 51 pose features: 17 YOLO pose keypoints, each represented as normalized `x`, normalized `y`, and confidence. It outputs these pose-phase classes in the order expected by `main.cpp`:
+
+| Index | Label |
+| ---: | --- |
+| 0 | `jump_middle` |
+| 1 | `lunges_middle` |
+| 2 | `pushup_middle` |
+| 3 | `pushup_start` |
+| 4 | `situp_middle` |
+| 5 | `situp_start` |
+| 6 | `squat_middle` |
+| 7 | `squat_start` |
+
+See `rep-counter-model/README.md` for the full rep-counter workflow.
 
 ## Training The Error Classifier
 

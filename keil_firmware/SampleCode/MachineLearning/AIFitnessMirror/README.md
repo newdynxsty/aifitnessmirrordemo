@@ -36,3 +36,5 @@ The display shows the camera feed, pose landmarks, rep/demo status, and compact 
 
 - `ERR:<class>` - predicted workout/form class
 - `EC:<confidence>` - error classifier confidence
+
+The current rep-counting state machine is wired for jumping jacks, sit ups, and squats. The rep-counter model also emits push-up and lunge phase classes, but the firmware currently only uses them as model outputs, not as completed rep counters.
