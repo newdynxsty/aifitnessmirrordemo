@@ -125,9 +125,9 @@
     "squats__good",
     "squats__not_low_enough"
   ],
-  "keras_model_path": "/home/edward_ding/diva/artifacts/workout_error_classifier/workout_error_classifier.keras",
-  "tflite_model_path": "/home/edward_ding/diva/artifacts/workout_error_classifier/workout_error_classifier_int8.tflite",
-  "source_cache_path": "/home/edward_ding/diva/artifacts/workout_error_classifier/pose_features.npz",
+  "keras_model_path": "/home/eding/aifitnessmirrordemo/error-classes-model/artifacts/workout_error_classifier/workout_error_classifier.keras",
+  "tflite_model_path": "/home/eding/aifitnessmirrordemo/error-classes-model/artifacts/workout_error_classifier/workout_error_classifier_int8.tflite",
+  "source_cache_path": "/home/eding/aifitnessmirrordemo/error-classes-model/artifacts/workout_error_classifier/pose_features.npz",
   "notes": [
     "Features are 17 YOLO pose keypoints in bbox-normalized x, y, confidence format.",
     "Canonical labels collapse left/right variants into one class."
