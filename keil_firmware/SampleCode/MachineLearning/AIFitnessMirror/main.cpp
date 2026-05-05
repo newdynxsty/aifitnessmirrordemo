@@ -892,7 +892,7 @@ int main()
 						sErrClearRect.u32TopLeftX = 650;
 						sErrClearRect.u32TopLeftY = 320;
 						sErrClearRect.u32BottonRightX = 800;
-						sErrClearRect.u32BottonRightY = 380;
+						sErrClearRect.u32BottonRightY = 416;
 						Display_ClearRect(C_WHITE, &sErrClearRect);
 
 						const char* errorName = "NO POSE";
