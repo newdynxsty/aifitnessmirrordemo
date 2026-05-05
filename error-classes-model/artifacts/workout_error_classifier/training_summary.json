@@ -1,6 +1,6 @@
 {
-  "training_samples": 6309,
-  "validation_samples": 2088,
+  "training_samples": 7050,
+  "validation_samples": 2343,
   "train_clip_ids": [
     0,
     2,
@@ -56,14 +56,22 @@
     69,
     70,
     71,
-    72,
     73,
     74,
-    76,
+    75,
     77,
     78,
-    79,
-    80
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
   ],
   "validation_clip_ids": [
     1,
@@ -84,8 +92,10 @@
     63,
     66,
     68,
-    75,
-    81
+    72,
+    76,
+    79,
+    91
   ],
   "class_distribution_train": {
     "0": 309,
@@ -97,8 +107,8 @@
     "6": 756,
     "7": 765,
     "8": 828,
-    "9": 444,
-    "10": 366
+    "9": 831,
+    "10": 720
   },
   "class_distribution_val": {
     "0": 147,
@@ -110,44 +120,44 @@
     "5": 249,
     "8": 306,
     "7": 177,
-    "9": 102,
-    "10": 96
+    "9": 261,
+    "10": 192
   },
-  "frame_accuracy": 0.7878352490421456,
-  "clip_accuracy": 0.95,
+  "frame_accuracy": 0.7998292787025182,
+  "clip_accuracy": 1.0,
   "keras_model_path": "/home/eding/aifitnessmirrordemo/error-classes-model/artifacts/workout_error_classifier/workout_error_classifier.keras",
   "tflite_model_path": "/home/eding/aifitnessmirrordemo/error-classes-model/artifacts/workout_error_classifier/workout_error_classifier_int8.tflite",
   "labels_path": "/home/eding/aifitnessmirrordemo/error-classes-model/artifacts/workout_error_classifier/workout_error_labels.json",
   "confusion_matrix_path": "/home/eding/aifitnessmirrordemo/error-classes-model/artifacts/workout_error_classifier/validation_confusion_matrix.png",
   "classification_report": {
     "jumping_jacks__arms_not_high_enough": {
-      "precision": 0.7928571428571428,
-      "recall": 0.7551020408163265,
-      "f1-score": 0.7735191637630662,
+      "precision": 0.7317073170731707,
+      "recall": 0.8163265306122449,
+      "f1-score": 0.7717041800643086,
       "support": 147.0
     },
     "jumping_jacks__good": {
-      "precision": 0.7777777777777778,
-      "recall": 0.5,
-      "f1-score": 0.6086956521739131,
+      "precision": 0.6140350877192983,
+      "recall": 0.5555555555555556,
+      "f1-score": 0.5833333333333334,
       "support": 126.0
     },
     "jumping_jacks__legs_not_wide_enough": {
-      "precision": 0.7031963470319634,
-      "recall": 0.9166666666666666,
-      "f1-score": 0.7958656330749354,
+      "precision": 0.7192982456140351,
+      "recall": 0.7321428571428571,
+      "f1-score": 0.7256637168141593,
       "support": 168.0
     },
     "lunges__good": {
-      "precision": 0.6833855799373041,
-      "recall": 0.8257575757575758,
-      "f1-score": 0.7478559176672385,
+      "precision": 0.6872852233676976,
+      "recall": 0.7575757575757576,
+      "f1-score": 0.7207207207207207,
       "support": 264.0
     },
     "lunges__not_low_enough": {
-      "precision": 0.7383720930232558,
-      "recall": 0.5644444444444444,
-      "f1-score": 0.6397984886649875,
+      "precision": 0.7597765363128491,
+      "recall": 0.6044444444444445,
+      "f1-score": 0.6732673267326733,
       "support": 225.0
     },
     "push_ups__good": {
@@ -175,29 +185,29 @@
       "support": 306.0
     },
     "squats__good": {
-      "precision": 1.0,
-      "recall": 0.5294117647058824,
-      "f1-score": 0.6923076923076923,
-      "support": 102.0
+      "precision": 0.9311740890688259,
+      "recall": 0.8812260536398467,
+      "f1-score": 0.905511811023622,
+      "support": 261.0
     },
     "squats__not_low_enough": {
-      "precision": 0.6713286713286714,
-      "recall": 1.0,
-      "f1-score": 0.803347280334728,
-      "support": 96.0
+      "precision": 0.7972350230414746,
+      "recall": 0.9010416666666666,
+      "f1-score": 0.8459657701711492,
+      "support": 192.0
     },
-    "accuracy": 0.7878352490421456,
+    "accuracy": 0.7998292787025182,
     "macro avg": {
-      "precision": 0.811021662843345,
-      "recall": 0.7852870753665069,
-      "f1-score": 0.7717909806051915,
-      "support": 2088.0
+      "precision": 0.7995302001380028,
+      "recall": 0.7995534729343685,
+      "f1-score": 0.786770710684592,
+      "support": 2343.0
     },
     "weighted avg": {
-      "precision": 0.8266927563984798,
-      "recall": 0.7878352490421456,
-      "f1-score": 0.7829337404682424,
-      "support": 2088.0
+      "precision": 0.8257458411495339,
+      "recall": 0.7998292787025182,
+      "f1-score": 0.7985076214178853,
+      "support": 2343.0
     }
   }
 }
