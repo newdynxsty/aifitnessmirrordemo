@@ -887,11 +887,19 @@ int main()
 						snprintf(displayBuffer, sizeof(displayBuffer), "C: %.2f", current_pose_conf);
 						Display_PutText_Wrapped(displayBuffer, 650, 260, C_BLACK, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
 
+						// Clear error text area before redrawing
+						S_DISP_RECT sErrClearRect;
+						sErrClearRect.u32TopLeftX = 650;
+						sErrClearRect.u32TopLeftY = 320;
+						sErrClearRect.u32BottonRightX = 800;
+						sErrClearRect.u32BottonRightY = 380;
+						Display_ClearRect(C_WHITE, &sErrClearRect);
+
 						const char* errorName = "NO POSE";
 						if (current_error_class >= 0 && current_error_class < ERROR_CLASS_COUNT) {
 								errorName = ERROR_CLASS_NAMES[current_error_class];
 						}
-						snprintf(displayBuffer, sizeof(displayBuffer), "ERR:%s", errorName);
+						snprintf(displayBuffer, sizeof(displayBuffer), "%s", errorName);
 						Display_PutText_Wrapped(displayBuffer, 650, 320, C_MAGENTA, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
 
 						snprintf(displayBuffer, sizeof(displayBuffer), "EC: %.2f", current_error_conf);
