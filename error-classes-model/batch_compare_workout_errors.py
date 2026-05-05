@@ -9,10 +9,10 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
+from workout_error_model import ErrorClassifierRunner
 from workout_error_pipeline import (
     DEFAULT_DESKTOP_POSE_MODEL,
     DEFAULT_OUTPUT_DIR,
-    ErrorClassifierRunner,
     extract_pose_feature_from_result,
     resolve_desktop_pose_model,
 )

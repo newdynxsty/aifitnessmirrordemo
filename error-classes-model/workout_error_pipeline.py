@@ -18,11 +18,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 import tf_keras as keras
-import tf_keras.src.backend as keras_backend
-import tf_keras.src.utils.tf_utils as keras_tf_utils
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.utils.class_weight import compute_class_weight
 from ultralytics import YOLO
+
+from workout_error_model import run_tflite_classifier
 
 FEATURE_DIM = 51
 VIDEO_EXTENSIONS = {".mp4", ".mov", ".m4v", ".avi"}
@@ -30,11 +30,7 @@ DEFAULT_DATASET_DIR = Path("Error Classes Dataset")
 DEFAULT_OUTPUT_DIR = Path("artifacts/workout_error_classifier")
 DEFAULT_CACHE_NAME = "pose_features.npz"
 DEFAULT_DESKTOP_POSE_MODEL = "yolov8n-pose.pt"
-BOARD_POSE_MODEL_HINT = Path(
-    "a/en-us--M55M1_Series_BSP_CMSIS_V3.01.002/"
-    "SampleCode/MachineLearning/PoseLandmark_YOLOv8n_workout_w_accel/Model/"
-    "YOLOv8n-pose.tflite"
-)
+BOARD_POSE_MODEL_HINT = Path("../sd_card_root/YOLOv8n-pose.tflite")
 
 LEFT_RIGHT_KEYPOINT_PAIRS = [
     (1, 2),
@@ -48,24 +44,11 @@ LEFT_RIGHT_KEYPOINT_PAIRS = [
 ]
 
 
-class _Py312SafeRandom(random.Random):
-    def randint(self, a, b):
-        return super().randint(int(a), int(b))
-
-
-def install_tfkeras_seed_workaround(seed: int) -> None:
-    """Work around tf_keras using float bounds in randint() under Python 3.12."""
+def set_training_seed(seed: int) -> None:
+    random.seed(seed)
+    np.random.seed(seed)
+    tf.random.set_seed(seed)
     keras.utils.set_random_seed(seed)
-    keras_backend._SEED_GENERATOR.generator = _Py312SafeRandom(int(seed))
-    keras_tf_utils.backend._SEED_GENERATOR.generator = keras_backend._SEED_GENERATOR.generator
-
-    def _safe_get_random_seed() -> int:
-        generator = getattr(keras_backend._SEED_GENERATOR, "generator", None)
-        if generator is not None:
-            return generator.randint(1, int(1e9))
-        return random.randint(1, int(1e9))
-
-    keras_tf_utils.get_random_seed = _safe_get_random_seed
 
 
 def to_jsonable(value: Any) -> Any:
@@ -84,23 +67,6 @@ def to_jsonable(value: Any) -> Any:
     if isinstance(value, np.bool_):
         return bool(value)
     return value
-
-
-CORRECTION_MESSAGES = {
-    "arms_not_high_enough": "Reach your arms higher overhead!",
-    "legs_not_wide_enough": "Step your feet wider on each jack!",
-    "not_low_enough": "Go lower and reach full depth!",
-    "knees_touching_ground": "Get those knees off the ground!",
-    "core_not_high_enough": "Sit up taller and lift your chest!",
-    "good": "Great form. Keep it up!",
-}
-
-
-def correction_message_for_prediction(prediction: dict[str, Any] | None) -> str:
-    if prediction is None:
-        return "Move into frame so I can check your form."
-    condition = prediction.get("condition", "")
-    return CORRECTION_MESSAGES.get(condition, "Adjust your form and try again.")
 
 
 @dataclass(frozen=True)
@@ -518,36 +484,6 @@ def make_representative_dataset(X_train: np.ndarray):
     return representative_dataset
 
 
-def quantize_to_int8(value: np.ndarray, scale: float, zero_point: int) -> np.ndarray:
-    quantized = np.round(value / scale + zero_point)
-    return np.clip(quantized, -128, 127).astype(np.int8)
-
-
-def dequantize_from_int8(value: np.ndarray, scale: float, zero_point: int) -> np.ndarray:
-    return (value.astype(np.float32) - zero_point) * scale
-
-
-def run_tflite_classifier(
-    interpreter: tf.lite.Interpreter, input_detail: dict[str, Any], output_detail: dict[str, Any], X: np.ndarray
-) -> np.ndarray:
-    probabilities = []
-    in_scale, in_zero = input_detail["quantization"]
-    out_scale, out_zero = output_detail["quantization"]
-
-    for row in X:
-        tensor = row.reshape(1, -1).astype(np.float32)
-        if input_detail["dtype"] == np.int8:
-            tensor = quantize_to_int8(tensor, in_scale, int(in_zero))
-        interpreter.set_tensor(input_detail["index"], tensor)
-        interpreter.invoke()
-        output = interpreter.get_tensor(output_detail["index"])
-        if output_detail["dtype"] == np.int8:
-            output = dequantize_from_int8(output, out_scale or (1.0 / 255.0), int(out_zero))
-        probabilities.append(output[0])
-
-    return np.asarray(probabilities, dtype=np.float32)
-
-
 def plot_confusion_matrix_image(
     cm: np.ndarray, class_names: list[str], output_path: Path, title: str = "Validation Confusion Matrix"
 ) -> None:
@@ -636,7 +572,7 @@ def train_error_classifier(
     class_weights_raw = compute_class_weight("balanced", classes=present_classes, y=y_train)
     class_weight = {int(index): float(weight) for index, weight in zip(present_classes, class_weights_raw)}
 
-    install_tfkeras_seed_workaround(seed)
+    set_training_seed(seed)
     model = build_classifier(num_classes=len(class_names))
     callbacks = [
         keras.callbacks.EarlyStopping(monitor="val_loss", patience=20, restore_best_weights=True),
@@ -745,61 +681,6 @@ def train_error_classifier(
     print(f"Saved label metadata to {labels_path}")
     print(f"Saved training summary to {summary_path}")
     return summary
-
-
-class ErrorClassifierRunner:
-    def __init__(self, model_path: Path | str, labels_path: Path | str):
-        self.model_path = Path(model_path)
-        self.metadata = json.loads(Path(labels_path).read_text())
-        self.class_infos = self.metadata["class_infos"]
-        self.class_names = [info["canonical_label"] for info in self.class_infos]
-        self.backend = ""
-        self.model: Any = None
-        self.interpreter: tf.lite.Interpreter | None = None
-        self.input_detail: dict[str, Any] | None = None
-        self.output_detail: dict[str, Any] | None = None
-
-        if self.model_path.suffix == ".tflite":
-            self.backend = "tflite"
-            self.interpreter = tf.lite.Interpreter(model_path=str(self.model_path))
-            self.interpreter.allocate_tensors()
-            self.input_detail = self.interpreter.get_input_details()[0]
-            self.output_detail = self.interpreter.get_output_details()[0]
-        else:
-            self.backend = "keras"
-            self.model = keras.models.load_model(self.model_path)
-
-    def predict_proba(self, feature: np.ndarray) -> np.ndarray:
-        feature = np.asarray(feature, dtype=np.float32).reshape(1, -1)
-        if self.backend == "keras":
-            return self.model.predict(feature, verbose=0)[0]
-
-        assert self.interpreter is not None
-        assert self.input_detail is not None
-        assert self.output_detail is not None
-        return run_tflite_classifier(self.interpreter, self.input_detail, self.output_detail, feature)[0]
-
-    def describe_prediction(self, probabilities: np.ndarray) -> dict[str, Any]:
-        index = int(np.argmax(probabilities))
-        info = self.class_infos[index]
-        return {
-            "index": index,
-            "confidence": float(probabilities[index]),
-            "canonical_label": info["canonical_label"],
-            "display_name": info["display_name"],
-            "workout": info["workout"],
-            "condition": info["condition"],
-            "condition_display": info["condition_display"],
-            "is_error": bool(info["is_error"]),
-            "top3": [
-                {
-                    "canonical_label": self.class_infos[top_idx]["canonical_label"],
-                    "display_name": self.class_infos[top_idx]["display_name"],
-                    "confidence": float(probabilities[top_idx]),
-                }
-                for top_idx in np.argsort(probabilities)[::-1][:3]
-            ],
-        }
 
 
 def parse_training_args() -> argparse.Namespace:
