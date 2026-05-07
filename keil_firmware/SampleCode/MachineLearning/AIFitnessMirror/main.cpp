@@ -29,7 +29,7 @@
 
 //#define __PROFILE__
 #define __USE_DISPLAY__
-//#define __USE_UVC__
+#define __USE_UVC__
 
 #include "Profiler.hpp"
 #include "ImageSensor.h"
@@ -468,8 +468,8 @@ static int32_t PrepareModelToHyperRAM(const char* modelFile, uint32_t dstAddr)
 
 int main()
 {
-    /* Initialise the UART module to allow printf related functions (if using retarget) */
-    BoardInit();
+	/* Initialise the UART module to allow printf related functions (if using retarget) */
+	BoardInit();
 	SYS_UnlockReg();
 	/* UART1 (Bluetooth) Clock & Pins */
 	CLK_SetModuleClock(UART1_MODULE, CLK_UARTSEL0_UART1SEL_HIRC, CLK_UARTDIV0_UART1DIV(1));
@@ -856,6 +856,16 @@ int main()
 									sDispRect.u32BottonRightY = ((frameBuffer.h * IMAGE_DISP_UPSCALE_FACTOR) - 1);
 
 									Display_FillRect((uint16_t *)infFramebuf->frameImage.data, &sDispRect, IMAGE_DISP_UPSCALE_FACTOR);
+						
+						#if defined (__USE_UVC__)
+							if (UVC_IsConnect()) // Check if the PC has opened the camera app
+							{
+									image_t origImg; origImg.w=infFramebuf->frameImage.w; origImg.h=infFramebuf->frameImage.h;
+									origImg.data = (uint8_t *)infFramebuf->frameImage.data; origImg.pixfmt = PIXFORMAT_RGB565;
+									image_t vflipImg = origImg; imlib_nvt_vflip(&origImg, &vflipImg);
+									UVC_SendImage((uint32_t)infFramebuf->frameImage.data, IMAGE_FB_SIZE, uvcStatus.StillImage);
+							}
+						#endif
 
 						// --- DEMO DISPLAY ---
 						char displayBuffer[64];
@@ -904,7 +914,15 @@ int main()
 
 						snprintf(displayBuffer, sizeof(displayBuffer), "EC: %.2f", current_error_conf);
 						Display_PutText_Wrapped(displayBuffer, 650, 380, C_MAGENTA, C_WHITE, FONT_DISP_UPSCALE_FACTOR);
-
+						
+						// Send exercise data over serial
+						printf("DATA:%s,%.2f,%d,%s,%.2f\n", 
+							g_activeExerciseName,      // Current Exercise Name (String)
+							current_pose_conf,         // Exercise Confidence (Float)
+							g_currentRepCount,         // Rep Count (Int)
+							errorName,                 // Bad Form Class Name (String)
+							current_error_conf         // Bad Form Confidence (Float)
+						);
 			// Display accelerometer and heart rate data
 			/**
 			if (g_bMsgReceived) {
