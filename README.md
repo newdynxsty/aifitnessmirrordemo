@@ -81,7 +81,7 @@ The firmware supports a "Dual-Stream" mode where you can view live camera feed a
 
 1. Connect the Nu-Link (ICE/debug) port to your PC for power, flashing, and serial data.
 2. Connect the HSUSB port to your PC. The board will be recognized as a UVC USB Camera.
-3. Video Feed: Use any camera app to view the live processed video feed from the board.
+3. Use any camera app to view the live processed video feed from the board.
 
 ### Live Dashboard (Windows and Mac)
 
@@ -91,7 +91,7 @@ The firmware supports a "Dual-Stream" mode where you can view live camera feed a
    pip install streamlit pyserial
    ```
 3. Ensure SERIAL_PORT in the script matches your device, e.g., COM3 on Windows or /dev/cu.usbmodem... on Mac. You can find the correct port through Device Manager on Windows or running `ls /dev/cu.*` in the Mac Terminal.
-4. Run the Dashboard:
+4. Run the dashboard:
    ```text
    streamlit run dashboard_app.py
    ```
