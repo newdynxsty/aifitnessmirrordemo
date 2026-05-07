@@ -1,0 +1,12 @@
+# Keil build output folders
+**/Listings/
+**/Objects/
+**/release/
+
+# Specific executable extensions
+*.axf
+*.bin
+*.htm
+*.dep
+*.build_log.htm
+*.map
