@@ -93,7 +93,7 @@ The firmware supports a "Dual-Stream" mode where you can view live camera feed a
 3. Ensure SERIAL_PORT in the script matches your device, e.g., COM3 on Windows or /dev/cu.usbmodem... on Mac. You can find the correct port through Device Manager on Windows or running `ls /dev/cu.*` in the Mac Terminal.
 4. Run the dashboard:
    ```text
-   streamlit run dashboard_app.py
+   streamlit run dashboard.py
    ```
 
 ## Training The Rep Counter
