@@ -772,11 +772,8 @@ int main()
 										if (current_pose_class == 0) detectedType = 2;      // Jumping Jack (middle)
 										else if (current_pose_class == 4 || current_pose_class == 5) detectedType = 5; // Situp (middle)
 										else if (current_pose_class == 6) detectedType = 1; // Squat (middle)
-<<<<<<< HEAD
 										else if (current_pose_class == 1) detectedType = 3; // Lunge (middle)
 										else if (current_pose_class == 2 || current_pose_class == 3) detectedType = 4; // Pushup (middle)
-=======
->>>>>>> a31d80ecf0e4cdf19706c4ba154a35c690c473a4
 
 										// If we hit a 'middle' state of a different exercise, reset the counter
 										if (detectedType != 0 && g_activeExerciseType != detectedType) {
@@ -785,11 +782,8 @@ int main()
 												if (detectedType == 2) g_activeExerciseName = "JUMPING JACK";
 												else if (detectedType == 5) g_activeExerciseName = "SIT-UP";
 												else if (detectedType == 1) g_activeExerciseName = "SQUAT";
-<<<<<<< HEAD
 												else if (detectedType == 3) g_activeExerciseName = "LUNGE";
 												else if (detectedType == 4) g_activeExerciseName = "PUSH-UP";
-=======
->>>>>>> a31d80ecf0e4cdf19706c4ba154a35c690c473a4
 												g_activeExercise = 0; // Reset state machine phase
 											
 												// Clear the text area to prevent character overlapping
@@ -804,11 +798,7 @@ int main()
 										// 2. REP COUNTING
 										// STAND
 										if (current_pose_class == 7) {
-<<<<<<< HEAD
 												if (g_activeExercise == 2 || g_activeExercise == 1 || g_activeExercise == 3) g_currentRepCount++;
-=======
-												if (g_activeExercise == 2 || g_activeExercise == 1) g_currentRepCount++;
->>>>>>> a31d80ecf0e4cdf19706c4ba154a35c690c473a4
 												g_activeExercise = 0;
 										} 
 										// JUMP_MIDDLE
@@ -828,7 +818,6 @@ int main()
 										else if (current_pose_class == 4) {
 												g_activeExercise = 5;
 										}
-<<<<<<< HEAD
 										// LUNGE MIDDLE
 										else if (current_pose_class == 1) {
 												g_activeExercise = 3;
@@ -842,8 +831,6 @@ int main()
 										else if (current_pose_class == 2) {
 											g_activeExercise = 4;
 										}
-=======
->>>>>>> a31d80ecf0e4cdf19706c4ba154a35c690c473a4
 								}
 								
 								// --- EVALUATE ERROR CLASS BASED ON CURRENT EXERCISE ---
