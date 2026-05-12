@@ -1,6 +1,10 @@
 # AI Fitness Mirror Demo
 
-Firmware and model bundle for the Nuvoton M55 AI fitness mirror demo. The demo runs YOLOv8n pose detection on the camera stream, feeds pose keypoints into a rep counter and a workout-form error classifier, and draws the result on the display. **The current firmware counts jumping jacks, sit ups, and squats. Push ups and lunges are still in development.**
+Firmware and model bundle for the Nuvoton M55 AI fitness mirror demo. The demo runs YOLOv8n pose detection on the camera stream, feeds pose keypoints into a rep counter and a workout-form error classifier, and draws the result on the display. 
+
+You can optionally connect the board’s HSUSB port to your PC to use it as a UVC camera, allowing you to view the live video feed on a larger display (Windows only). When paired with the included Python script, this setup also launches a desktop dashboard for real-time tracking of exercise information (Windows and Mac).
+
+**The current firmware counts jumping jacks, sit ups, and squats. Push ups and lunges are still in development.**
 
 ## Repository Layout
 
@@ -68,6 +72,29 @@ If Keil reports that a model file cannot be prepared, re-check the SD card root 
 The active rep counter currently displays `JUMPING JACK`, `SIT-UP`, or `SQUAT` once it sees the corresponding pose phase with enough confidence. Example error-class outputs include `JJ ARM LOW`, `JJ LEG NAR`, `PUSH KNEE`, `SIT CORE`, and `SQUAT LOW`.
 
 NOTE: Most recent firmware version may have slightly different labels. 
+
+## PC Dashboard & UVC Camera
+
+The firmware supports a "Dual-Stream" mode where you can view live camera feed and exercise information on your PC monitor while the board is running.
+
+### Utilizing an External Display (Windows only)
+
+1. Connect the Nu-Link (ICE/debug) port to your PC for power, flashing, and serial data.
+2. Connect the HSUSB port to your PC. The board will be recognized as a UVC USB Camera.
+3. Use any camera app to view the live processed video feed from the board.
+
+### Live Dashboard (Windows and Mac)
+
+1. Connect the Nu-Link (ICE/debug) port to your PC for power, flashing, and serial data.
+2. Install Python Dependencies:
+   ```text
+   pip install streamlit pyserial
+   ```
+3. Ensure SERIAL_PORT in the script matches your device, e.g., COM3 on Windows or /dev/cu.usbmodem... on Mac. You can find the correct port through Device Manager on Windows or running `ls /dev/cu.*` in the Mac Terminal.
+4. Run the dashboard:
+   ```text
+   streamlit run dashboard_app.py
+   ```
 
 ## Training The Rep Counter
 
