@@ -20,7 +20,7 @@ The board copy of `YOLOv8n-pose.tflite` is Ethos-U compiled and does not run in 
 For desktop training and demo, use an uncompiled pose model such as `yolov8n-pose.pt`:
 
 ```bash
-.venv/bin/python workout_error_pipeline.py --pose-model yolov8n-pose.pt
+../.venv/bin/python workout_error_pipeline.py --pose-model yolov8n-pose.pt
 ```
 
 That matches `Rep_Count.ipynb`: Ultralytics can load or auto-download `yolov8n-pose.pt` if it is not already present locally.
@@ -29,7 +29,7 @@ If you already have a local copy somewhere else, pass the full path with `--pose
 ## Train
 
 ```bash
-.venv/bin/python workout_error_pipeline.py \
+../.venv/bin/python workout_error_pipeline.py \
   --dataset-dir "Error Classes Dataset" \
   --pose-model yolov8n-pose.pt \
   --output-dir artifacts/workout_error_classifier
@@ -51,12 +51,48 @@ Artifacts land in `artifacts/workout_error_classifier/`:
 - `training_summary.json`
 - `validation_confusion_matrix.png`
 
+## Compile For The Board With Vela
+
+Install Vela in the repo virtual environment if needed:
+
+```bash
+../.venv/bin/python -m pip install ethos-u-vela==4.0.0
+```
+
+Compile the fully quantized TFLite model:
+
+```bash
+../.venv/bin/vela \
+  artifacts/workout_error_classifier/workout_error_classifier_int8.tflite \
+  --accelerator-config ethos-u55-256 \
+  --output-dir artifacts/workout_error_classifier
+```
+
+The board-ready file is:
+
+```text
+artifacts/workout_error_classifier/workout_error_classifier_int8_vela.tflite
+```
+
+Copy it into the repository SD-card bundle:
+
+```bash
+cp artifacts/workout_error_classifier/workout_error_classifier_int8_vela.tflite \
+  ../sd_card_root/workout_error_classifier_int8_vela.tflite
+```
+
+The firmware expects this exact filename at the SD card root:
+
+```text
+0:\workout_error_classifier_int8_vela.tflite
+```
+
 ## Desktop Demo
 
 Webcam:
 
 ```bash
-.venv/bin/python demo_workout_error_classifier.py \
+../.venv/bin/python demo_workout_error_classifier.py \
   --pose-model yolov8n-pose.pt \
   --classifier-model artifacts/workout_error_classifier/workout_error_classifier.keras \
   --labels artifacts/workout_error_classifier/workout_error_labels.json \
@@ -66,7 +102,7 @@ Webcam:
 Local video:
 
 ```bash
-.venv/bin/python demo_workout_error_classifier.py \
+../.venv/bin/python demo_workout_error_classifier.py \
   --pose-model yolov8n-pose.pt \
   --classifier-model artifacts/workout_error_classifier/workout_error_classifier.keras \
   --labels artifacts/workout_error_classifier/workout_error_labels.json \
