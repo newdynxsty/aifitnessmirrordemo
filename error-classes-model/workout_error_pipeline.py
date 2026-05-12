@@ -575,7 +575,7 @@ def train_error_classifier(
     set_training_seed(seed)
     model = build_classifier(num_classes=len(class_names))
     callbacks = [
-        keras.callbacks.EarlyStopping(monitor="val_loss", patience=20, restore_best_weights=True),
+        keras.callbacks.EarlyStopping(monitor="val_loss", patience=40, restore_best_weights=True),
         keras.callbacks.ReduceLROnPlateau(monitor="val_loss", factor=0.5, patience=8, min_lr=1e-5),
     ]
 
