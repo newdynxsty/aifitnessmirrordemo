@@ -845,6 +845,8 @@ int main()
 										if (g_activeExerciseType == 2 && strncmp(ERROR_CLASS_NAMES[i], "JJ", 2) == 0) match = true;
 										else if (g_activeExerciseType == 5 && strncmp(ERROR_CLASS_NAMES[i], "SIT", 3) == 0) match = true;
 										else if (g_activeExerciseType == 1 && strncmp(ERROR_CLASS_NAMES[i], "SQUAT", 5) == 0) match = true;
+										else if (g_activeExerciseType == 3 && strncmp(ERROR_CLASS_NAMES[i], "LUNGE", 5) == 0) match = true;
+										else if (g_activeExerciseType == 4 && strncmp(ERROR_CLASS_NAMES[i], "PUSH", 4) == 0) match = true;
 										else if (g_activeExerciseType == 0) match = true; // No active exercise, consider all
 										
 										if (match && p > current_error_conf) {
