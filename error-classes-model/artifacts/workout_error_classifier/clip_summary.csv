@@ -30,50 +30,64 @@ clip_id,video_name,canonical_label,sampled_frames,usable_frames
 28,IMG_3280.MP4,lunges__good,48,48
 29,JieshengLungeRight.mp4,lunges__good,64,64
 30,JustinLungeRight.mp4,lunges__good,45,44
-31,ian right push up good.mov,push_ups__good,58,58
-32,jason good push up right.mov,push_ups__good,28,28
-33,pushup good right flipped.mov,push_ups__good,26,26
-34,ian-sit-up-left-flipped.mov,sit_ups__core_not_high_enough,37,37
-35,sit-up-bad-edward-left.mov,sit_ups__core_not_high_enough,26,26
-36,AustinGoodSitupLeft.MOV,sit_ups__good,45,45
-37,IMG_3160.MOV,sit_ups__good,28,28
-38,IMG_3162.MOV,sit_ups__good,45,45
-39,IMG_3166.MOV,sit_ups__good,33,33
-40,IMG_3169 (3).mov,sit_ups__good,54,54
-41,IMG_3268.MP4,sit_ups__good,28,28
-42,IMG_3271.MP4,sit_ups__good,31,31
-43,JustinGoodSitupLeft.MOV,sit_ups__good,41,41
-44,ian-sit-up-left-good.mov,sit_ups__good,57,57
-45,sit-up left good - edward.mov,sit_ups__good,46,46
-46,AustinBadSitupRight.mp4,sit_ups__core_not_high_enough,30,30
-47,IMG_3273.MP4,sit_ups__core_not_high_enough,37,37
-48,IMG_3275.MP4,sit_ups__core_not_high_enough,26,26
-49,JieshengBadSitupRight.mp4,sit_ups__core_not_high_enough,29,29
-50,JustinBadSitupRight.mp4,sit_ups__core_not_high_enough,35,35
-51,AustinGoodSitupRight.mp4,sit_ups__good,45,45
-52,IMG_3272.MP4,sit_ups__good,57,57
-53,IMG_3274.MP4,sit_ups__good,46,46
-54,JustinGoodSitupRight.mp4,sit_ups__good,41,41
-55,bad-pushup-flipped-right.mov,squats__good,28,28
-56,flipped_IMG_4050.MOV,squats__good,38,38
-57,flipped_IMG_4052.MOV,squats__good,28,28
-58,flipped_IMG_4054.MOV,squats__good,33,33
-59,flipped_IMG_4057.MOV,squats__good,34,34
-60,flipped_IMG_4059.MOV,squats__good,49,49
-61,ian pushup right flipped bad.mov,squats__good,54,54
-62,jason right bad push-up flipped.mov,squats__good,33,33
-63,flipped_IMG_4051.MOV,squats__not_low_enough,22,22
-64,flipped_IMG_4053.MOV,squats__not_low_enough,31,27
-65,flipped_IMG_4056.MOV,squats__not_low_enough,32,32
-66,flipped_IMG_4058.MOV,squats__not_low_enough,37,37
-67,flipped_IMG_4060.MOV,squats__not_low_enough,32,32
-68,IMG_4050.MOV,squats__good,38,38
-69,IMG_4052.MOV,squats__good,28,28
-70,IMG_4054.MOV,squats__good,33,33
-71,IMG_4057.MOV,squats__good,34,34
-72,IMG_4059.MOV,squats__good,49,49
-73,IMG_4051.MOV,squats__not_low_enough,22,22
-74,IMG_4053.MOV,squats__not_low_enough,31,31
-75,IMG_4056.MOV,squats__not_low_enough,32,32
-76,IMG_4058.MOV,squats__not_low_enough,37,37
-77,IMG_4060.MOV,squats__not_low_enough,32,32
+31,AustinBadLungeRight.mp4,lunges__not_low_enough,33,33
+32,JieshengBadLungeRight.mp4,lunges__not_low_enough,33,33
+33,JustinBadLungeRight.mp4,lunges__not_low_enough,43,42
+34,AustinGoodPushupLeft.MOV,push_ups__good,24,24
+35,IMG_3163.MOV,push_ups__good,25,25
+36,IMG_3167.MOV,push_ups__good,58,58
+37,IMG_3267.MP4,push_ups__good,26,26
+38,JustinGoodPushupLeft.MOV,push_ups__good,25,25
+39,AustinBadPushup.MOV,push_ups__knees_touching_ground,27,27
+40,IMG_3166.MOV,push_ups__knees_touching_ground,33,33
+41,IMG_3169 (3).mov,push_ups__knees_touching_ground,54,54
+42,IMG_3268.MP4,push_ups__knees_touching_ground,28,28
+43,JustinBadPushup.MOV,push_ups__knees_touching_ground,22,22
+44,AustinGoodFlippedRight.mp4,push_ups__good,24,24
+45,JustinGoodFlippedRight.mp4,push_ups__good,25,25
+46,ian right push up good.mov,push_ups__good,58,58
+47,jason good push up right.mov,push_ups__good,25,25
+48,pushup good right flipped.mov,push_ups__good,26,26
+49,AustinBadPushupFlipped.mp4,push_ups__knees_touching_ground,27,27
+50,JustinBadPushupFlipped.mp4,push_ups__knees_touching_ground,22,22
+51,bad-pushup-flipped-right.mov,push_ups__knees_touching_ground,28,28
+52,ian pushup right flipped bad.mov,push_ups__knees_touching_ground,54,54
+53,jason right bad push-up flipped.mov,push_ups__knees_touching_ground,33,33
+54,AustinBadSitupLeft.MOV,sit_ups__core_not_high_enough,30,30
+55,JieshengBadSitupLeft.MOV,sit_ups__core_not_high_enough,29,29
+56,JustinBadSitupLeft.MOV,sit_ups__core_not_high_enough,35,35
+57,ian-sit-up-left-flipped.mov,sit_ups__core_not_high_enough,37,37
+58,sit-up-bad-edward-left.mov,sit_ups__core_not_high_enough,26,26
+59,AustinGoodSitupLeft.MOV,sit_ups__good,45,45
+60,JustinGoodSitupLeft.MOV,sit_ups__good,41,41
+61,ian-sit-up-left-good.mov,sit_ups__good,57,57
+62,sit-up left good - edward.mov,sit_ups__good,46,46
+63,AustinBadSitupRight.mp4,sit_ups__core_not_high_enough,30,30
+64,IMG_3273.MP4,sit_ups__core_not_high_enough,37,37
+65,IMG_3275.MP4,sit_ups__core_not_high_enough,26,26
+66,JieshengBadSitupRight.mp4,sit_ups__core_not_high_enough,29,29
+67,JustinBadSitupRight.mp4,sit_ups__core_not_high_enough,35,35
+68,AustinGoodSitupRight.mp4,sit_ups__good,45,45
+69,IMG_3272.MP4,sit_ups__good,57,57
+70,IMG_3274.MP4,sit_ups__good,46,46
+71,JustinGoodSitupRight.mp4,sit_ups__good,41,41
+72,flipped_IMG_4050.MOV,squats__good,38,38
+73,flipped_IMG_4052.MOV,squats__good,28,28
+74,flipped_IMG_4054.MOV,squats__good,33,33
+75,flipped_IMG_4057.MOV,squats__good,34,34
+76,flipped_IMG_4059.MOV,squats__good,49,49
+77,flipped_IMG_4051.MOV,squats__not_low_enough,22,22
+78,flipped_IMG_4053.MOV,squats__not_low_enough,31,27
+79,flipped_IMG_4056.MOV,squats__not_low_enough,32,32
+80,flipped_IMG_4058.MOV,squats__not_low_enough,37,37
+81,flipped_IMG_4060.MOV,squats__not_low_enough,32,32
+82,IMG_4050.MOV,squats__good,38,38
+83,IMG_4052.MOV,squats__good,28,28
+84,IMG_4054.MOV,squats__good,33,33
+85,IMG_4057.MOV,squats__good,34,34
+86,IMG_4059.MOV,squats__good,49,49
+87,IMG_4051.MOV,squats__not_low_enough,22,22
+88,IMG_4053.MOV,squats__not_low_enough,31,31
+89,IMG_4056.MOV,squats__not_low_enough,32,32
+90,IMG_4058.MOV,squats__not_low_enough,37,37
+91,IMG_4060.MOV,squats__not_low_enough,32,32

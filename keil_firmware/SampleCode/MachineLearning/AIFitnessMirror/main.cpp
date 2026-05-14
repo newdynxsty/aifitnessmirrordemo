@@ -109,7 +109,7 @@ extern "C" {
 
 static constexpr int KP_WIN = 16;
 static constexpr int KP_DIM = 51;
-static constexpr int ERROR_CLASS_COUNT = 10;
+static constexpr int ERROR_CLASS_COUNT = 11;
 
 static const char* const ERROR_CLASS_NAMES[ERROR_CLASS_COUNT] = {
     "JJ ARM LOW",
@@ -118,6 +118,7 @@ static const char* const ERROR_CLASS_NAMES[ERROR_CLASS_COUNT] = {
     "LUNGE GOOD",
     "LUNGE LOW",
     "PUSH GOOD",
+    "PUSH KNEE",
     "SIT CORE",
     "SIT GOOD",
     "SQUAT GOOD",
@@ -889,18 +890,27 @@ int main()
 										current_error_conf = 0.0f;
 								}
 								
-								// --- OVERRIDE ERROR MODEL FOR SQUATS ---
-								// 8 = "SQUAT GOOD", 9 = "SQUAT LOW"
+								// --- OVERRIDE ERROR MODEL FOR SQUATS, LUNGES, SIT-UPS ---
 								if (g_activeExerciseType == 1) { // 1 is Squat
 										current_error_conf = 1.0f; // Force high confidence so it displays clearly
-										
-										// If we are waiting for them to go down (phase 0) or they are standing (class 7)
-										// but they haven't hit the middle state (phase 1) yet
 										if (g_activeExercise == 0) {
-												current_error_class = 9; // "Squat deeper!"
+												current_error_class = 10; // "Squat deeper!"
 										} else {
-												// They hit the middle state, so the rep is valid so far
-												current_error_class = 8;  // "Perfect Squat!"
+												current_error_class = 9;  // "Perfect Squat!"
+										}
+								} else if (g_activeExerciseType == 3) { // 3 is Lunge
+										current_error_conf = 1.0f;
+										if (g_activeExercise == 0) {
+												current_error_class = 4; // "Lunge deeper!"
+										} else {
+												current_error_class = 3;  // "Perfect Lunge!"
+										}
+								} else if (g_activeExerciseType == 5) { // 5 is Sit-up
+										current_error_conf = 1.0f;
+										if (g_activeExercise == 0) {
+												current_error_class = 7; // "Engage your core!"
+										} else {
+												current_error_class = 8;  // "Perfect Situp!"
 										}
 								}
 								
