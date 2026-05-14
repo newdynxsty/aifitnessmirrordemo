@@ -131,10 +131,11 @@ static const char* const HUMAN_READABLE_ERRORS[ERROR_CLASS_COUNT] = {
     "Perfect  Lunge!",          // 3: LUNGE GOOD
     "Lunge    deeper!",           // 4: LUNGE LOW
     "Perfect  Pushup!",         // 5: PUSH GOOD
-    "Engage   your     core!",       // 6: SIT CORE
-    "Perfect  Situp!",          // 7: SIT GOOD
-    "Perfect  Squat!",          // 8: SQUAT GOOD
-    "Squat    deeper!"            // 9: SQUAT LOW
+    "Keep     knees offground!",  // 6: PUSH KNEE
+    "Engage   your     core!",       // 7: SIT CORE
+    "Perfect  Situp!",          // 8: SIT GOOD
+    "Perfect  Squat!",          // 9: SQUAT GOOD
+    "Squat    deeper!"            // 10: SQUAT LOW
 };
 
 // --- NEW REP COUNTER STATE MACHINE GLOBALS ---
