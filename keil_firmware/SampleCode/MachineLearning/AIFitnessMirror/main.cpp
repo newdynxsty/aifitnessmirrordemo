@@ -69,7 +69,7 @@
 
 // GROUP 2: Error Data
 #define ROW_Y_ERR_NAME      (ROW_Y_CONF + LINE_HEIGHT + 30) 
-#define ROW_Y_ERR_CONF      (ROW_Y_ERR_NAME + 3 * LINE_HEIGHT)
+#define ROW_Y_ERR_CONF      (ROW_Y_ERR_NAME + 2 * LINE_HEIGHT)
 
 // GROUP 3: Accelerometer and Heart Rate
 #define ROW_Y_AX            (ROW_Y_ERR_CONF + LINE_HEIGHT + 30)
