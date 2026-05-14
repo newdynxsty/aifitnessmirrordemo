@@ -125,7 +125,19 @@ static const char* const ERROR_CLASS_NAMES[ERROR_CLASS_COUNT] = {
     "SQUAT LOW"
 };
 
-
+static const char* const HUMAN_READABLE_ERRORS[ERROR_CLASS_COUNT] = {
+    "Raise    arms     higher!",      // 0: JJ ARM LOW
+    "Perfect  Jumping  Jack!",   // 1: JJ GOOD
+    "Spread   legs     wider!",      // 2: JJ LEG NAR
+    "Perfect  Lunge!",          // 3: LUNGE GOOD
+    "Lunge    deeper!",           // 4: LUNGE LOW
+    "Perfect  Pushup!",         // 5: PUSH GOOD
+    "Keep     knees offground!",  // 6: PUSH KNEE
+    "Engage   your     core!",       // 7: SIT CORE
+    "Perfect  Situp!",          // 8: SIT GOOD
+    "Perfect  Squat!",          // 9: SQUAT GOOD
+    "Squat    deeper!"            // 10: SQUAT LOW
+};
 
 // --- NEW REP COUNTER STATE MACHINE GLOBALS ---
 static int g_squatCount = 0;
@@ -851,6 +863,7 @@ int main()
 								}
 								
 								// --- EVALUATE ERROR CLASS BASED ON CURRENT EXERCISE ---
+								
 								current_error_class = -1;
 								current_error_conf = -1.0f;
 								
@@ -876,8 +889,30 @@ int main()
 										current_error_class = 0;
 										current_error_conf = 0.0f;
 								}
+								
+						}
+						// ERROR CLASS DISPLAY TEST
+						/*
+						static int test_frame_counter = 0;
+						static int test_error_index = 0;
+
+						test_frame_counter++;
+
+						if (test_frame_counter > 30) { 
+								test_frame_counter = 0;
+								test_error_index++;
+								
+								if (test_error_index >= ERROR_CLASS_COUNT) {
+										test_error_index = 0;
+								}
 						}
 
+						current_error_class = test_error_index;
+						current_error_conf = 0.99f;
+						*/
+						// ENDTEST
+						
+						
             //draw bbox and render
 						if(infFramebuf->results.size())
 						{
@@ -947,7 +982,7 @@ int main()
 						// Get Error Name String
 						const char* errorName = "NO POSE";
 						if (current_error_class >= 0 && current_error_class < ERROR_CLASS_COUNT) {
-								errorName = ERROR_CLASS_NAMES[current_error_class];
+								errorName = HUMAN_READABLE_ERRORS[current_error_class];
 						}
 
 						// 4. Error Class
