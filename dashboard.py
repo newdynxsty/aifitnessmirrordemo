@@ -7,27 +7,10 @@ import platform
 
 # --- CONFIGURATION ---
 if platform.system() == "Windows":
-    SERIAL_PORT = 'COM3'
+    SERIAL_PORT = 'COM7'
 else:
     SERIAL_PORT = '/dev/cu.usbmodem102'
 BAUD_RATE = 115200
-
-# --- FEEDBACK MAPPING ---
-FORM_FEEDBACK = {
-    "JJ ARM LOW": "Get your arms higher!",
-    "JJ LEG NAR": "Jump with your legs wider!",
-    "LUNGE LOW": "Lunge deeper!",
-    "PUSH KNEE": "Knees off the ground!",
-    "SIT CORE": "Get your core higher!",
-    "SQUAT LOW": "Squat lower!",
-    "JJ GOOD": "Perfect Jumping Jacks!",
-    "LUNGE GOOD": "Great Lunge form!",
-    "PUSH GOOD": "Solid Pushup!",
-    "SIT GOOD": "Nice Situp!",
-    "SQUAT GOOD": "Great Squat!",
-    "WAITING...": "Waiting for exercise...",
-    "NO POSE": "Step into view of the camera."
-}
 
 # --- STYLING ---
 def local_css():
@@ -94,27 +77,22 @@ st.divider()
 
 data = st.session_state.workout_data
 
-# Layout: Two large columns for Exercise and Reps
-col1, col2 = st.columns(2)
+# Exercise name
+st.metric(label="Current Exercise", value=data["exercise"])
+st.caption(f"Confidence: {data['conf']*100:.0f}%")
 
-with col1:
-    st.metric(label="Current Exercise", value=data["exercise"])
-    st.caption(f"Confidence: {data['conf']*100:.0f}%")
-
-with col2:
-    st.metric(label="Rep Count", value=data["reps"])
-
+# Rep count
+st.metric(label="Rep Count", value=data["reps"])
 st.markdown('<p class="guidance-header">Form Guidance</p>', unsafe_allow_html=True)
 
 # --- FEEDBACK AREA ---
-display_msg = FORM_FEEDBACK.get(data["error"], data["error"])
 
-if "GOOD" in data["error"]:
-    st.success(display_msg)
+if "Perfect" in data["error"]:
+    st.success(data["error"])
 elif data["error"] in ["NONE", "WAITING...", "NO POSE"]:
-    st.info(display_msg)
+    st.info(data["error"])
 else:
-    st.error(f"{display_msg}")
+    st.error(f"{data["error"]}")
 
 st.caption(f"Confidence: {data['error_conf']*100:.0f}%")
 
