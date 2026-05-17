@@ -59,8 +59,8 @@
 #define SCREEN_WIDTH_X    	800   
 #define LINE_HEIGHT    			(16 * FONT_DISP_UPSCALE_FACTOR) // Single row height
 
-// Row Position Formulas (Tightened & Sequential)
-#define ROW_Y_FPS           20
+// Row Position Formulas
+#define ROW_Y_FPS           15
 
 // GROUP 1: Exercise Data
 #define ROW_Y_NAME          (ROW_Y_FPS + LINE_HEIGHT + 30)
@@ -69,7 +69,7 @@
 
 // GROUP 2: Error Data
 #define ROW_Y_ERR_NAME      (ROW_Y_CONF + LINE_HEIGHT + 30) 
-#define ROW_Y_ERR_CONF      (ROW_Y_ERR_NAME + 2 * LINE_HEIGHT)
+#define ROW_Y_ERR_CONF      (ROW_Y_ERR_NAME + 3 * LINE_HEIGHT)
 
 // GROUP 3: Accelerometer and Heart Rate
 #define ROW_Y_AX            (ROW_Y_ERR_CONF + LINE_HEIGHT + 30)
@@ -127,16 +127,16 @@ static const char* const ERROR_CLASS_NAMES[ERROR_CLASS_COUNT] = {
 
 static const char* const HUMAN_READABLE_ERRORS[ERROR_CLASS_COUNT] = {
     "Raise    arms     higher!",      // 0: JJ ARM LOW
-    "Perfect  Jumping  Jack!",   // 1: JJ GOOD
-    "Spread   legs     wider!",      // 2: JJ LEG NAR
-    "Perfect  Lunge!",          // 3: LUNGE GOOD
-    "Lunge    deeper!",           // 4: LUNGE LOW
-    "Perfect  Pushup!",         // 5: PUSH GOOD
-    "Keep     knees offground!",  // 6: PUSH KNEE
-    "Engage   your     core!",       // 7: SIT CORE
-    "Perfect  Situp!",          // 8: SIT GOOD
-    "Perfect  Squat!",          // 9: SQUAT GOOD
-    "Squat    deeper!"            // 10: SQUAT LOW
+    "Perfect  jumping  jack!",   			// 1: JJ GOOD
+    "Spread   legs     wider!",      	// 2: JJ LEG NAR
+    "Perfect  lunge!",          			// 3: LUNGE GOOD
+    "Lunge    deeper!",           		// 4: LUNGE LOW
+    "Perfect  pushup!",         			// 5: PUSH GOOD
+    "Knees off ground!",  						// 6: PUSH KNEE
+    "Sit up 	 higher!",       				// 7: SIT CORE
+    "Perfect  situp!",          			// 8: SIT GOOD
+    "Perfect  squat!",          			// 9: SQUAT GOOD
+    "Squat    deeper!"            		// 10: SQUAT LOW
 };
 
 // --- NEW REP COUNTER STATE MACHINE GLOBALS ---
@@ -162,28 +162,27 @@ static inline int8_t QuantizeToInt8(float x, float scale, int32_t zeroPoint)
     return (int8_t)v;
 }
 
-
-
-enum{
-	ePOSE_KP_INDEX_NOSE,				//0
-	ePOSE_KP_INDEX_LEFT_EYE,			//1
-	ePOSE_KP_INDEX_RIGHT_EYE,			//2
-	ePOSE_KP_INDEX_LEFT_EAR,			//3
-	ePOSE_KP_INDEX_RIGHT_EAR,			//4
-	ePOSE_KP_INDEX_LEFT_SHOULDER,		//5
-	ePOSE_KP_INDEX_RIGHT_SHOULDER,		//6
-	ePOSE_KP_INDEX_LEFT_ELBOW,			//7
-	ePOSE_KP_INDEX_RIGHT_ELBOW,			//8
-	ePOSE_KP_INDEX_LEFT_WRIST,			//9
-	ePOSE_KP_INDEX_RIGHT_WRIST,			//10
-	ePOSE_KP_INDEX_LEFT_HIP,			//11
-	ePOSE_KP_INDEX_RIGHT_HIP,			//12
-	ePOSE_KP_INDEX_LEFT_KNEE,			//13
-	ePOSE_KP_INDEX_RIGHT_KNEE,			//14
-	ePOSE_KP_INDEX_LEFT_ANKLE,			//15
-	ePOSE_KP_INDEX_RIGHT_ANKLE,			//16
-	ePOSE_KP_NUMS,						//17
-}E_POSE_KP_INDEX;
+enum
+{
+		ePOSE_KP_INDEX_NOSE,						//0
+		ePOSE_KP_INDEX_LEFT_EYE,				//1
+		ePOSE_KP_INDEX_RIGHT_EYE,				//2
+		ePOSE_KP_INDEX_LEFT_EAR,				//3
+		ePOSE_KP_INDEX_RIGHT_EAR,				//4
+		ePOSE_KP_INDEX_LEFT_SHOULDER,		//5
+		ePOSE_KP_INDEX_RIGHT_SHOULDER,	//6
+		ePOSE_KP_INDEX_LEFT_ELBOW,			//7
+		ePOSE_KP_INDEX_RIGHT_ELBOW,			//8
+		ePOSE_KP_INDEX_LEFT_WRIST,			//9
+		ePOSE_KP_INDEX_RIGHT_WRIST,			//10
+		ePOSE_KP_INDEX_LEFT_HIP,				//11
+		ePOSE_KP_INDEX_RIGHT_HIP,				//12
+		ePOSE_KP_INDEX_LEFT_KNEE,				//13
+		ePOSE_KP_INDEX_RIGHT_KNEE,			//14
+		ePOSE_KP_INDEX_LEFT_ANKLE,			//15
+		ePOSE_KP_INDEX_RIGHT_ANKLE,			//16
+		ePOSE_KP_NUMS,									//17
+} E_POSE_KP_INDEX;
 
 
 typedef enum
@@ -908,34 +907,13 @@ int main()
 								} else if (g_activeExerciseType == 5) { // 5 is Sit-up
 										current_error_conf = 1.0f;
 										if (g_activeExercise == 0) {
-												current_error_class = 7; // "Engage your core!"
+												current_error_class = 7; // "Sit up higher!"
 										} else {
 												current_error_class = 8;  // "Perfect Situp!"
 										}
 								}
 								
-						}
-						// ERROR CLASS DISPLAY TEST
-						/*
-						static int test_frame_counter = 0;
-						static int test_error_index = 0;
-
-						test_frame_counter++;
-
-						if (test_frame_counter > 30) { 
-								test_frame_counter = 0;
-								test_error_index++;
-								
-								if (test_error_index >= ERROR_CLASS_COUNT) {
-										test_error_index = 0;
-								}
-						}
-
-						current_error_class = test_error_index;
-						current_error_conf = 0.99f;
-						*/
-						// ENDTEST
-						
+						}				
 						
             //draw bbox and render
 						if(infFramebuf->results.size())
