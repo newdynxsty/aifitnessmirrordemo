@@ -19,6 +19,7 @@ You can optionally connect the board’s HSUSB port to your PC to use it as a UV
 - Nuvoton M55M1 board with camera/display setup used by the AI fitness mirror demo
 - SD card formatted as FAT32
 - USB cable for power/debug/flashing
+   - optional USB cable for MCU camera integration with the live dashboard
 - Windows machine with Keil uVision
 
 ## Required SD Card Files
@@ -73,30 +74,25 @@ The active rep counter currently displays `JUMPING JACK`, `SIT-UP`, or `SQUAT` o
 
 NOTE: Most recent firmware version may have slightly different labels. 
 
-## PC Dashboard & UVC Camera
+## PC Live Dashboard
 
-The firmware supports a "Dual-Stream" mode where you can view live camera feed and exercise information on your PC monitor while the board is running.
+The firmware supports a "dual-stream" mode where you can view live exercise information and camera feed (Windows only) from the MCU on your PC.
 
-### Utilizing an External Display (Windows only)
+### Live Dashboard
 
-1. Connect the Nu-Link (ICE/debug) port to your PC for power, flashing, and serial data.
-2. Connect the HSUSB port to your PC. The board will be recognized as a UVC USB Camera.
-3. Use any camera app to view the live processed video feed from the board.
-   - Ensure the board camera (usually named USB Camera) is selected
-
-### Live Dashboard (Windows and Mac)
-
-1. Connect the Nu-Link (ICE/debug) port to your PC for power, flashing, and serial data.
-2. Install Python Dependencies:
+1. Connect the Nu-Link (ICE/debug) port to your PC for power and serial data.
+2. Windows only: Connect the HSUSB port to your PC. The board will be recognized as a UVC USB Camera.
+3. Install Python Dependencies:
    ```text
    pip install streamlit pyserial
    ```
-3. Ensure SERIAL_PORT in the script matches your device, e.g., COM3 on Windows or /dev/cu.usbmodem102 on Mac. You can find the correct port through Device Manager on Windows or running `ls /dev/cu.*` in the Mac Terminal.
+4. Ensure SERIAL_PORT in the script matches your device, e.g., COM3 on Windows or /dev/cu.usbmodem102 on Mac. You can find the correct port through Device Manager on Windows or running `ls /dev/cu.*` in the Mac Terminal.
    - If you don't see a new port, ensure the board is plugged directly into the computer and not through a USB hub.
-4. Run the dashboard:
+5. Run the dashboard:
    ```text
    streamlit run dashboard.py
    ```
+6. To view live camera feed, select a camera from the dropdown. If step 2 was followed, the MCU camera will be available. If not, you can also use any connected webcam.
 
 ## Training The Rep Counter
 
