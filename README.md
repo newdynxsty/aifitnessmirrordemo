@@ -91,6 +91,8 @@ The firmware supports a "dual-stream" mode where you can view live exercise info
 5. Run the dashboard:
    ```text
    streamlit run dashboard.py
+   or
+   python -m streamlit run app.py
    ```
 6. To view live camera feed, select a camera from the dropdown. If step 2 was followed, the MCU camera will be available. If not, you can also use any connected webcam.
 
