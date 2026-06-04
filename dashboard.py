@@ -90,8 +90,7 @@ if 'thread_started' not in st.session_state:
 
 # --- UI RENDER HELPER FUNCTION --- 
 def render_ui(data):
-    ex_name = "JUMPING JACK" if data["exercise"] == "JUMPJACK" else data["exercise"]
-    exercise_name.text(ex_name, width='stretch')
+    exercise_name.text(data["exercise"], width='stretch')
 
     exercise_conf.caption(f"Confidence: {data['conf']*100:.0f}%")
     
