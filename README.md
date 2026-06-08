@@ -4,7 +4,17 @@ Firmware and model bundle for the Nuvoton M55 AI fitness mirror demo. The demo r
 
 You can optionally connect the board’s HSUSB port to your PC to use it as a UVC camera, allowing you to view the live video feed on a larger display (Windows only). When paired with the included Python script, this setup also launches a desktop dashboard for real-time tracking of exercise information (Windows and Mac).
 
-**The current firmware counts jumping jacks, sit ups, and squats. Push ups and lunges are still in development.**
+## Supported Exercises and Error Classes
+
+| Exercise | Error(s) |
+| --- | --- |
+| Jumping Jacks | Arms not high enough, Legs not wide enough |
+| Sit-Ups | Core not going high enough |
+| Squats | Not squatting low enough |
+| Push-Ups | Knees touching the ground |
+| Lunges | Not lunging low enough |
+
+Please note, squats require the user to face towards their left and lunges require the user to face towards their right.
 
 ## Repository Layout
 
