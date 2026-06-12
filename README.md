@@ -96,7 +96,7 @@ The firmware supports a "dual-stream" mode where you can view live exercise info
    ```text
    pip install streamlit pyserial
    ```
-4. Ensure SERIAL_PORT in the script matches your device, e.g., COM3 on Windows or /dev/cu.usbmodem102 on Mac. You can find the correct port through Device Manager on Windows or running `ls /dev/cu.*` in the Mac Terminal.
+4. Ensure SERIAL_PORT in the script (`dashboard.py`) matches your device, e.g., COM3 on Windows or /dev/cu.usbmodem102 on Mac. You can find the correct port through Device Manager on Windows or running `ls /dev/cu.*` in the Mac Terminal.
    - If you don't see a new port, ensure the board is plugged directly into the computer and not through a USB hub.
 5. Run the dashboard:
    ```text
@@ -106,7 +106,7 @@ The firmware supports a "dual-stream" mode where you can view live exercise info
    ```text
    python -m streamlit run app.py
    ```
-7. To view live camera feed, select a camera from the dropdown. If step 2 was followed, the MCU camera will be available. If not, you can also use any connected webcam.
+6. To view live camera feed, select a camera from the dropdown. If step 2 was followed, the MCU camera will be available. If not, you can also use any connected webcam.
 
 ## Training The Rep Counter
 
