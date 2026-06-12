@@ -23,6 +23,7 @@ Please note, squats require the user to face towards their left and lunges requi
 - `sd_card_root/` - copy these files directly to the root of the board SD card.
 - `rep-counter-model/` - training notebooks, image datasets, and TFLite artifacts for the pose-phase rep counter.
 - `error-classes-model/` - training/evaluation scripts, notebooks, dataset, and model artifacts for the workout error classifier.
+- `dashboard.py`  - Python script for running the live PC dashboard.
 
 ## Hardware
 
